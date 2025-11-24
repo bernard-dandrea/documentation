@@ -4,6 +4,11 @@
 >
 >S'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte.
 
+# BETA
+
+- Remplacement event par checkAndUpdateCmd pour eviter répétition des valeurs dans history
+- Déplacement de la documentation dans un repository github séparé afin de pouvoir mettre à jour la documentation sans générer un update du plugin
+
 # 07/11/2024
 
 - Passage des methodes cron en static pour éviter erreur en PHP 8
