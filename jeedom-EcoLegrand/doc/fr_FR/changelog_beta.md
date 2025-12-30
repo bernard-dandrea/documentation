@@ -8,7 +8,7 @@
 
 # BETA
 
-- Modifications pour convertir les valeurs recuperres de l'ecoconpteur en float et eviter les erreurs lors de l'addition
+- Modifications pour convertir les valeurs recuperres de l'ecoconpteur en float et eviter les erreurs lors de l'addition en PHP8 (merci à Michel_F)
 - Déplacement de la documentation dans un repository github séparé afin de pouvoir mettre à jour la documentation sans générer un update du plugin
 
 
