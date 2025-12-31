@@ -10,6 +10,8 @@
 * Déplacement de la documentation dans un repository github séparé afin de pouvoir mettre à jour la documentation sans générer un update du plugin
 * Pas d'autres changements
 
+**Version 2025-09-25**
+
 La version du 25/09/2025 est l'objet de profonds changements avec une réécriture très importante du code et de la documentation.
 
 *   Refonte complète de la documentation. Réorientation de la documentation et du changelog Béta vers la branche beta de Github. 
