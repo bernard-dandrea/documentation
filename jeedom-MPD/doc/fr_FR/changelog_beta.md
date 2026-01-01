@@ -1,6 +1,6 @@
 # Changelog plugin MPD
 
-# BETA
+# 01/01/2026
 
 - correction warnings PHP
 - Déplacement de la documentation dans un repository github séparé afin de pouvoir mettre à jour la documentation sans générer un update du plugin
