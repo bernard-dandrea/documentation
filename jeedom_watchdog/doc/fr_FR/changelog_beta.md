@@ -3,9 +3,7 @@
 -->
 # Changelog plugin Watchdog
 
-
-
-**BETA**
+**Version 2026-01-01**
 
 * Déplacement de la documentation dans un repository github séparé afin de pouvoir mettre à jour la documentation sans générer un update du plugin
 * Pas d'autres changements
