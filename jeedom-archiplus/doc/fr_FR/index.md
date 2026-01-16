@@ -1,5 +1,5 @@
 <!--  
-  Last Modified : 2026/01/14 19:24:05
+  Last Modified : 2026/01/16 16:47:06
 -->
 - [La gestion des historiques dans Jeedom](#la-gestion-des-historiques-dans-jeedom)
   - [Fonctionnement](#fonctionnement)
@@ -21,8 +21,30 @@
   - [Statistiques](#statistiques)
   - [Visualisation](#visualisation)
   - [Modifications](#modifications)
-  - [Données historiques](#données-historiques)
-  - [Menu contextuel](#menu-contextuel)
+  - [Données modifiables](#données-modifiables)
+    - [KLV (Keep Last Value):](#klv-keep-last-value)
+    - [Uniq](#uniq)
+    - [Délai](#délai)
+    - [Cadrage](#cadrage)
+    - [Pond](#pond)
+    - [Pack](#pack)
+    - [Arrondi](#arrondi)
+  - [Fonctions accessibles via le menu contextuel](#fonctions-accessibles-via-le-menu-contextuel)
+- [Données historiques](#données-historiques)
+  - [Accès](#accès)
+  - [Modification](#modification)
+  - [Suppression](#suppression)
+  - [Export](#export)
+- [Le module Import](#le-module-import)
+- [Le module Restore](#le-module-restore)
+- [FAQ](#faq)
+  - [Keep Last Value](#keep-last-value)
+  - [Uniq](#uniq-1)
+  - [Délai et Cadrage](#délai-et-cadrage)
+  - [Lissage et pondération](#lissage-et-pondération)
+  - [Pack](#pack-1)
+  - [Arrondi](#arrondi-1)
+  - [copier les données de historyArch vers history](#copier-les-données-de-historyarch-vers-history)
 
 
 
@@ -30,7 +52,7 @@ La fonction principale du plugin est de fournir un ensemble complets d'outils pe
 
 *   **de gérer les paramètres d'archivage des commandes de type info**
 *   **de visualiser les volumes de données et de détecter les anomalies**
-*   **d'insérer facilement des données d'historique à partir de fichiers de type excel**
+*   **d'insérer facilement des données historique à partir de fichiers de type excel**
 *   **de récupérer les historiques à partir des archives Jeedom**
 *   **d'étendre les options d'archivage standard de Jeedom**
 
@@ -49,11 +71,13 @@ La structure des deux tables est identique et très simple: une valeur est enreg
 
 L'historique peut être affiché dans l'interface Jeedom sous forme de graphe.
 
+La documentation officielle concernant la gestion des historiques dans Jeedom se trouve [ici](https://doc.jeedom.com/fr_FR/core/4.4/history).
+
 ## Volume des historiques
 
-L'utilisateur de Jeedom commencera à s'intéresser à l'historique lorsqu'ils constatera une base de données qui grossit de façon exagérée, des temps d'affichage de l'historique qui deviennent très longs, la taille de la sauvegarde qui devient importante.
+L'utilisateur de Jeedom commencera à s'intéresser à l'historique lorsqu'ils constatera une base de données qui grossit de façon exagérée, des temps d'affichage de l'historique qui deviennent très longs, une taille de la sauvegarde qui devient importante.
 
-Le lien suivant permet d'accéder à un tuto qui explique comment créer un scénario qui listera les volumes des tables les plus volumineuses et les commandes info avec les plus gros historiques [Tuto - Analyser les archives](https://community.jeedom.com/t/tuto-analyser-les-archives-pour-detecter-des-pbs-lenteurs-espaces-disques/104384).
+Le lien suivant permet d'accéder à un tuto qui explique comment créer un scénario qui listera les volumes des tables les plus volumineuses et les commandes INFO avec les plus gros historiques [Tuto - Analyser les archives](https://community.jeedom.com/t/tuto-analyser-les-archives-pour-detecter-des-pbs-lenteurs-espaces-disques/104384).
 
 Plus simplement, vous pouvez voir les volumes des tables en interrogeant directement la base de données (menu Réglages / Système / Configuration puis onglet OS / DB (le dernier) puis bouton "Administration base de données" (bouton rouge le plus bas) puis sur la gauche interrogation "taille").
 
@@ -147,7 +171,7 @@ A partir du menu Plugins / Monitoring / archiplus, vous avez accès à la totali
 
 * Configuration du plugin (voir ci-dessus)
 * Accès aux paramètres globaux du paramétrage de l'archivage
-* Monitoring: visualiser et modifier le paramètrage et de réaliser les principales opérations concernant l'archivage
+* Monitoring: visualiser et modifier le paramètrage et  réaliser les principales opérations concernant l'archivage
 * Import: importer des données historiques à partir d'un fichier de type Excel
 * Restore: extraire les données historiques à partir d'une archive standard Jeedom
 
@@ -157,7 +181,7 @@ Les modules sont lancés à partir de la configuration du plugin.
 
 ![005](../images/005.png)
 
-Par exemple, avec le module Monitor, un tableau est affiché avec les commandes de type info ayant la fonction historique activée.
+Par exemple, avec le module Monitor, un tableau est affiché avec les commandes de type INFO ayant la fonction historique activée.
 
 L'écran comporte plusieurs parties.
 
@@ -222,7 +246,7 @@ En cliquant sur un champ modifiable, on peut entrer une nouvelle valeur.
 
 ![011](../images/011.png)
 
-Les champs modifiés apparaissent sur un fond bleu qui disparait après validation des modifications.
+Les champs modifiés apparaissent sur un fond magenta qui disparait après validation des modifications.
 
 ## Les totaux de bas de tableau
 
@@ -236,7 +260,7 @@ Il s'agit du module principal de archiplus.
 
 ![005](../images/005.png)
 
-Après avoir cliqué sur Monitor, les commandes info avec un historique actif sont affichées en quelques secondes.
+Après avoir cliqué sur Monitor, les commandes INFO avec un historique actif sont affichées en quelques secondes.
 
 ![014](../images/014.png)
 
@@ -260,24 +284,150 @@ Les totaux en bas du tableau vous permettent de connaitre immédiatement la tail
 
 ![018](../images/018.png)
 
-Les boutons de visualisation vous permetent de sélectionner les données affichées
+Les boutons de visualisation vous permettent de sélectionner les données affichées
 
-* le paramétrage de l'historique
+* la configuration de l'historique
 * les calculs
 * les valeurs interdites
-* l'affichage via es graphiques
+* l'affichage via les graphiques
 * les statistiques
 
-Suivant ce qui vous intéresse, vous pouvez activer ou non la partie que vous voulez gérer.
+Suivant ce qui vous intéresse, vous pouvez activer ou non la partie que vous voulez gérer. Afin de ne pas surcharger l'écran de démarrage de Monitor, seules les données d'identification, de configuration et les statistiques sont présentées.
 
 ## Modifications
 
+![020](../images/020.png)
 
-## Données historiques
+Pour modifier une donnée, il suffit de cliquer sur la zone concernée et d'entrer une nouvelle valeur. 
 
+![021](../images/021.png)
 
-## Menu contextuel
+Les données modifiées apparaissent sur fond magenta. 
 
+![022](../images/022.png)
 
+Avec un clic droit sur une ligne, il est possible de copier sa configuration sur les lignes sélectionnées. 
 
+![023](../images/023.png)
 
+Afin de contrôler les données avant validation, il est possible d'afficher uniquement les lignes modifiées. 
+
+![024](../images/024.png)
+
+Après avoir cliqué sur le bouton Validation, les données sont mises à jour et le fond des cellules modifiées est effacé.
+
+![025](../images/025.png)
+
+Noter qu'un clic droit sur une ligne permet de lancer directement la configuration avancée de commande de Jeedom.
+
+## Données modifiables
+
+L'ensemble des données de paramètrage de l'historique standard de Jeedom et celles spécifiques au plugin archiplus peuvent être modifiées directement à partir de Monitor.
+
+Ci-dessous sont détaillées les options spécifiques à archiplus dans leur ordre d'apparition:
+
+### KLV (Keep Last Value): 
+
+Permet de toujours conserver au moins un enregistrement dans l'historique. Voir la FAQ suivante pour en comprendre l'utilisation de cette option [Keep Last Value](#keep-last-value).
+
+### Uniq 
+
+Permet de supprimer les valeurs consécutives identiques dans historyArch. Voir la FAQ suivante pour en comprendre l'utilisation de cette option [Uniq](#uniq-1).
+
+### Délai
+
+Il s'agit du délai à partir duquel on transfert les enregistrements de history vers historyArch. Dans Jeedom, ce paramètre est le même pour toutes les commandes. Avec archiplus, ce délai peut-être spécifié par commande.
+
+### Cadrage 
+
+Permet de fixer le moment jusqu'auquel on purge les données historique et aussi celui du transfert des données de history vers historyArch sur une limite de jour, heure ou minute. Voir la FAQ suivante pour comprendre l'utilisation de cette option [Délai et Cadrage](#délai-et-cadrage).
+
+### Pond
+
+Permet de faire une moyenne pondérée en tenant compte du temps et non une moyenne des valeurs enregistrées sur la période. Voir la FAQ suivante pour comprendre l'utilisation de cette option [Lissage et pondération](#lissage-et-pondération).
+
+### Pack
+
+Définit selon quel intervalle les données vont être regroupées lors du lissage. Dans l'archivage standard de Jeedom, ce paramètre est le même pour toutes les commandes et est un multiuple d'heures. Avec archiplus, on peut préciser l'interval pour chaque commande et aussi exprimer la valeur en minutes.  Voir la FAQ suivante pour comprendre l'utilisation de cette option [Pack](#pack-1).
+
+### Arrondi
+
+Dans Jeedom, on peut préciser l'arrondi pour chaque commande. Le plugin permet en plus de préciser un arrondi différent lors du lissage des données dans historyArch. Voir la FAQ suivante pour comprendre l'utilisation de cette option [Arrondi](#arrondi-1).
+
+## Fonctions accessibles via le menu contextuel
+
+![026](../images/026.png)
+
+En faisant un clic droit n'importe où sur une ligne du tableau, on fait apparaître le menu contextuel de la commande. En plus des actions déjà vues, celui-ci permet:
+
+* d'afficher l'historique sous forme de graphique  (appel de la fonction standard de Jeedom)
+* d'afficher les données stockées dans les tables history et historyArch
+* de purger l'historique jusqu'à une date donnée
+* d'exporter les données historique au fomat CSV (zppel de la fonction standard de Jeedom)
+* de mettre à jour les statistiques pour la ligne concernée
+* de lancer l'archivage uniquement pour la commande concernée
+* de copier les données de historyArch vers history:  Voir la FAQ suivante pour comprendre l'utilisation de cette action  [historyArch vers history](#copier-les-données-de-historyarch-vers-history)
+* de copier l'historique de la commande sélectionnée vers une autre commande
+
+# Données historiques
+
+## Accès
+
+![027](../images/027.png)
+
+L'accès aux données dans les tables history et historyArch se fait via:
+
+* le menu contextuel de Monitor (voir plus haut)
+* la sélection de une ou plusieurs lignes suivi de l'appui sur le bouton Data des modules Monitor et Restore
+
+![028](../images/028.png)
+
+Les données sont présentées dans une fenêtre modale triées par datetime décroissant.
+
+## Modification 
+
+![029](../images/029.png)
+
+Il arrive parfois que l'on ait des valeurs abérantes, ici suite à la maintenance de la chaudière.
+
+![030](../images/030.png)
+
+Le menu contextuel permet de modifier ou supprimer la valeur concernée. 
+
+![031](../images/031.png)
+
+Après correction, l'affichage de l'historique est alors bien plus significatif.
+
+## Suppression
+
+![032](../images/032.png)
+
+Il est également possible de supprimer plusieurs données historique en les sélectionnant et cliquant sur le bouton supprimer.
+
+## Export
+
+![033](../images/033.png)
+
+Le bouton Export permet d'exporter les données.
+
+Noter que celles-ci peuvent être retravaillées dans Excel afin d'être importées via le module Import.
+
+# Le module Import
+
+# Le module Restore
+
+# FAQ
+
+## Keep Last Value
+
+## Uniq
+
+## Délai et Cadrage
+
+## Lissage et pondération
+
+## Pack
+
+## Arrondi
+
+## copier les données de historyArch vers history
