@@ -1,5 +1,5 @@
 <!--  
-  Last Modified : 2026/01/17 14:36:23
+  Last Modified : 2026/01/18 16:41:12
 -->
 - [La gestion des historiques dans Jeedom](#la-gestion-des-historiques-dans-jeedom)
   - [Fonctionnement](#fonctionnement)
@@ -72,7 +72,7 @@ La structure des deux tables est identique et très simple: une valeur est enreg
 
 L'historique peut être affiché dans l'interface Jeedom sous forme de graphe.
 
-La documentation officielle concernant la gestion des historiques dans Jeedom se trouve [ici](https://doc.jeedom.com/fr_FR/core/4.4/history).
+La documentation officielle concernant la gestion des historiques dans Jeedom se trouve [ici](https://doc.jeedom.com/fr_FR/core/4.5/history).
 
 ## Volume des historiques
 
@@ -424,7 +424,71 @@ Noter que celles-ci peuvent être retravaillées dans Excel afin d'être import�
 
 # Le module Import
 
+Le module Import permet d'importer des données historiques dans une ou plusieurs commandes de type INFO.
+
+![035](../images/035.png)
+
+Le fichier à importer doit être de type Excel ou CSV et doit comporter au moins les 3 colonnnes suivantes (les autres seront ignorées):
+
+* id : ID de la commande
+* datetime: datetime de la donnée historique sous le format AAAA-MM-JJ HH:MM:SS (le format datetime interne à Excel est également supporté)
+* value: valeur à importer
+
+Noter que les données extraites des modules Monitor or Restore sont au bon format.
+
+![034](../images/034.png)
+
+La première action à effectuer est de sélectionner le fichier contenant les données.
+
+![036](../images/036.png)
+
+Après chargement, les données historique du fichier sont chargées. 
+
+Les données de la commande INFO sont extraites de Jeedom.
+
+Un contrôle est effectué et les données en erreur sont détectées.
+
+![037](../images/037.png)
+
+Il est possible d'affecter les lignes chargées à une autre commande en sélectionnant la ou les lignes concernées et cliquant sur le bouton "Changer Commande".
+
+![038](../images/038.png)
+
+Pour importer les données historique dans Jeedom, il faut sélectionner la ou les lignes concernées (ici filtre sur une plage de dates) et cliquer sur le bouton "Importer". Les lignes en erreur sont ignorées.
+
+![039](../images/039.png)
+
+Noter que l'import est réalisé par la méthode standard cmd::addHistoryValue. Aussi ce sont les contrôles et traitements standard de Jeedom qui sont effectués. Les nouvelles entrées se retrouvent dans la table history.
+
 # Le module Restore
+
+Le module Restore permet d'extraire les données historique depuis une archive standard Jeedom et de les exporter afin de pouvoir les importer avec le module Import de archiplus.
+
+Tous les traitements s'effectuent en local sur le navigateur WEB. L'ensemble des commandes et données historique sont chargées dans la mémoire du navigateur. Le programme a été testé avec 1.5 million de lignes dans history plus historyArch. Le nombre maximum de données chargées dépend de la RAM allouée au navigateur et ne peut pas être connue à priori. Il devrait cependant être capable de charger la plupart des installations où l'historique n'a pas explosé.
+
+![040](../images/040.png)
+
+La première étape est de rapatrier la sauvegarde en local sur l'ordinateur. Voir la documentation suivante pour la gestion des sauvegardes Jeedom [ici](https://doc.jeedom.com/fr_FR/core/4.5/backup).
+
+![041](../images/041.png)
+
+Sélectionner l'archive que vous souhaitez utiliser.
+
+![042](../images/042.png)
+
+Après quelques secondes, les commandes avec un historique sont affichées.
+
+![043](../images/043.png)
+
+Vous pouvez sélectionner les commandes qui vous intéressent et lancer l'export.
+
+![044](../images/044.png)
+
+Vous pouvez également afficher les données historique concernées et sélectionner celles à exporter.
+
+![045](../images/045.png)
+
+Dans les 2 cas, vous retrouvez un export que vous pouvez utiliser pour réaliser un import avec le module Import.
 
 # FAQ
 
