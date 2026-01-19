@@ -1,5 +1,5 @@
 <!--  
-  Last Modified : 2026/01/18 16:41:12
+  Last Modified : 2026/01/19 09:15:24
 -->
 - [La gestion des historiques dans Jeedom](#la-gestion-des-historiques-dans-jeedom)
   - [Fonctionnement](#fonctionnement)
@@ -51,9 +51,9 @@
 
 La fonction principale du plugin est de fournir un ensemble complets d'outils permettant:
 
-*   **de gérer les paramètres d'archivage des commandes de type info**
+*   **de gérer les paramètres d'archivage des commandes de type INFO**
 *   **de visualiser les volumes de données et de détecter les anomalies**
-*   **d'insérer facilement des données historique à partir de fichiers de type excel**
+*   **d'insérer facilement des données historique à partir de fichiers de type Excel**
 *   **de récupérer les historiques à partir des archives Jeedom**
 *   **d'étendre les options d'archivage standard de Jeedom**
 
@@ -189,9 +189,9 @@ Les modules sont lancés à partir de la configuration du plugin.
 
 ![005](../images/005.png)
 
-La base de l'interface est une table Tabulator remplie avec les données pertinentes.
+La base de l'interface est un tableau Tabulator rempli avec les données pertinentes.
 
-Par exemple, avec le module Monitor, une table est affichée avec les commandes de type INFO ayant la fonction historique activée.
+Par exemple, avec le module Monitor, un tableau est affiché avec les commandes de type INFO ayant la fonction historique activée.
 
 L'écran comporte plusieurs parties.
 
@@ -209,7 +209,7 @@ Les boutons ci-dessus sont communs à tous les modules et permettent:
 * d'aller à la première ou à la dernière ligne du tableau
 * d'annuler les filtres qui ont été activés
 * de revenir au tri initial
-* d'exporter les données sélectionnées 
+* d'exporter les données affichées dans le tableau (unqiuement les données filtrées)
 * de revenir aux différents modules proposés par archiplus
 
 ![019](../images/019.png)
@@ -368,7 +368,7 @@ Dans Jeedom, on peut préciser l'arrondi pour chaque commande. Le plugin permet 
 
 ![026](../images/026.png)
 
-En faisant un clic droit n'importe où sur une ligne de la table, on fait apparaître le menu contextuel de la commande. En plus des actions déjà vues, celui-ci permet:
+En faisant un clic droit n'importe où sur une ligne du tableau, on fait apparaître le menu contextuel de la commande. En plus des actions déjà vues, celui-ci permet:
 
 * d'afficher l'historique sous forme de graphique  (appel de la fonction standard de Jeedom)
 * d'afficher les données stockées dans les tables history et historyArch
@@ -472,7 +472,7 @@ La première étape est de rapatrier la sauvegarde en local sur l'ordinateur. Vo
 
 ![041](../images/041.png)
 
-Sélectionner l'archive que vous souhaitez utiliser.
+Lancer le module Restore et sélectionnez l'archive que vous souhaitez utiliser.
 
 ![042](../images/042.png)
 
