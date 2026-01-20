@@ -1,5 +1,5 @@
 <!--  
-  Last Modified : 2026/01/19 09:15:24
+  Last Modified : 2026/01/20 18:38:33
 -->
 - [La gestion des historiques dans Jeedom](#la-gestion-des-historiques-dans-jeedom)
   - [Fonctionnement](#fonctionnement)
@@ -494,9 +494,60 @@ Dans les 2 cas, vous retrouvez un export que vous pouvez utiliser pour réaliser
 
 ## Keep Last Value
 
+Dans certains cas, il est nécessaire de disposer de la dernière valeur de la commande INFO.
+
+![046](../images/046.png)
+
+Prenons le cas d'une chaudière dont dont on relève périodiquement le compteur de gaz affecté au chauffage. 
+
+![047](../images/047.png)
+
+Un scenario exécuté chaque heure permet de calculer la consommation horaire en faisant la différence entre la valeur dans l'historique au début et la fin de l'heure. Pour ce faire, un historique d'une journée est suffisant pour la commande INFO du compteur de chauffage.
+
+Cependant, quand la saison de chauffe se termine, l'historique du compteur de chauffage a disparu et n'est plus disponible pour calculer la première consommation horaire lors de la première chauffe de la saison suivante.
+
+L'activation de l'option Keep Last Value permet de pallier ce problème sans devoir recourir à des artifices de programation ou garder un historique sur une année.
+
 ## Uniq
 
+Jeedom permet d'éviter les doublons dans la table history avec l'option "Répéter les valeurs identiques" qui est désactivée par défaut.
+
+Il y a cependant plusieurs situations dans lesquelles les valeurs consécutives identiques ne sont pas ignorées:
+
+  * si le sous-type de la commande est Binaire ou Autre
+  * si la mise à jour est effectuée avec la méthode cmd::event et non eqlogic::checkAndUpdateCmd. De nombreux plugins fonctionnent encore avec la méthode cmd::event qui est plus ancienne et de ce fait n'éliminent pas les doublons.
+
+Lors de l'archivage, si il n'y a pas de lissage, les données de history sont transférées directement dans historyArch et les doublons sont donc copiés.
+
+L'activation de l'option Uniq permet de supprimer les doublons dans l'archivage spécifique de archiplus.
+
 ## Délai et Cadrage
+
+En standard, le moment à partir duquel on supprime les données dans history et historyArch est défini par le paramètre "Purger historique" exprimé en heures. Une valeur par défaut est définie dans la configuration globale de Jeedom.
+
+Ainsi, avec une purge définie à 7 jours, si l'archivage est lancé le 20/01/2025 à 05:11:21, les enregistrements history et historyArch seront supprimées jusqu'au 03/01/2025 à 05:11:21. 
+
+Le paramètre Cadrage spécifique à archiplus permet de fixer plus précisément le moment de la purge. Ainsi, dans l'exemple ci-dessus, le moment de la purge sera:
+
+* le 13/01/2025 à 05:11:21 si aucun cadrage n'est défini
+* le 13/01/2025 à 05:11:00 avec un cadrage sur la dernière minute
+* le 13/01/2025 à 05:00:00 avec un cadrage sur la dernière heure
+* le 13/01/2025 à 00:00:00 avec un cadrage sur le dernier jour
+
+Le "Délai avant archivage" (en heure) permet de déterminer à partir de quel moment les enregistrements de history sont transférés vers historyArch (avec ou sans consolidation). En standard, il est défini de façon globale et est donc identique pour toutes les commandes. 
+
+L'archivage spécifique de archiplus permet de définir un délai spécifique pour chaque commande INFO et d'utiliser le cadrage vu ci-dessus. Ainsi avec un délai de 2 heures, le moment de transfert de history vers historyArch sera:
+
+* le 20/01/2025 à 03:11:21 si aucun cadrage n'est défini
+* le 20/01/2025 à 03:11:00 avec un cadrage sur la dernière minute
+* le 20/01/2025 à 03:00:00 avec un cadrage sur la dernière heure
+* le 20/01/2025 à 00:00:00 avec un cadrage sur le dernier jour, ici quelque soit l'heure dans la journée.
+
+Noter que le moment de la purge ne peut pas être postérieur au moment du transfert de history vers historyArch et sera donc ajusté automatiquement.
+
+![048](../images/048.png)
+
+On peut jouer sur ces paramètres si on souhaite par exemple un historique détaillé sur une courte période (ici 36 heures maxi) sans besoin d'un archivage consolidé. On évite ainsi le transfert de history vers historyArch qui n'apporte rien.
 
 ## Lissage et pondération
 
