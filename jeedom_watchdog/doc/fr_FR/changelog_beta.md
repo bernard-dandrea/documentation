@@ -3,6 +3,10 @@
 -->
 # Changelog plugin Watchdog
 
+** BETA
+
+* Ne modifie pas l'affichage du nom du controle sur le widget
+
 **Version 2026-01-01**
 
 * Déplacement de la documentation dans un repository github séparé afin de pouvoir mettre à jour la documentation sans générer un update du plugin
