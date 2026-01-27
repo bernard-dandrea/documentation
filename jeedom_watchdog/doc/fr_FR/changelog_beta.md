@@ -3,7 +3,7 @@
 -->
 # Changelog plugin Watchdog
 
-** BETA
+**Version 2026-01-27**
 
 * Ne modifie pas l'affichage du nom du controle sur le widget
 
