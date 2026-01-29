@@ -1,5 +1,5 @@
 <!--  
-  Last Modified : 2026/01/28 18:58:29
+  Last Modified : 2026/01/29 09:46:40
 -->
 - [La gestion des historiques dans Jeedom](#la-gestion-des-historiques-dans-jeedom)
   - [Fonctionnement](#fonctionnement)
@@ -504,7 +504,7 @@ Prenons le cas d'une chaudière dont dont on relève périodiquement le compteur
 
 Un scenario exécuté chaque heure permet de calculer la consommation horaire en faisant la différence entre la valeur dans l'historique au début et la fin de l'heure. Pour ce faire, un historique d'une journée est suffisant.
 
-Cependant, quand la saison de chauffe se termine, l'historique du compteur de chauffage a disparu et il n'est plus disponible pour calculer la première consommation horaire lors de la première chauffe de la saison suivante.
+Cependant, quand la saison de chauffe est terminée, l'historique du compteur de chauffage a disparu et il n'est plus disponible pour calculer la première consommation horaire lors de la première chauffe de la saison suivante.
 
 L'activation de l'option Keep Last Value permet de pallier ce problème sans devoir recourir à des artifices de programmation ou garder un historique sur une année.
 
@@ -541,7 +541,7 @@ L'archivage spécifique de archiplus permet de définir un délai spécifique po
 * le 20/01/2025 à 03:11:21 si aucun cadrage n'est défini
 * le 20/01/2025 à 03:11:00 avec un cadrage sur la dernière minute
 * le 20/01/2025 à 03:00:00 avec un cadrage sur la dernière heure
-* le 20/01/2025 à 00:00:00 avec un cadrage sur le dernier jour, ici quelque soit l'heure dans la journée où l'archivage est lancé
+* le 20/01/2025 à 00:00:00 avec un cadrage sur le dernier jour, ici quelle que soit l'heure dans la journée où l'archivage est lancé
 
 Noter que le moment de la purge ne peut pas être postérieur au moment du transfert de history vers historyArch et sera donc ajusté automatiquement.
 
@@ -551,7 +551,7 @@ On peut jouer sur ces paramètres si on souhaite par exemple un historique déta
 
 ## Lissage et pondération
 
-Le lissage intervient lors de la copie des données de history vers historyArch. Le processus d'archivage considére toutes les données de history selon l'intervalle défini (par défaut une heure) et conserve une seule valeur calculée selon le mode de lissage. Trois modes sont possible:
+Le lissage intervient lors de la copie des données de history vers historyArch. Le processus d'archivage considére toutes les données de history selon l'intervalle défini (par défaut une heure) et conserve une seule valeur calculée selon le mode de lissage. Trois modes sont possibles:
 
 * minimum: la plus petite des valeurs contenues dans l'intervalle
 * maximum: la plus grande des valeurs contenues dans l'intervalle
@@ -569,7 +569,7 @@ Considérons deux commandes avec les configurations suivantes.
 
 ![049](../images/049.png)
 
-Elles ont les mêmes valeurs entrées dans history
+Elles ont les mêmes entrées dans la table history
 
 ![051](../images/051.png)
 
@@ -597,19 +597,19 @@ Pour une batterie, conserver une valeur par jour sur une longue durée peut êtr
 
 ![056](../images/056.png)
 
-Pour un thermometre, une valeur tous les quarts d'heure peut être plus utile qu'une valeur par heure.
+Pour un thermomètre, une valeur tous les quarts d'heure peut être plus utile qu'une valeur par heure.
 
-Pour indiquer des minutes, entrer dans la zone le nombre de minutes souhaité suivi de m, par exemple 15m.
+Pour indiquer des minutes, entrer dans la zone Pack le nombre de minutes souhaitées suivi de m, par exemple 15m.
 
 ## Arrondi
 
 En standard, Jeedom permet de préciser le nombre de décimales d'une valeur de commande INFO. 
 
-Pour certaines commandes, il peut être inteéressant d'avoir une valeur précise sur une courte période puis moins précise ultérieurement. Par exemple, la connaissance d'une température extérieure précise est intéressante sur le moment mais n'est plus nécessaire après plusieurs jours.
+Pour certaines commandes, il peut être intéressant d'avoir une valeur précise sur une courte période puis moins précise ultérieurement. Par exemple, la connaissance d'une température extérieure précise est intéressante sur le moment mais n'est plus nécessaire après plusieurs jours.
 
 ![064](../images/064.png)
 
-En laissant l'arrondi standard (2 décimales) et précisant un arrondi de zéro décimale après archivage on peut réduire le nombre d'enregistrements dans historyArch. 
+En laissant l'arrondi standard (2 décimales) et précisant un arrondi de zéro décimale après archivage, on peut réduire le nombre d'enregistrements dans historyArch. 
 
 Noter que cela est pris en compte uniquement si il y a lissage, dans le cas contraire les données de history sont transférées vers historyArch sans modification.
 
@@ -625,7 +625,7 @@ Par exemple, pour cette commande, un historique par intervalle de 10 minutes ser
 
 ![059](../images/059.png)
 
-Après avoir modifier le paramétrage, on peut transférer les entrées de historyArch vers history.
+Après avoir modifié le paramétrage, on peut transférer les entrées de historyArch vers history.
 
 ![061](../images/061.png)
 
@@ -635,7 +635,7 @@ Une fois cette mise à jour effectuée, on peut lancer un archivage sur cette co
 
 ![062](../images/062.png)
 
-Après archivage, le nombre d'enregistrement est fortement réduit et l'affichage de l'historique est beaucoup plus rapide.
+Après archivage, le nombre d'enregistrements est fortement réduit et l'affichage de l'historique est beaucoup plus rapide.
 
 ## Utiliser archiplus en PHP
 
@@ -647,7 +647,7 @@ Ici, les fonctions archiplus sont utilisées dans un scénario pour charger l'hi
 
 `require_once dirname(__FILE__) . '../../../plugins/archiplus/core/class/archiplus.class.php';`
 
-Cette ligne permet de charger le code des fonctions archiplus. Il peut être nécessaire d'apater le chemin pour pointer sur la classe du plugin.
+Cette ligne permet de charger le code des fonctions archiplus. Il peut être nécessaire d'adapter le chemin pour pointer sur la classe du plugin.
 
 Les fonctions utilisables peuvent être trouvées dans le code de la classe archiplus. Les principales sont:
 
