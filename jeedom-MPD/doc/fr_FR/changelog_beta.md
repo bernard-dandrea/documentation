@@ -1,5 +1,9 @@
 # Changelog plugin MPD
 
+# BETA
+
+- suppression des appels à jQuery
+
 # 01/01/2026
 
 - correction warnings PHP
