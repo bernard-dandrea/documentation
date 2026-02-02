@@ -1,5 +1,10 @@
 # Changelog plugin MPD
 
+# 02/02/2026
+
+- suppression des appels à jQuery
+- traduction dans les langages supportés par Jeedom (merci à @mips)
+
 # 01/01/2026
 
 - correction warnings PHP
