@@ -4,6 +4,7 @@
 
 - suppression des appels à jQuery
 - traduction dans les langages supportés par Jeedom (merci à @mips)
+- version minimale de Jeedom 4.5.0
 
 # 01/01/2026
 
