@@ -1,5 +1,9 @@
 # MPD Plugin Changelog
 
+# 03/02/2026
+
+- translations modification
+
 # 02/02/2026
 
 - Removal of jQuery calls  
