@@ -1,5 +1,5 @@
 <!--  
-  Last Modified : 2026/01/29 09:46:40
+  Last Modified : 2026/02/04 17:30:40
 -->
 - [La gestion des historiques dans Jeedom](#la-gestion-des-historiques-dans-jeedom)
   - [Fonctionnement](#fonctionnement)
@@ -162,6 +162,7 @@ Noter que les demandes de support devront se faire via le bouton **Assistance**.
 Dans la section configuration, vous pouvez:
 
 * Activer l'archivage spécifique (désactivé par défaut)
+* Indiquer si les enregistrements dans history et historyArch doivent être supprimés dans le cas où la commande concernée n'existe pas
 * Définir le format pour les exports
 * Définir le cadrage par défaut pour les dates de purge et de fin d'archivage
 
