@@ -1,5 +1,5 @@
 <!--  
-  Last Modified : 2026/02/04 17:30:40
+  Last Modified : 2026/02/06 19:44:13
 -->
 - [La gestion des historiques dans Jeedom](#la-gestion-des-historiques-dans-jeedom)
   - [Fonctionnement](#fonctionnement)
@@ -46,6 +46,7 @@
   - [Arrondi](#arrondi-1)
   - [Copier les données de historyArch vers history](#copier-les-données-de-historyarch-vers-history)
   - [Utiliser archiplus en PHP](#utiliser-archiplus-en-php)
+  - [Traduction](#traduction)
 
 
 
@@ -658,3 +659,9 @@ Les fonctions utilisables peuvent être trouvées dans le code de la classe arch
 * `historyArch2history($_cmd_id, $_date_start = '', $_date_end = '')` : transfert les enregistrements de historyArch vers history
   
 Il est évidemment possible d'utiliser les fonctions disponibles dans la classe history.class.php après avoir fait la déclaration `require_once` nécessaire.
+
+## Traduction
+
+L'interface et les messages envoyés dans les logs sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation). Si des erreurs de traductions sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).
+
+La documentation du plugin est traduite uniquement en anglais (les autres langues renvoient vers la traduction anglaise). La traduction est faite via un traducteur automatique. Par contre, les copies écrans ne sont pas traduites. 
