@@ -86,6 +86,12 @@ The scenario above, triggered by a change of state of #[None][Cube][side]#, allo
 
 The scenario above, triggered by a change of state of #[None][Cube][Button]#, allows stopping and restarting the song by shaking the Mi Cube.
 
+# Translation
+
+The interface and the messages sent to the logs are translated into the 5 languages supported by Jeedom (thanks to @mips for the ga-translation development). If translation errors are found, you can open a support request and, if possible, attach the corrected translation file (located in the `core/i18n` directory of the plugin).
+
+The plugin documentation is only translated into English (other languages redirect to the English version). The translation is done via an automatic translator. However, screenshots are not translated.
+
 # Review
 
 ![MPD_avis](../images/MPD_avis.png)
