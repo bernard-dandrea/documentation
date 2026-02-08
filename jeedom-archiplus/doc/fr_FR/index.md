@@ -1,5 +1,5 @@
 <!--  
-  Last Modified : 2026/02/06 19:44:13
+  Last Modified : 2026/02/08 18:38:40
 -->
 - [La gestion des historiques dans Jeedom](#la-gestion-des-historiques-dans-jeedom)
   - [Fonctionnement](#fonctionnement)
@@ -46,7 +46,8 @@
   - [Arrondi](#arrondi-1)
   - [Copier les données de historyArch vers history](#copier-les-données-de-historyarch-vers-history)
   - [Utiliser archiplus en PHP](#utiliser-archiplus-en-php)
-  - [Traduction](#traduction)
+- [Traduction](#traduction)
+- [Avis](#avis)
 
 
 
@@ -611,9 +612,15 @@ Pour certaines commandes, il peut être intéressant d'avoir une valeur précise
 
 ![064](../images/064.png)
 
-En laissant l'arrondi standard (2 décimales) et précisant un arrondi de zéro décimale après archivage, on peut réduire le nombre d'enregistrements dans historyArch. 
+La commande ci-dessus est configurée pour conserver un historique avec 1 décimale pendant une semaine et un historique sans décimale au delà.
 
-Noter que cela est pris en compte uniquement si il y a lissage, dans le cas contraire les données de history sont transférées vers historyArch sans modification.
+![065](../images/065.png)
+
+Avant archivage, on a 6 entrées dans l'historique entre 7.7 °C et 8.3 °C.
+
+![066](../images/066.png)
+
+Après archivage, les 6 entrées sont arrondies à 8 °C et l'option Uniq permet d'en conserver une seule.
 
 ## Copier les données de historyArch vers history
 
@@ -660,8 +667,14 @@ Les fonctions utilisables peuvent être trouvées dans le code de la classe arch
   
 Il est évidemment possible d'utiliser les fonctions disponibles dans la classe history.class.php après avoir fait la déclaration `require_once` nécessaire.
 
-## Traduction
+# Traduction
 
-L'interface et les messages envoyés dans les logs sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation). Si des erreurs de traductions sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).
+L'interface et les messages envoyés dans les logs sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation). Si des erreurs de traduction sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).
 
 La documentation du plugin est traduite uniquement en anglais (les autres langues renvoient vers la traduction anglaise). La traduction est faite via un traducteur automatique. Par contre, les copies écrans ne sont pas traduites. 
+
+# Avis
+
+![archiplus_avis](../images/archiplus_avis.png)
+
+Si vous appréciez ce plugin, merci de laisser une évaluation et un commentaire sur le Jeedom market, ça fait toujours plaisir: <https://jeedom.com/market/index.php?v=d&p=market_display&id=xxxx#>
