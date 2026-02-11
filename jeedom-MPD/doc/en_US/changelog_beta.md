@@ -1,8 +1,12 @@
 # MPD Plugin Changelog
 
+# BETA
+
+- translation modifications
+
 # 03/02/2026
 
-- translations modification
+- translation modifications
 
 # 02/02/2026
 
