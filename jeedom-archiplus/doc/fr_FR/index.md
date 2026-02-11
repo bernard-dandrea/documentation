@@ -1,5 +1,5 @@
 <!--  
-  Last Modified : 2026/02/08 18:38:40
+  Last Modified : 2026/02/11 18:30:21
 -->
 - [La gestion des historiques dans Jeedom](#la-gestion-des-historiques-dans-jeedom)
   - [Fonctionnement](#fonctionnement)
@@ -616,11 +616,11 @@ La commande ci-dessus est configurée pour conserver un historique avec 1 décim
 
 ![065](../images/065.png)
 
-Avant archivage, on a 6 entrées dans l'historique entre 7.7 °C et 8.3 °C.
+Avant archivage, on a 7 entrées dans l'historique entre 7.7 °C et 8.3 °C.
 
 ![066](../images/066.png)
 
-Après archivage, les 6 entrées sont arrondies à 8 °C et l'option Uniq permet d'en conserver une seule.
+Après archivage, les 7 entrées sont arrondies à 8 °C et l'option Uniq permet d'en conserver une seule.
 
 ## Copier les données de historyArch vers history
 
