@@ -1,5 +1,5 @@
 <!--  
-  Last Modified : 2026/02/13 13:58:18
+  Last Modified : 2026/02/13 14:12:53
 -->
 - [La gestion des historiques dans Jeedom](#la-gestion-des-historiques-dans-jeedom)
   - [Fonctionnement](#fonctionnement)
@@ -14,7 +14,7 @@
 - [Accès aux modules](#accès-aux-modules)
   - [Les boutons de commandes](#les-boutons-de-commandes)
   - [La colonne de sélection des lignes](#la-colonne-de-sélection-des-lignes)
-  - [Les en-têtess de colonne](#les-en-têtess-de-colonne)
+  - [Les en-têtes de colonne](#les-en-têtes-de-colonne)
   - [Les lignes](#les-lignes)
   - [Les totaux de bas de tableau](#les-totaux-de-bas-de-tableau)
 - [le module Monitor](#le-module-monitor)
@@ -22,7 +22,7 @@
   - [Visualisation](#visualisation)
   - [Modifications](#modifications)
   - [Données modifiables](#données-modifiables)
-    - [KLV (Keep Last Value):](#klv-keep-last-value)
+    - [KLV (Keep Last Value)](#klv-keep-last-value)
     - [Uniq](#uniq)
     - [Délai](#délai)
     - [Cadrage](#cadrage)
@@ -90,13 +90,13 @@ Le plugin archiplus donne immédiatement les volumes de history et historyArch e
 
 ## Les limites de l'archivage dans Jeedom
 
-Bien que dans de nombreuses installations, le fonctionnement standard sera suffisant, on peut relever les limitations suivantes:
+Bien que dans de nombreuses installations, le fonctionnement standard sera suffisant, on peut relever les limitations suivantes :
 
-* Difficulté à visualiser et modifier les paramètres d'archivage: le seul outil disponible (menu Analyse / Historique puis Configuration) est très lent, peu pratique et présente peu de champs à configurer
-* Difficulté pour visualiser les volumes d'historique par commande et repérer les volumes anormaux: il faut passer par des requêtes SQL et des processus peu pratiques 
+* Difficulté à visualiser et modifier les paramètres d'archivage : le seul outil disponible (menu Analyse / Historique puis Configuration) est très lent, peu pratique et présente peu de champs à configurer
+* Difficulté pour visualiser les volumes d'historique par commande et repérer les volumes anormaux : il faut passer par des requêtes SQL et des processus peu pratiques 
 * Paramètres pour le regroupement de données dans historyArch défini de façon globale et non personnalisable par commande
 * Pas de visibilité concernant le processus d'archivage (pas de log)
-* Archivage global: pas de possibilité de lancer l'archivage pour une commande spécifique
+* Archivage global : pas de possibilité de lancer l'archivage pour une commande spécifique
 * Lissage par moyenne approximatif
 * Outils basiques pour exporter/importer les données (plugin dataexport). Rien n'est proposé pour restaurer les données d'historique contenues dans les sauvegardes.
 
@@ -180,9 +180,9 @@ A partir du menu Plugins / Monitoring / archiplus, vous avez accès à la totali
 
 * Configuration du plugin (voir ci-dessus)
 * Accès aux paramètres globaux du paramétrage de l'archivage
-* Monitoring: visualiser et modifier le paramétrage et  réaliser les principales opérations concernant l'archivage
-* Import: importer des données historiques à partir d'un fichier de type Excel
-* Restore: extraire les données historiques à partir d'une archive standard Jeedom
+* Monitoring : visualiser et modifier le paramétrage et  réaliser les principales opérations concernant l'archivage
+* Import : importer des données historiques à partir d'un fichier de type Excel
+* Restore : extraire les données historiques à partir d'une archive standard Jeedom
 
 La visualisation des données historiques est accessible à partir du module Monitoring et Restore.
 
@@ -206,7 +206,7 @@ Les boutons permettent des actions globales concernant l'affichage, les lignes s
 
 ![013](../images/013.png)
 
-Les boutons ci-dessus sont communs à tous les modules et permettent:
+Les boutons ci-dessus sont communs à tous les modules et permettent :
 
 * d'afficher le fichier log de archiplus
 * d'aller à la première ou à la dernière ligne du tableau
@@ -231,11 +231,11 @@ On peut sélectionner chaque ligne individuellement en cliquant sur la case à c
 
 On peut sélectionner aussi une suite de lignes en cliquant sur la première à sélectionner puis en cliquant sur la dernière en maintenant la touche MAJ enfoncée.
 
-## Les en-têtess de colonne
+## Les en-têtes de colonne
 
 ![008](../images/008.png)
 
-Les en-têtess de colonne décrivent le contenu des cellules situées dans la colonne.
+Les en-têtes de colonne décrivent le contenu des cellules situées dans la colonne.
 
 Elles permettent :
 
@@ -339,7 +339,7 @@ L'ensemble des données de paramètrage de l'historique standard de Jeedom et ce
 
 Ci-dessous sont détaillées les options spécifiques à archiplus:
 
-### KLV (Keep Last Value): 
+### KLV (Keep Last Value) 
 
 Permet de toujours conserver au moins un enregistrement dans l'historique. Voir la FAQ suivante pour comprendre l'utilisation de cette option [Keep Last Value](#keep-last-value).
 
@@ -349,7 +349,7 @@ Permet de supprimer les valeurs consécutives identiques dans historyArch. Voir 
 
 ### Délai
 
-Il s'agit du délai à partir duquel on transfert les enregistrements de history vers historyArch. En standard dans Jeedom, ce paramètre est le même pour toutes les commandes. Avec archiplus, ce délai peut être spécifié par commande.
+Il s'agit du délai à partir duquel on transfère les enregistrements de history vers historyArch. En standard dans Jeedom, ce paramètre est le même pour toutes les commandes. Avec archiplus, ce délai peut être spécifié par commande.
 
 ### Cadrage 
 
@@ -371,7 +371,7 @@ En standard dans Jeedom, on peut préciser l'arrondi pour chaque commande. Le pl
 
 ![026](../images/026.png)
 
-En faisant un clic droit n'importe où sur une ligne du tableau, on fait apparaître le menu contextuel de la commande. En plus des actions déjà vues, celui-ci permet:
+En faisant un clic droit n'importe où sur une ligne du tableau, on fait apparaître le menu contextuel de la commande. En plus des actions déjà vues, celui-ci permet :
 
 * d'afficher l'historique sous forme de graphique  (appel de la fonction standard de Jeedom)
 * d'afficher les données stockées dans les tables history et historyArch
@@ -379,7 +379,7 @@ En faisant un clic droit n'importe où sur une ligne du tableau, on fait appara�
 * d'exporter les données historiques au format CSV (appel de la fonction standard de Jeedom)
 * de mettre à jour les statistiques pour la ligne concernée
 * de lancer l'archivage uniquement pour la commande concernée
-* de copier les données de historyArch vers history:  Voir la FAQ suivante pour comprendre l'utilisation de cette action  [historyArch vers history](#copier-les-données-de-historyarch-vers-history)
+* de copier les données de historyArch vers history : Voir la FAQ suivante pour comprendre l'utilisation de cette action  [historyArch vers history](#copier-les-données-de-historyarch-vers-history)
 * de copier l'historique de la commande sélectionnée vers une autre commande
 
 # Données historiques
@@ -388,7 +388,7 @@ En faisant un clic droit n'importe où sur une ligne du tableau, on fait appara�
 
 ![027](../images/027.png)
 
-L'accès aux données dans les tables history et historyArch se fait via:
+L'accès aux données dans les tables history et historyArch se fait via :
 
 * le menu contextuel de Monitor (voir plus haut)
 * la sélection de une ou plusieurs lignes suivi de l'appui sur le bouton Data.
@@ -434,8 +434,8 @@ Le module Import permet d'importer des données historiques dans une ou plusieur
 Le fichier à importer doit être de type Excel ou CSV et doit comporter au moins les 3 colonnnes suivantes (les autres seront ignorées):
 
 * id : ID de la commande
-* datetime: datetime de la donnée historique sous le format AAAA-MM-JJ HH:MM:SS (le format datetime interne à Excel est également supporté)
-* value: valeur à importer
+* datetime : datetime de la donnée historique sous le format AAAA-MM-JJ HH:MM:SS (le format datetime interne à Excel est également supporté)
+* value : valeur à importer
 
 Noter que les données extraites des modules Monitor ou Restore sont au bon format.
 
@@ -467,7 +467,7 @@ Noter que l'import est réalisé par la méthode standard cmd::addHistoryValue. 
 
 Le module Restore permet d'extraire les données historiques depuis une archive standard Jeedom et de les exporter afin de pouvoir les importer avec le module Import.
 
-Tous les traitements s'effectuent en local sur le navigateur WEB. L'ensemble des commandes et données historiques sont chargées dans la mémoire du navigateur. Le programme a été testé avec 1.5 million de lignes dans history plus historyArch. Le nombre maximum de données chargées dépend de la RAM allouée au navigateur et ne peut pas être connue à priori. Il devrait cependant être capable de charger la plupart des sauvegardes où l'historique n'a pas explosé.
+Tous les traitements s'effectuent en local sur le navigateur WEB. L'ensemble des commandes et données historiques sont chargées dans la mémoire du navigateur. Le programme a été testé avec 1.5 million de lignes dans history plus historyArch. Le nombre maximum de données chargées dépend de la RAM allouée au navigateur et ne peut pas être connu à priori. Il devrait cependant être capable de charger la plupart des sauvegardes où l'historique n'a pas explosé.
 
 ![040](../images/040.png)
 
@@ -515,7 +515,7 @@ L'activation de l'option Keep Last Value permet de pallier ce problème sans dev
 
 Jeedom permet d'éviter les doublons dans la table history avec l'option "Répéter les valeurs identiques" qui est désactivée par défaut.
 
-Il y a cependant plusieurs situations dans lesquelles les valeurs consécutives identiques ne sont pas ignorées:
+Il y a cependant plusieurs situations dans lesquelles les valeurs consécutives identiques ne sont pas ignorées :
 
   * si le sous-type de la commande est Binaire ou Autre
   * si la mise à jour est effectuée avec la méthode cmd::event et non eqLogic::checkAndUpdateCmd. De nombreux plugins fonctionnent encore avec la méthode cmd::event qui est plus ancienne et de ce fait n'éliminent pas les doublons.
@@ -530,7 +530,7 @@ En standard, le moment à partir duquel on supprime les données dans history et
 
 Ainsi, avec une purge définie à 7 jours, si l'archivage est lancé le 20/01/2025 à 05:11:21, les enregistrements history et historyArch seront supprimés jusqu'au 13/01/2025 à 05:11:21. 
 
-Le paramètre Cadrage spécifique à archiplus permet de fixer plus précisément le moment de la purge. Ainsi, dans l'exemple ci-dessus, le moment de la purge sera:
+Le paramètre Cadrage spécifique à archiplus permet de fixer plus précisément le moment de la purge. Ainsi, dans l'exemple ci-dessus, le moment de la purge sera :
 
 * le 13/01/2025 à 05:11:21 si aucun cadrage n'est défini
 * le 13/01/2025 à 05:11:00 avec un cadrage sur la dernière minute
@@ -539,7 +539,7 @@ Le paramètre Cadrage spécifique à archiplus permet de fixer plus précisémen
 
 Le "Délai avant archivage" (en heure) permet de déterminer à partir de quel moment les enregistrements de history sont transférés vers historyArch (avec ou sans consolidation). En standard, il est défini de façon globale et est donc identique pour toutes les commandes. 
 
-L'archivage spécifique de archiplus permet de définir un délai spécifique pour chaque commande INFO et d'utiliser le cadrage vu ci-dessus. Ainsi avec un délai de 2 heures, le moment de transfert de history vers historyArch sera:
+L'archivage spécifique de archiplus permet de définir un délai spécifique pour chaque commande INFO et d'utiliser le cadrage vu ci-dessus. Ainsi avec un délai de 2 heures, le moment de transfert de history vers historyArch sera :
 
 * le 20/01/2025 à 03:11:21 si aucun cadrage n'est défini
 * le 20/01/2025 à 03:11:00 avec un cadrage sur la dernière minute
@@ -554,11 +554,11 @@ On peut jouer sur ces paramètres si on souhaite par exemple un historique déta
 
 ## Lissage et pondération
 
-Le lissage intervient lors de la copie des données de history vers historyArch. Le processus d'archivage considère toutes les données de history selon l'intervalle défini (par défaut une heure) et conserve une seule valeur calculée selon le mode de lissage. Trois modes sont possibles:
+Le lissage intervient lors de la copie des données de history vers historyArch. Le processus d'archivage considère toutes les données de history selon l'intervalle défini (par défaut une heure) et conserve une seule valeur calculée selon le mode de lissage. Trois modes sont possibles :
 
-* minimum: la plus petite des valeurs contenues dans l'intervalle
-* maximum: la plus grande des valeurs contenues dans l'intervalle
-* moyenne: la moyenne des valeurs contenues dans l'intervalle
+* minimum : la plus petite des valeurs contenues dans l'intervalle
+* maximum : la plus grande des valeurs contenues dans l'intervalle
+* moyenne : la moyenne des valeurs contenues dans l'intervalle
 
 Il faut noter que l'archivage standard ne tient pas compte de la valeur de la commande au début de l'intervalle et fait une moyenne des valeurs présentes dans l'intervalle, ce qui peut fausser significativement le résultat. 
 
@@ -658,7 +658,7 @@ Ici, les fonctions archiplus sont utilisées dans un scénario pour charger l'hi
 
 Cette ligne permet de charger le code des fonctions archiplus. Il peut être nécessaire d'adapter le chemin pour pointer sur la classe du plugin.
 
-Les fonctions utilisables peuvent être trouvées dans le code de la classe archiplus. Les principales sont:
+Les fonctions utilisables peuvent être trouvées dans le code de la classe archiplus. Les principales sont :
 
 * `archive($_cmd_id = '')` : lance l'archivage pour une commande ou toutes les commandes si il n'y a pas de paramètre
 * `History_purge($_cmd_id, $_date='')` : supprime l'historique pour une commande jusqu'à un datetime déterminé (ou tout l'historique si pas de deuxième paramètre)
@@ -671,10 +671,10 @@ Il est évidemment possible d'utiliser les fonctions disponibles dans la classe 
 
 L'interface et les messages envoyés dans les logs sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation). Si des erreurs de traduction sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).
 
-La documentation du plugin est traduite uniquement en anglais (les autres langues renvoient vers la traduction anglaise). La traduction est faite via un traducteur automatique. Par contre, les captures d'écrans ne sont pas traduites. 
+La documentation du plugin est traduite uniquement en anglais (les autres langues renvoient vers la traduction anglaise). La traduction est faite via un traducteur automatique. Par contre, les captures d'écran ne sont pas traduites. 
 
 # Avis
 
 ![archiplus_avis](../images/archiplus_avis.png)
 
-Si vous appréciez ce plugin, merci de laisser une évaluation et un commentaire sur le Jeedom market, ça fait toujours plaisir: <https://jeedom.com/market/index.php?v=d&p=market_display&id=xxxx#>
+Si vous appréciez ce plugin, merci de laisser une évaluation et un commentaire sur le Jeedom market, ça fait toujours plaisir : <https://jeedom.com/market/index.php?v=d&p=market_display&id=xxxx#>
