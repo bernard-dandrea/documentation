@@ -1,5 +1,5 @@
 <!--  
-  Last Modified : 2026/02/13 14:12:53
+  Last Modified : 2026/02/18 15:01:52
 -->
 - [La gestion des historiques dans Jeedom](#la-gestion-des-historiques-dans-jeedom)
   - [Fonctionnement](#fonctionnement)
@@ -46,6 +46,7 @@
   - [Arrondi](#arrondi-1)
   - [Copier les données de historyArch vers history](#copier-les-données-de-historyarch-vers-history)
   - [Utiliser archiplus en PHP](#utiliser-archiplus-en-php)
+- [Les logs](#les-logs)
 - [Traduction](#traduction)
 - [Avis](#avis)
 
@@ -666,6 +667,22 @@ Les fonctions utilisables peuvent être trouvées dans le code de la classe arch
 * `historyArch2history($_cmd_id, $_date_start = '', $_date_end = '')` : transfert les enregistrements de historyArch vers history
   
 Il est évidemment possible d'utiliser les fonctions disponibles dans la classe history.class.php après avoir fait la déclaration `require_once` nécessaire.
+
+# Les logs
+
+Si le niveau de log dans la configuration du plugin est défini au moins à Info, les différents événements liés à archiplus seront enregistrés dans la log archiplus de Jeedom. On peut y accéder directement avec le bouton log présent dans les différents modules de archiplus.
+
+![068](../images/068.png)
+
+Lors de l'archivage, les paramètres généraux de l'archivage de Jeedom sont affichés.
+
+![067](../images/067.png)
+
+Ensuite, sont détaillées pour chaque commande les opérations réalisées et le nombre d'enregistrements dans history et historyArch avant et après celle-ci.
+
+![069](../images/069.png)
+
+Il est possible d'afficher la log pour une commande en particulier en indiquant sont numéro précédé des caractères - et espace dans la zone de recherche.
 
 # Traduction
 
