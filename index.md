@@ -7,3 +7,4 @@
 * OZW: <https://bernard-dandrea.github.io/documentation/jeedom-OZW/doc/fr_FR/index>
 * watchdog: <https://bernard-dandrea.github.io/documentation/jeedom_watchdog/doc/fr_FR/index>
 * SNMP3: <https://bernard-dandrea.github.io/documentation/jeedom-SNMP3/doc/fr_FR/index>
+* archiplus: <https://bernard-dandrea.github.io/documentation/jeedom-archiplus/doc/fr_FR/index>
