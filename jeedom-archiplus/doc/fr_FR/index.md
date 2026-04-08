@@ -1,5 +1,5 @@
 <!--  
-  Last Modified : 2026/02/18 15:01:52
+  Last Modified : 2026/04/08 11:39:46
 -->
 - [La gestion des historiques dans Jeedom](#la-gestion-des-historiques-dans-jeedom)
   - [Fonctionnement](#fonctionnement)
@@ -21,6 +21,7 @@
   - [Statistiques](#statistiques)
   - [Visualisation](#visualisation)
   - [Modifications](#modifications)
+  - [Modifications à partir d'un fichier Excel](#modifications-à-partir-dun-fichier-excel)
   - [Données modifiables](#données-modifiables)
     - [KLV (Keep Last Value)](#klv-keep-last-value)
     - [Uniq](#uniq)
@@ -112,11 +113,13 @@ Toutes les fonctions offertes par Jeedom sont disponibles directement et d'autre
 * Purge de l'historique
 * Export standard CSV
 * Copie de la configuration de l'historique (ou d'un seul paramètre) vers plusieurs commandes
+* Chargement des paramètres des commandes INFO concernant l'historique à partir d'un fichier Excel
 * Lancement de l'archivage pour une commande donnée
 * Copie de l'historique d'une commande vers une autre commande
 * Copie de historyArch vers history afin de lancer une consolidation par intervalle
 * Importation de l'historique d'une commande à partir d'un fichier Excel
 * Extraction de l'historique sous plusieurs formats (xlsx, CSV, JSON, HTML) d'une ou plusieurs commandes depuis Jeedom ou une sauvegarde standard Jeedom
+* Extraction depuis une sauvegarde Jeedom des paramètres des commandes INFO concernant l'historique (ces paramètres peuvent être ensuite appliqués sur Jeedom)
 
 De plus, le processus d'archivage du plugin peut être activé en remplacement de la fonction archive native offerte par Jeedom. Celui-ci permet:
 
@@ -166,6 +169,7 @@ Dans la section configuration, vous pouvez:
 
 * Activer l'archivage spécifique (désactivé par défaut)
 * Indiquer si les enregistrements dans history et historyArch doivent être supprimés dans le cas où la commande concernée n'existe pas
+* Choisir de ne pas transférer dans historyArch les enregistrements de history lorsqu'il n'y a pas de lissage (le transfert de history vers historyArch a un intérêt seulement dans le cas où on mémorise les valeurs identiques et qu'on veut supprimer les doublons lors de l'archivage)
 * Définir le format pour les exports
 * Définir le cadrage par défaut pour les dates de purge et de fin d'archivage
 
@@ -230,7 +234,7 @@ En cliquant sur l'en-têtes de colonne, on sélectionne toutes les lignes affich
 
 On peut sélectionner chaque ligne individuellement en cliquant sur la case à cocher ou sur n'importe quel endroit de la ligne.
 
-On peut sélectionner aussi une suite de lignes en cliquant sur la première à sélectionner puis en cliquant sur la dernière en maintenant la touche MAJ enfoncée.
+On peut sélectionner aussi une suite de lignes en cliquant sur la première à sélectionner en maintenant la touche Contrôle enfoncée puis en cliquant sur la dernière toujours en maintenant la touche Contrôle enfoncée.
 
 ## Les en-têtes de colonne
 
@@ -333,6 +337,24 @@ Après avoir cliqué sur le bouton Valider, les données sont mises à jour et l
 ![025](../images/025.png)
 
 Noter qu'un clic droit sur une ligne permet de lancer directement la configuration avancée de commande de Jeedom.
+
+## Modifications à partir d'un fichier Excel
+
+![070](../images/070.png)
+
+Il est également possible de charger des modifications à partir d'un fichier Excel ou CSV en cliquant sur le bouton Import. Celui-ci permet de sélectionner le fichier et de charger les données modifiées dans le tableau.
+
+![071](../images/071.png)
+
+Les données doivent avoir le même format que celui généré par l'export. Il est donc possible d'exporter les données, de les modifier dans Excel puis de charger les modifications dans le tableau.
+
+Il est également possible d'extraire les paramètres d'archivage depuis une sauvegarde Jeedom et de charger les modifications: cela permet de voir rapidement les changements effectués depuis la sauvegarde et éventuellement de revenir à une situation antérieure.
+
+![072](../images/072.png)
+
+Une fois l'import effectué, il est possible de visualiser uniquement les données modifiées en cliquant sur le filtre "Mises à Jour". On peut également cliquer sur les boutons d'affichage (Configuration, Calculs, ...) pour voir toutes les données modifiables.
+
+Pour appliquer les modifications, cliquer sur le bouton Valider.
 
 ## Données modifiables
 
@@ -493,6 +515,13 @@ Vous pouvez également afficher les données historiques concernées et sélecti
 ![045](../images/045.png)
 
 Dans les 2 cas, vous retrouvez un export que vous pouvez utiliser pour réaliser un import avec le module Import.
+
+
+![073](../images/073.png)
+
+En cliquant sur les boutons de visualisation, on peut afficher les paramètres des commandes INFO tels qu'ils étaient lors de la sauvegarde. Le filtre Tout permet d'afficher toutes les commandes INFO.
+
+Le bouton Export permet de générer un fichier qui pourra être utilisé pour charger dans le module Monitor les différences de configuration depuis la sauvegarde.
 
 # FAQ
 
