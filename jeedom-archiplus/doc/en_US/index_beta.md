@@ -1,53 +1,54 @@
 <!--  
-  Last Modified : 2026/02/24 18:32:45
+  Last Modified : 2026/04/08 11:39:46
 -->
-- [History management in Jeedom](#history-management-in-jeedom)
-  - [Functioning](#functioning)
-  - [History volume](#history-volume)
-  - [The limits of archiving in Jeedom](#the-limits-of-archiving-in-jeedom)
-  - [The ADVANTAGES of the archiplus plugin](#the-advantages-of-the-archiplus-plugin)
-  - [Warning](#warning)
+- [History management in Jeedom](#la-gestion-des-historiques-dans-jeedom)
+  - [Functioning](#fonctionnement)
+  - [History volume](#volume-des-historiques)
+  - [The limits of archiving in Jeedom](#les-limites-de-larchivage-dans-jeedom)
+  - [The ADVANTAGES of the archiplus plugin](#les-plus-du-plugin-archiplus)
+  - [Warning](#avertissement)
 - [Plugin archiplus](#plugin-archiplus)
-  - [Install the archiplus Plugin](#install-the-archiplus-plugin)
-  - [Configure the plugin](#configure-the-plugin)
-  - [Plugin modules](#plugin-modules)
-- [Access to modules](#access-to-modules)
-  - [The command buttons](#the-command-buttons)
-  - [The row selection column](#the-row-selection-column)
-  - [Column headers](#column-headers)
-  - [The lines](#the-lines)
-  - [Bottom of table totals](#bottom-of-table-totals)
-- [the Monitor module](#the-monitor-module)
-  - [Statistics](#statistics)
+  - [Install the archiplus Plugin](#installer-le-plugin-archiplus)
+  - [Configure the plugin](#configurer-le-plugin)
+  - [Plugin modules](#les-modules-du-plugin)
+- [Access to modules](#accès-aux-modules)
+  - [The command buttons](#les-boutons-de-commandes)
+  - [The row selection column](#la-colonne-de-sélection-des-lignes)
+  - [Column headers](#les-en-têtes-de-colonne)
+  - [The lines](#les-lignes)
+  - [Bottom of table totals](#les-totaux-de-bas-de-tableau)
+- [the Monitor module](#le-module-monitor)
+  - [Statistics](#statistiques)
   - [Visualisation](#visualisation)
   - [Modifications](#modifications)
-  - [Editable data](#editable-data)
+  - [Editing from an Excel file](#modifications-à-partir-dun-fichier-excel)
+  - [Editable data](#données-modifiables)
     - [KLV (Keep Last Value)](#klv-keep-last-value)
-    - [unique](#unique)
-    - [Deadline](#deadline)
-    - [Framing](#framing)
+    - [unique](#uniq)
+    - [Deadline](#délai)
+    - [Framing](#cadrage)
     - [Pond](#pond)
     - [Pack](#pack)
-    - [Rounded](#rounded)
-  - [Functions accessible via the context menu](#functions-accessible-via-the-context-menu)
-- [Historical data](#historical-data)
-  - [Access](#access)
+    - [Rounded](#arrondi)
+  - [Functions accessible via the context menu](#fonctions-accessibles-via-le-menu-contextuel)
+- [Historical data](#données-historiques)
+  - [Access](#accès)
   - [Modification](#modification)
   - [Suppression](#suppression)
   - [Export](#export)
-- [The Import module](#the-import-module)
-- [The Restore module](#the-restore-module)
+- [The Import module](#le-module-import)
+- [The Restore module](#le-module-restore)
 - [FAQ](#faq)
   - [Keep Last Value](#keep-last-value)
-  - [unique](#unique-1)
-  - [Deadline and Framing](#deadline-and-framing)
-  - [Smoothing and weighting](#smoothing-and-weighting)
+  - [unique](#uniq-1)
+  - [Deadline and Framing](#délai-et-cadrage)
+  - [Smoothing and weighting](#lissage-et-pondération)
   - [Pack](#pack-1)
-  - [Rounded](#rounded-1)
-  - [Copy data from historyArch to history](#copy-data-from-historyarch-to-history)
-  - [Using archiplus in PHP](#using-archiplus-in-php)
+  - [Rounded](#arrondi-1)
+  - [Copy data from historyArch to history](#copier-les-données-de-historyarch-vers-history)
+  - [Using archiplus in PHP](#utiliser-archiplus-en-php)
 - [Les logs](#les-logs)
-- [Translation](#translation)
+- [Translation](#traduction)
 - [Avis](#avis)
 
 
@@ -112,11 +113,13 @@ All functions offered by Jeedom are available directly and other functions have 
 * Purge history
 * Export standard CSV
 * Copying history configuration (or a single parameter) to multiple commands
+* Loading history INFO command parameters from an Excel file
 * Launching archiving for a given order
 * Copying order history to another order
 * Copying historyArch to history to initiate interval consolidation
 * Importing order history from an Excel file
 * Extraction of history in several formats (xlsx, CSV, JSON, HTML) of one or more orders from Jeedom or a standard Jeedom backup
+* Extraction from a Jeedom backup of INFO command parameters concerning the history (these parameters can then be applied to Jeedom)
 
 Additionally, the plugin's archiving process can be activated as a replacement for the native archive function offered by Jeedom. This allows:
 
@@ -166,6 +169,7 @@ In the configuration section you can:
 
 * Enable specific archiving (disabled by default)
 * Indicate whether records in history and historyArch should be deleted in case the relevant command does not exist
+* Choose not to transfer history records to historyArch when there is no smoothing (the transfer from history to historyArch is only of interest in the case where identical values ​​are memorized and you want to delete duplicates during archiving)
 * Define the format for exports
 * Set default framing for purge and archive end dates
 
@@ -230,7 +234,7 @@ By clicking on the column headers, we select all the rows displayed in the table
 
 Each line can be selected individually by clicking on the check box or anywhere on the line.
 
-You can also select a series of lines by clicking on the first to select then clicking on the last while holding down the SHIFT key.
+You can also select a series of lines by clicking on the first to select while holding down the Control key then clicking on the last one while still holding down the Control key.
 
 ## Column headers
 
@@ -333,6 +337,24 @@ After clicking on the Validate button, the data is updated and the background of
 ![025](../images/025.png)
 
 Note that right-clicking on a line directly launches Jeedom's advanced command configuration.
+
+## Editing from an Excel file
+
+![070](../images/070.png)
+
+It is also possible to load changes from an Excel or CSV file by clicking on the Import button. This allows you to select the file and load the modified data into the table.
+
+![071](../images/071.png)
+
+The data must have the same format as that generated by the export. It is therefore possible to export the data, modify it in Excel and then load the modifications into the table.
+
+It is also possible to extract the archive settings from a Jeedom backup and load the modifications: this allows you to quickly see the changes made since the backup and possibly return to a previous situation.
+
+![072](../images/072.png)
+
+Once the import has been completed, it is possible to view only the modified data by clicking on the "Updates" filter. You can also click on the display buttons (Configuration, Calculations, etc.) to see all the modifiable data.
+
+To apply the changes, click on the Validate button.
 
 ## Editable data
 
@@ -493,6 +515,13 @@ You can also view the relevant historical data and select which ones to export.
 ![045](../images/045.png)
 
 In both cases, you will find an export that you can use to perform an import with the Import module.
+
+
+![073](../images/073.png)
+
+By clicking on the display buttons, you can display the INFO command parameters as they were when saved. The All filter allows you to display all INFO commands.
+
+The Export button allows you to generate a file which can be used to load configuration differences from the backup into the Monitor module.
 
 # FAQ
 
@@ -693,6 +722,5 @@ The plugin documentation is translated into English only (other languages ​​
 # Avis
 
 ![archiplus_opinion](../images/archiplus_avis.png)
-
 
 If you like this plugin, please leave a rating and a comment on the Jeedom market, it's always nice: <https://jeedom.com/market/index.php?v=d&p=market_display&id=xxxx#>
