@@ -711,7 +711,7 @@ Ensuite, sont détaillées pour chaque commande les opérations réalisées et l
 
 ![069](../images/069.png)
 
-Il est possible d'afficher la log pour une commande en particulier en indiquant sont numéro précédé des caractères - et espace dans la zone de recherche.
+Il est possible d'afficher la log pour une commande en particulier en indiquant son numéro précédé des caractères - et espace dans la zone de recherche.
 
 # Traduction
 
