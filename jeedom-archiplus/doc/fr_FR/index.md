@@ -368,7 +368,7 @@ Permet de toujours conserver au moins un enregistrement dans l'historique. Voir 
 
 ### Uniq 
 
-Permet de supprimer les valeurs consécutives identiques dans historyArch. Voir la FAQ suivante pour  comprendre l'utilisation de cette option [Uniq](#uniq-1).
+Permet de supprimer les valeurs consécutives identiques dans historyArch (et éventuellement history). Voir la FAQ suivante pour  comprendre l'utilisation de cette option [Uniq](#uniq-1).
 
 ### Délai
 
@@ -548,11 +548,13 @@ Jeedom permet d'éviter les doublons dans la table history avec l'option "Répé
 Il y a cependant plusieurs situations dans lesquelles les valeurs consécutives identiques ne sont pas ignorées :
 
   * si le sous-type de la commande est Binaire ou Autre
-  * si la mise à jour est effectuée avec la méthode cmd::event et non eqLogic::checkAndUpdateCmd. De nombreux plugins fonctionnent encore avec la méthode cmd::event qui est plus ancienne et de ce fait n'éliminent pas les doublons.
+  * si la mise à jour est effectuée avec la méthode cmd::event et non eqLogic::checkAndUpdateCmd. De nombreux plugins fonctionnent encore avec la méthode cmd::event qui est plus ancienne et de ce fait n'élimine pas les doublons.
 
 Lors de l'archivage, s'il n'y a pas de lissage, les données de history sont transférées directement dans historyArch et les doublons sont donc copiés.
 
 L'activation de l'option Uniq permet de supprimer les doublons dans historyArch lors de l'archivage spécifique de archiplus.
+
+De plus, si le plugin est configuré pour ne pas copier les enregistrements de history vers historyArch, les doublons dans history seront supprimés également.
 
 ## Délai et Cadrage
 
