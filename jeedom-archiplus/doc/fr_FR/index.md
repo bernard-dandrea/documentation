@@ -234,7 +234,7 @@ En cliquant sur l'en-têtes de colonne, on sélectionne toutes les lignes affich
 
 On peut sélectionner chaque ligne individuellement en cliquant sur la case à cocher ou sur n'importe quel endroit de la ligne.
 
-On peut sélectionner aussi une suite de lignes en cliquant sur la première à sélectionner en maintenant la touche Contrôle enfoncée puis en cliquant sur la dernière toujours en maintenant la touche Contrôle enfoncée.
+On peut sélectionner aussi une suite de lignes en cliquant sur la première à sélectionner en maintenant la touche Contrôle enfoncée puis en cliquant sur la dernière toujours en maintenant la touche Contrôle enfoncée (attention à bien cliquer n'importe où sur la ligne mais pas sur la case de sélection sinon la sélection mulitple ne fonctionnera pas).
 
 ## Les en-têtes de colonne
 
