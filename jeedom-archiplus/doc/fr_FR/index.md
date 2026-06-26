@@ -1,5 +1,5 @@
 <!--  
-  Last Modified : 2026/04/08 11:39:46
+  Last Modified : 2026/06/26 
 -->
 - [La gestion des historiques dans Jeedom](#la-gestion-des-historiques-dans-jeedom)
   - [Fonctionnement](#fonctionnement)
