@@ -1,5 +1,8 @@
 # Changelog plugin SNMP3
 
+# 02/07/2026
+- Amélioration de la gestion des crons
+
 # 09/06/2026
 
 - Définition des méthodes cron en static pour éviter erreur en PHP 8 (modifications perdues lors d'une mise à jour)
