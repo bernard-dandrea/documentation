@@ -1,6 +1,11 @@
 # Changelog plugin SNMP3
 
+# 03/07/2026
+
+- Implement encryption and decryption for passphrases
+
 # 02/07/2026
+
 - Amélioration de la gestion des crons
 
 # 09/06/2026
