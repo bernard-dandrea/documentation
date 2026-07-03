@@ -2,7 +2,7 @@
 
 # 03/07/2026
 
-- Implement encryption and decryption for passphrases
+- Encryption en base de données des passphrases
 
 # 02/07/2026
 
