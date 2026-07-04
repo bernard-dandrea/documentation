@@ -1,5 +1,11 @@
 # Changelog plugin OZW
 
+# 04/07/2026
+
+- Encryption en base de données des codes d'accès
+- Amélioration de la gestion des crons
+- Nettoyage de code
+
 # 05/01/2026
 
 - Remplacement event par checkAndUpdateCmd pour eviter répétition des valeurs dans history
