@@ -1,9 +1,10 @@
 # Changelog plugin BSBLAN
 
-# 03/07/2026
+# 04/07/2026
 
 - Encryption en base de données des codes d'accès
 - Amélioration de la gestion des crons
+- Nettoyage de code
 
 # 05/01/2026
 
