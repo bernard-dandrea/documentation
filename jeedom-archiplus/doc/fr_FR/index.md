@@ -169,7 +169,7 @@ Dans la section configuration, vous pouvez:
 
 * Activer l'archivage spécifique (désactivé par défaut)
 * Indiquer si les enregistrements dans history et historyArch doivent être supprimés dans le cas où la commande concernée n'existe pas
-* Choisir de ne pas transférer dans historyArch les enregistrements de history lorsqu'il n'y a pas de lissage (le transfert de history vers historyArch a un intérêt seulement dans le cas où on mémorise les valeurs identiques et qu'on veut supprimer les doublons lors de l'archivage)
+* Choisir de ne pas transférer dans historyArch les enregistrements de history lorsqu'il n'y a pas de lissage
 * Définir le format pour les exports
 * Définir le cadrage par défaut pour les dates de purge et de fin d'archivage
 
