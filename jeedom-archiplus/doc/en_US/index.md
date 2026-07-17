@@ -169,7 +169,7 @@ In the configuration section you can:
 
 * Enable specific archiving (disabled by default)
 * Indicate whether records in history and historyArch should be deleted in case the relevant command does not exist
-* Choose not to transfer history records to historyArch when there is no smoothing (the transfer from history to historyArch is only of interest in the case where identical values ​​are memorized and you want to delete duplicates during archiving)
+* Choose not to transfer history records to historyArch when there is no smoothing
 * Define the format for exports
 * Set default framing for purge and archive end dates
 
