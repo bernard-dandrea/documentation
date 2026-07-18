@@ -1,4 +1,4 @@
-# Changelog plugin MPD
+# Changelog plugin archiplus
 
 # 18/07/2026
 
