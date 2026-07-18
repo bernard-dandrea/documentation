@@ -1,5 +1,5 @@
 # Changelog plugin MPD
 
-# xx/xx/2026
+# 18/07/2026
 
 - Initial load
