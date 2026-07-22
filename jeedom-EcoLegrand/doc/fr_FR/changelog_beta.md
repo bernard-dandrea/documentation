@@ -1,5 +1,9 @@
 # Changelog plugin EcoLegrand
 
+# 22/07/2026
+
+- Possibilité de définir un cron autonome dans le moteur des tâches
+
 # 01/01/2026
 
 - Modifications pour convertir les valeurs récupérées de l'écocompteur en float et éviter les erreurs lors de l'addition en PHP8 (merci à Michel_F)
