@@ -1,5 +1,9 @@
 # Changelog plugin SNMP3
 
+# 22/07/2026
+
+- Possibilité de définir un cron autonome dans le moteur des tâches
+
 # 03/07/2026
 
 - Encryption en base de données des passphrases
