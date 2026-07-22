@@ -1,5 +1,9 @@
 # Changelog plugin OZW
 
+# 22/07/2026
+
+- Possibilité de définir un cron autonome dans le moteur des tâches
+
 # 04/07/2026
 
 - Encryption en base de données des codes d'accès
