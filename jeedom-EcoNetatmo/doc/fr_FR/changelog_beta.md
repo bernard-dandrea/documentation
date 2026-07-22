@@ -1,5 +1,9 @@
 # Changelog plugin EcoNetatmo
 
+# 22/07/2026
+
+- Possibilité de définir un cron autonome dans le moteur des tâches
+
 # 07/11/2025
 
 - Correction problème en PHP8 lors du renouvellement des tokens
