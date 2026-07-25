@@ -9,7 +9,7 @@
 # 16/06/2026
 
 - Définition des méthodes cron en static pour éviter erreur en PHP 8 (modifications perdues lors d'une mise à jour)
-- 
+
 # 01/01/2026
 
 - Déplacement de la documentation dans un repository github séparé afin de pouvoir mettre à jour la documentation sans générer un update du plugin
