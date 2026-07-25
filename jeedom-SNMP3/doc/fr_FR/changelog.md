@@ -1,5 +1,11 @@
 # Changelog plugin SNMP3
 
+# 25/07/2026
+
+- Possibilité de définir un cron autonome dans le moteur des tâches
+- Encryption en base de données des passphrases
+- Amélioration de la gestion des crons
+
 # 16/06/2026
 
 - Définition des méthodes cron en static pour éviter erreur en PHP 8 (modifications perdues lors d'une mise à jour)
