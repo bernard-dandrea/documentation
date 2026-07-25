@@ -1,3 +1,8 @@
+
+<!--  
+  Last Modified : 2026/07/25 18:39:50
+-->
+
 # Plugin SNMP3
 
 Plugin permettant de lire et écrire les OIDs des dispositifs supportant le protocol SNMP. 
@@ -37,6 +42,11 @@ Tester les paramètres de connexion avec la commande snmpget (voir paragraphe pr
 Une fois le plugin installé, il faut l'activer. Le package php-snmp est installé lors de l'installation des dépendances.
 
 Vous pouvez activer le niveau de log Debug pour suivre l'activité du plugin et identifier les éventuels problèmes.
+
+
+![SNMP3_Equipement](../images/SNMP3_cron.png)
+
+Vous pouvez également définir si un cron autonome est utilisé. Cela permet de ne pas bloquer les autres crons si le cron du plugin se bloque et ne pas être bloqué par d'autres crons lancés pour d'autres plugins.
 
 # Gestion des MIBs
 
