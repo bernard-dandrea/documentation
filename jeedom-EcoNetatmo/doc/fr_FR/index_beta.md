@@ -1,3 +1,9 @@
+
+<!--  
+  Last Modified : 2026/07/26 18:45:10
+-->
+
+
 # Plugin EcoNetatmo
 
 Plugin permettant de récupérer les consommations venant des Ecocompteurs Legrand type Drivia with NetAtmo (ref 41203x).
@@ -51,6 +57,8 @@ Une fois le plugin installé, il faut l'activer et renseigner vos informations d
 -   **Refresh token** : token permettant de rafraichir l'access token
 
 La gestion des tokens est effectuée par le plugin. Dans le cas où ceux-ci deviendraient invalides (voir les logs) après une longue période d'inactivité par exemple, il faudrait en générer de nouveaux et mettre à jour la configuration du plugin avec les nouveaux tokens.
+
+Vous pouvez également définir si un cron autonome est utilisé. Cela permet de ne pas bloquer les autres crons si le cron du plugin se bloque et ne pas être bloqué par d'autres crons lancés pour d'autres plugins.
 
 ![log](../images/log.png)
 
