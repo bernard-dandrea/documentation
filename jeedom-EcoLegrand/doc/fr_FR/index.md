@@ -1,3 +1,9 @@
+
+<!--  
+  Last Modified : 2026/07/27 15:27:46
+-->
+
+
 # Plugin EcoLegrand
 
 Plugin permettant de récupérer les données des écocompteurs Legrand d'ancienne génération (référence 412000). 
@@ -30,7 +36,7 @@ Les données à récupérer sont définies dans un fichier JSON qui doit être c
 \"Compteur_EC\":~LG538 1 12907$  
 }
 
-Le fichier JSON a la forme ci-dessus. Il y a une ligne par donnée à récupérer (attention à ne pas mettre de virgule sur la dernière ligne et à utiliser des guillemets simples).
+Le fichier JSON a la forme ci-dessus. Il y a une ligne par donnée à récupérer (attention à ne pas mettre de virgule sur la dernière ligne et à utiliser des guillemets doubles).
 
 Chaque ligne comprend le nom de la donnée et la référence interne définie dans l'écocompteur. Le fichier en lien <https://github.com/bernard-dandrea/documentation/blob/main/jeedom-EcoLegrand/doc/fr_FR/JSON_codes.txt> donne une liste non exhautive des références utilisables.
 
@@ -69,6 +75,11 @@ Pour remédier à ce probème, le plugin peut remettre les compteurs à zéro à
 # Installation du plugin
 
 Une fois le plugin installé, il faut l'activer.
+
+
+![Configuration](../images/configuration.png)
+
+Vous pouvez également définir si un cron autonome est utilisé. Cela permet de ne pas bloquer les autres crons si le cron du plugin se bloque et ne pas être bloqué par d'autres crons lancés pour d'autres plugins.
 
 Vous pouvez activer le niveau de log Debug pour suivre l'activité du plugin et identifier les éventuels problèmes.
 
