@@ -1,3 +1,8 @@
+<!--  
+  Last Modified : 2026/07/28 15:35:23
+-->
+
+
 # Plugin OZW
 
 Plugin permettant de s'interfacer avec les centrales de communication SIEMENS de type OZW. 
@@ -49,6 +54,10 @@ De même, l'ID d'un menu peut être nécessaire et est touvée de la même faço
 # Configuration du plugin
 
 Une fois le plugin installé, il faut l'activer.
+
+![Configuration](../images/OZW_configuration.png)
+
+Vous pouvez également définir si un cron autonome est utilisé. Cela permet de ne pas bloquer les autres crons si le cron du plugin se bloque et ne pas être bloqué par d'autres crons lancés pour d'autres plugins.
 
 Vous pouvez activer le niveau de log Debug pour suivre l'activité du plugin et identifier les éventuels problèmes.
 
