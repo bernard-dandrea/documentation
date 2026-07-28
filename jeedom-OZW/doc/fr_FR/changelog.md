@@ -1,5 +1,12 @@
 # Changelog plugin OZW
 
+# 28/07/2026
+
+- Possibilité de définir un cron autonome dans le moteur des tâches
+- Encryption en base de données des codes d'accès
+- Amélioration de la gestion des crons
+- Nettoyage de code
+
 # 05/01/2026
 
 - Remplacement event par checkAndUpdateCmd pour eviter répétition des valeurs dans history
