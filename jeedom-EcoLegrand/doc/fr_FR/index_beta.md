@@ -58,7 +58,7 @@ Se positionner sur le répertoire SYS.
 
 Copier le fichier JSON. Noter que son nom doit être assez court sinon la copie ne se fait pas.
 
-Dans le répertoire SYS se trouvent les fichiers HTML utilisés par l'écocompteur. Vous pouvez trouver en les analysant la référence aux variables qui vous intéresse.
+Dans le répertoire SYS se trouvent les fichiers HTML utilisés par l'écocompteur. Vous pouvez trouver en les analysant la référence aux variables qui vous intéressent.
 
 # Problème avec les compteurs d'énergie
 
