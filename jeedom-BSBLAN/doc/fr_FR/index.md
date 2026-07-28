@@ -1,3 +1,8 @@
+
+<!--  
+  Last Modified : 2026/07/28 16:00:31
+-->
+
 # Plugin BSBLAN
 
 Plugin permettant de s'interfacer avec le controleur BSB-LPB-LAN. 
@@ -9,7 +14,6 @@ La documentation est très complète et se trouve à cette adresse <https://docs
 Le BSB-LAN peut remplacer avantageusement les controleurs OZW fournis par Siemens. La solution est beaucoup moins onéreuse, permet l'accès à tous les paramètres des cartes Siemens (contrairement à l'OZW) et les temps d'accès aux cartes sont beaucoup plus rapides. Par ailleurs, il est possible d'envoyer la température des zones chauffées sans avoir besoin de passer par une sonde d'ambiance.
 
 La communication entre le plugin et le BSBLAN s'effectue via des WEB APIs.
-
 
 # Installation et configuration du controleur BSBLAN
 
@@ -24,6 +28,10 @@ Le plugin a été testé avec une version 3.2 et 4.2 . A priori, le plugin devra
 # Configuration du plugin
 
 Une fois le plugin installé, il faut l'activer.
+
+![Configuration](../images/BSBLAN_configuration.png)
+
+Vous pouvez également définir si un cron autonome est utilisé. Cela permet de ne pas bloquer les autres crons si le cron du plugin se bloque et ne pas être bloqué par d'autres crons lancés pour d'autres plugins.
 
 Vous pouvez activer le niveau de log Debug pour suivre l'activité du plugin et identifier les éventuels problèmes.
 
