@@ -717,9 +717,7 @@ Il est possible d'afficher la log pour une commande en particulier en indiquant 
 
 # Traduction
 
-L'interface et les messages envoyés dans les logs sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation). Si des erreurs de traduction sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).
-
-La documentation du plugin est traduite uniquement en anglais (les autres langues renvoient vers la traduction anglaise). La traduction est faite via un traducteur automatique. Par contre, les captures d'écran ne sont pas traduites. 
+L'interface, les messages envoyés dans les logs et la documenation sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation et docs-translations). Si des erreurs de traduction sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).
 
 # Avis
 
