@@ -717,9 +717,7 @@ Successivamente, per ogni comando vengono riportate in dettaglio le operazioni e
 
 # Traduzione
 
-L'interfaccia e i messaggi inviati nei log sono tradotti nelle 5 lingue supportate da Jeedom (grazie a @mips per lo sviluppo di ga-translation). Se si riscontrano errori di traduzione, è possibile aprire una richiesta di assistenza e, se possibile, allegare il file di traduzione corretto (che si trova nella directory core/i18n del plugin).
-
-La documentazione del plugin è tradotta solo in inglese (le altre lingue rimandano alla traduzione inglese). La traduzione è effettuata tramite un traduttore automatico. Le schermate, invece, non sono tradotte.
+L'interfaccia, i messaggi inviati nei log e la documentazione sono tradotti nelle 5 lingue supportate da Jeedom (grazie a @mips per lo sviluppo di ga-translation e docs-translations). Se si riscontrano errori di traduzione, è possibile aprire una richiesta di assistenza e, se possibile, allegare il file di traduzione corretto (che si trova nella directory core/i18n del plugin).
 
 # Recensioni
 
