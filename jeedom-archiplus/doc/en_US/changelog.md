@@ -1,5 +1,5 @@
-# Changelog plugin MPD
+# Archiplus plugin changelog
 
-# xx/xx/2026
+# 18/07/2026
 
 - Initial load
