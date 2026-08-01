@@ -234,7 +234,7 @@ Cliccando sull'intestazione della colonna, si selezionano tutte le righe visuali
 
 È possibile selezionare ogni riga singolarmente cliccando sulla casella di selezione o in qualsiasi punto della riga.
 
-È possibile selezionare anche una serie di righe cliccando sulla prima da selezionare tenendo premuto il tasto Ctrl, quindi cliccando sull'ultima sempre tenendo premuto il tasto Ctrl.
+È possibile selezionare anche una serie di righe cliccando sulla prima riga da selezionare tenendo premuto il tasto Ctrl, quindi cliccando sull'ultima riga sempre tenendo premuto il tasto Ctrl (attenzione a cliccare in un punto qualsiasi della riga, ma non sulla casella di selezione, altrimenti la selezione multipla non funzionerà).
 
 ## Le intestazioni delle colonne
 
@@ -717,12 +717,10 @@ Successivamente, per ogni comando vengono riportate in dettaglio le operazioni e
 
 # Traduzione
 
-L'interfaccia e i messaggi inviati nei log sono tradotti nelle 5 lingue supportate da Jeedom (grazie a @mips per lo sviluppo di ga-translation). Se si riscontrano errori di traduzione, è possibile aprire una richiesta di assistenza e, se possibile, allegare il file di traduzione corretto (che si trova nella directory core/i18n del plugin).
-
-La documentazione del plugin è tradotta solo in inglese (le altre lingue rimandano alla traduzione inglese). La traduzione è effettuata tramite un traduttore automatico. Le schermate, invece, non sono tradotte.
+L'interfaccia, i messaggi inviati nei log e la documentazione sono tradotti nelle 5 lingue supportate da Jeedom (grazie a @mips per lo sviluppo di ga-translation e docs-translations). Se si riscontrano errori di traduzione, è possibile aprire una richiesta di assistenza e, se possibile, allegare il file di traduzione corretto (che si trova nella directory core/i18n del plugin).
 
 # Recensioni
 
 ![archiplus_recensioni](../images/archiplus_avis.png)
 
-Se ti piace questo plugin, ti invitiamo a lasciare una valutazione e un commento sul Jeedom Market, ci fa sempre piacere: <https://jeedom.com/market/index.php?v=d&p=market_display&id=xxxx#>
+Se ti piace questo plugin, ti invitiamo a lasciare una valutazione e un commento sul Jeedom Market, ci fa sempre piacere: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4679#>

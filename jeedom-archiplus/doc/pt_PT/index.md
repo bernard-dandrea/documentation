@@ -723,4 +723,4 @@ A interface, as mensagens enviadas nos registos e a documentação estão traduz
 
 ![archiplus_opinião](../images/archiplus_avis.png)
 
-Se gostar deste plugin, por favor, deixe uma avaliação e um comentário no Jeedom Market, é sempre um prazer: <https://jeedom.com/market/index.php?v=d&p=market_display&id=xxxx#>
+Se gostar deste plugin, por favor, deixe uma avaliação e um comentário no Jeedom Market, é sempre um prazer: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4679#>

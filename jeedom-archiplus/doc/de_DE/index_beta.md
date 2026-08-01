@@ -234,7 +234,7 @@ Durch Klicken auf die Spaltenüberschriften werden alle angezeigten Zeilen der T
 
 Jede Zeile kann einzeln ausgewählt werden, indem man auf das Kontrollkästchen oder eine beliebige Stelle in der Zeile klickt.
 
-Man kann auch eine Reihe von Zeilen auswählen, indem man auf die erste auszuwählende Zeile klickt, dabei die Strg-Taste gedrückt hält und anschließend auf die letzte Zeile klickt, wobei die Strg-Taste weiterhin gedrückt gehalten wird.
+Man kann auch eine Reihe von Zeilen auswählen, indem man auf die erste auszuwählende Zeile klickt, dabei die Strg-Taste gedrückt hält und dann auf die letzte Zeile klickt, wobei die Strg-Taste weiterhin gedrückt gehalten wird (Achtung: Klicken Sie unbedingt an eine beliebige Stelle auf der Zeile, aber nicht auf das Auswahlfeld, da sonst die Mehrfachauswahl nicht funktioniert).
 
 ## Die Spaltenüberschriften
 
@@ -717,12 +717,10 @@ Sie können das Protokoll für einen bestimmten Befehl anzeigen, indem Sie desse
 
 # Übersetzung
 
-Die Benutzeroberfläche und die in den Protokollen ausgegebenen Meldungen werden in die fünf von Jeedom unterstützten Sprachen übersetzt (vielen Dank an @mips für die Entwicklung von ga-translation). Sollten Ihnen Übersetzungsfehler auffallen, können Sie eine Supportanfrage stellen und, wenn möglich, die korrigierte Übersetzungsdatei (zu finden im Verzeichnis core/i18n des Plugins) beifügen.
-
-Die Dokumentation des Plugins ist ausschließlich auf Englisch verfügbar (die anderen Sprachen verweisen auf die englische Übersetzung). Die Übersetzung erfolgt mithilfe eines automatischen Übersetzungsprogramms. Die Screenshots werden jedoch nicht übersetzt.
+Die Benutzeroberfläche, die in den Protokollen ausgegebenen Meldungen und die Dokumentation sind in die fünf von Jeedom unterstützten Sprachen übersetzt (vielen Dank an @mips für die Entwicklung von ga-translation und docs-translations). Sollten Sie Übersetzungsfehler feststellen, können Sie eine Supportanfrage stellen und, wenn möglich, die korrigierte Übersetzungsdatei (im Verzeichnis core/i18n des Plugins) beifügen.
 
 # Bewertungen
 
 ![archiplus_Bewertung](../images/archiplus_avis.png)
 
-Wenn Ihnen dieses Plugin gefällt, hinterlassen Sie bitte eine Bewertung und einen Kommentar im Jeedom Market – das freut uns immer: <https://jeedom.com/market/index.php?v=d&p=market_display&id=xxxx#>
+Wenn Ihnen dieses Plugin gefällt, hinterlassen Sie bitte eine Bewertung und einen Kommentar im Jeedom Market – das freut uns immer: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4679#>

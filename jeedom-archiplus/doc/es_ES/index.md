@@ -723,4 +723,4 @@ La interfaz, los mensajes que aparecen en los registros y la documentación est�
 
 ![archiplus_opiniones](../images/archiplus_avis.png)
 
-Si te gusta este plugin, te agradeceríamos que dejaras una valoración y un comentario en Jeedom Market, siempre nos hace ilusión: <https://jeedom.com/market/index.php?v=d&p=market_display&id=xxxx#>
+Si te gusta este plugin, te agradeceríamos que dejaras una valoración y un comentario en Jeedom Market, siempre nos hace ilusión: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4679#>

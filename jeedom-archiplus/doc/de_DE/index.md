@@ -723,4 +723,4 @@ Die Benutzeroberfläche, die in den Protokollen ausgegebenen Meldungen und die D
 
 ![archiplus_Bewertung](../images/archiplus_avis.png)
 
-Wenn Ihnen dieses Plugin gefällt, hinterlassen Sie bitte eine Bewertung und einen Kommentar im Jeedom Market – das freut uns immer: <https://jeedom.com/market/index.php?v=d&p=market_display&id=xxxx#>
+Wenn Ihnen dieses Plugin gefällt, hinterlassen Sie bitte eine Bewertung und einen Kommentar im Jeedom Market – das freut uns immer: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4679#>

@@ -723,4 +723,4 @@ The interface, log messages, and documentation have been translated into the 5 l
 
 ![archiplus_review](../images/archiplus_avis.png)
 
-If you like this plugin, please leave a rating and a comment on the Jeedom Market—it’s always appreciated: <https://jeedom.com/market/index.php?v=d&p=market_display&id=xxxx#>
+If you like this plugin, please leave a rating and a comment on the Jeedom Market—it’s always appreciated: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4679#>
