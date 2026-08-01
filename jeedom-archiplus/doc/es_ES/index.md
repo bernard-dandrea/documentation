@@ -717,9 +717,7 @@ Es posible visualizar el registro de un comando concreto indicando su número, p
 
 # Traducción
 
-La interfaz y los mensajes que aparecen en los registros están traducidos a los cinco idiomas compatibles con Jeedom (gracias a @mips por el desarrollo de ga-translation). Si detectas algún error de traducción, puedes abrir una solicitud de asistencia y, si es posible, adjuntar el archivo de traducción corregido (que se encuentra en el directorio core/i18n del complemento).
-
-La documentación del complemento está traducida únicamente al inglés (los demás idiomas remiten a la traducción al inglés). La traducción se ha realizado mediante un traductor automático. Sin embargo, las capturas de pantalla no están traducidas.
+La interfaz, los mensajes que aparecen en los registros y la documentación están traducidos a los cinco idiomas compatibles con Jeedom (gracias a @mips por el desarrollo de ga-translation y docs-translations). Si detectas algún error de traducción, puedes abrir una solicitud de asistencia y, si es posible, adjuntar el archivo de traducción corregido (que se encuentra en el directorio core/i18n del complemento).
 
 # Opiniones
 

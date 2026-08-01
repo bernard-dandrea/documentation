@@ -717,9 +717,7 @@ Em seguida, são detalhadas, para cada comando, as operações realizadas e o n�
 
 # Tradução
 
-A interface e as mensagens enviadas para os registos são traduzidas para as 5 línguas suportadas pelo Jeedom (obrigado ao @mips pelo desenvolvimento do ga-translation). Se forem detetados erros de tradução, pode abrir um pedido de apoio e, se possível, anexar o ficheiro de tradução corrigido (localizado no diretório core/i18n do plugin).
-
-A documentação do plugin está traduzida apenas para inglês (os outros idiomas remetem para a tradução em inglês). A tradução é feita através de um tradutor automático. No entanto, as capturas de ecrã não são traduzidas.
+A interface, as mensagens enviadas nos registos e a documentação estão traduzidas para as 5 línguas suportadas pelo Jeedom (obrigado ao @mips pelo desenvolvimento do ga-translation e do docs-translations). Se forem detetados erros de tradução, pode abrir um pedido de suporte e, se possível, anexar o ficheiro de tradução corrigido (localizado no diretório core/i18n do plugin).
 
 # Opiniões
 
