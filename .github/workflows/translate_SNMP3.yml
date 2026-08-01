@@ -15,6 +15,6 @@ jobs:
         with:
           deepl_api_key: ${{ secrets.DEEPL_API_KEY }}
           target_languages: "en_US,es_ES,de_DE,it_IT,pt_PT"
-          documents_roots: "SNMP3"
+          documents_roots: "jeedom-SNMP3/doc"
           memory_path: ${{ github.workspace }}/.translation_memory
           
