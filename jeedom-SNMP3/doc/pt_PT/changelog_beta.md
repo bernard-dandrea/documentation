@@ -10,7 +10,7 @@
 
 # 03/07/2026
 
-- Criptografia das senhas na base de dados
+- Criptografia das frases-passe na base de dados
 
 # 02/07/2026
 
@@ -27,11 +27,11 @@
 
 # 28/03/2025
 
-- Adição de uma comunidade RW (normalmente «privada») para atualizações nos protocolos v1/v2c
+- Adição de uma comunidade RW (normalmente «privada») para atualizações no protocolo v1/v2c
 
 # 17/10/2024
 
-- Definição de métodos cron como estáticos para evitar erros no PHP 8
+- Definição dos métodos cron como estáticos para evitar erros no PHP 8
 - Correção de um erro nos comandos de atualização
   
 # 11/08/2024

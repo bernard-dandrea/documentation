@@ -54,7 +54,7 @@ OIDs können entweder über ihren numerischen Code, z. B. .1.3.6.1.4.1.6574.1.1.
 
 Bei der Installation des Pakets „php-snmp“ werden eine Reihe von MIBs installiert (normalerweise im Verzeichnis /usr/share/snmp/mibs), die direkt verwendet werden können.
 
-Mit dem Plugin lassen sich spezifische MIBs installieren, indem die entsprechenden Dateien, beispielsweise SYNOLOGY-SYSTEM-MIB.txt, im Verzeichnis plugins/SNMP3/data/mibs abgelegt werden.
+Mit dem Plugin lassen sich spezifische MIBs installieren, indem die entsprechenden Dateien, zum Beispiel SYNOLOGY-SYSTEM-MIB.txt, im Verzeichnis plugins/SNMP3/data/mibs abgelegt werden.
 
 Sie können die Dateien auch in das gemeinsame Verzeichnis (in der Regel /usr/share/snmp/mibs) kopieren. Beachten Sie, dass dieser Vorgang bei einer Wiederherstellung von Jeedom erneut durchgeführt werden muss.
 
@@ -83,7 +83,7 @@ Geben Sie die Konfiguration des SNMP-Geräts an:
 
 Es ist möglich, ein bestimmtes Symbol individuell anzupassen, indem man das entsprechende Bild (z. B. perso1.png für das Symbol „perso1“) im Verzeichnis „plugin_info“ des Plugins ablegt.
 
-Mit der Schaltfläche **„SNMP3-Verbindung testen“** können Sie überprüfen, ob die Verbindungseinstellungen korrekt sind (denken Sie daran, das Gerät einzuschalten und die Konfiguration zu speichern, bevor Sie auf die Schaltfläche klicken).
+Mit der Schaltfläche **SNMP3-Verbindung testen** können Sie überprüfen, ob die Verbindungseinstellungen korrekt sind (denken Sie daran, das Gerät einzuschalten und die Konfiguration zu speichern, bevor Sie auf die Schaltfläche klicken).
 
 # Gerätebezogene Steuerungen
 

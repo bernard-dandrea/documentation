@@ -52,7 +52,7 @@ Una volta installato il plugin, è necessario attivarlo. Il pacchetto php-snmp v
 
 È possibile identificare gli OID tramite il loro codice numerico, ad esempio .1.3.6.1.4.1.6574.1.1.0, oppure utilizzando la MIB corrispondente, ad esempio SYNOLOGY-SYSTEM-MIB::systemStatus.0.
 
-Durante l'installazione del pacchetto php-snmp, vengono installati alcuni MIB (di norma nella directory /usr/share/snmp/mibs) che possono essere utilizzati direttamente.
+Durante l'installazione del pacchetto php-snmp, vengono installati alcuni MIB (normalmente nella directory /usr/share/snmp/mibs) che possono essere utilizzati direttamente.
 
 Il plugin consente di installare MIB specifiche inserendo i file corrispondenti, ad esempio SYNOLOGY-SYSTEM-MIB.txt, nella directory plugins/SNMP3/data/mibs.
 
