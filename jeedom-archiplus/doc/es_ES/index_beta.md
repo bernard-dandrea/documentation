@@ -234,7 +234,7 @@ Al hacer clic en los encabezados de las columnas, se seleccionan todas las filas
 
 Se puede seleccionar cada línea por separado haciendo clic en la casilla de selección o en cualquier punto de la línea.
 
-También se puede seleccionar una serie de líneas haciendo clic en la primera de ellas mientras se mantiene pulsada la tecla Control y, a continuación, haciendo clic en la última, siempre manteniendo pulsada la tecla Control.
+También se puede seleccionar una serie de líneas haciendo clic en la primera de ellas mientras se mantiene pulsada la tecla Control y, a continuación, haciendo clic en la última, siempre manteniendo pulsada la tecla Control (tenga cuidado de hacer clic en cualquier punto de la línea, pero no en la casilla de selección; de lo contrario, la selección múltiple no funcionará).
 
 ## Los encabezados de columna
 
@@ -717,12 +717,10 @@ Es posible visualizar el registro de un comando concreto indicando su número, p
 
 # Traducción
 
-La interfaz y los mensajes que aparecen en los registros están traducidos a los cinco idiomas compatibles con Jeedom (gracias a @mips por el desarrollo de ga-translation). Si detectas algún error de traducción, puedes abrir una solicitud de asistencia y, si es posible, adjuntar el archivo de traducción corregido (que se encuentra en el directorio core/i18n del complemento).
-
-La documentación del complemento está traducida únicamente al inglés (los demás idiomas remiten a la traducción al inglés). La traducción se ha realizado mediante un traductor automático. Sin embargo, las capturas de pantalla no están traducidas.
+La interfaz, los mensajes que aparecen en los registros y la documentación están traducidos a los cinco idiomas compatibles con Jeedom (gracias a @mips por el desarrollo de ga-translation y docs-translations). Si detectas algún error de traducción, puedes abrir una solicitud de asistencia y, si es posible, adjuntar el archivo de traducción corregido (que se encuentra en el directorio core/i18n del complemento).
 
 # Opiniones
 
 ![archiplus_opiniones](../images/archiplus_avis.png)
 
-Si te gusta este plugin, te agradeceríamos que dejaras una valoración y un comentario en Jeedom Market, siempre nos hace ilusión: <https://jeedom.com/market/index.php?v=d&p=market_display&id=xxxx#>
+Si te gusta este plugin, te agradeceríamos que dejaras una valoración y un comentario en Jeedom Market, siempre nos hace ilusión: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4679#>
