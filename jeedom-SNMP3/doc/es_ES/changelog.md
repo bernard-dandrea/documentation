@@ -2,7 +2,7 @@
 
 # 25/07/2026
 
-- Posibilidad de configurar un cron independiente en el motor de tareas
+- Posibilidad de definir una tarea programada independiente en el motor de tareas
 - Cifrado de las contraseñas en la base de datos
 - Mejora de la gestión de las tareas programadas
 
@@ -21,7 +21,7 @@
 
 # 17/10/2024
 
-- Definición de los métodos cron en «static» para evitar errores en PHP 8
+- Definición de los métodos cron como estáticos para evitar errores en PHP 8
 - Corrección de un error en los comandos de actualización
   
 # 11/08/2024

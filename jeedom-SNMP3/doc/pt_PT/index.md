@@ -9,7 +9,7 @@ Plugin que permite ler e escrever os OIDs dos dispositivos compatíveis com o pr
 
 O SNMP é um dos protocolos amplamente aceites para gerir e analisar os elementos da rede. A maioria dos elementos de rede de nível profissional vem equipada com um agente SNMP integrado.
 
-O plugin utiliza o pacote php-snmp (ver <https://www.php.net/manual/fr/book.snmp.php>), que é um wrapper da biblioteca Net-SNMP (ver <http://www.net-snmp.org>). O plugin permite consultar (comando get) e atualizar (comando set) os OIDs que suportam essa funcionalidade.
+O plugin utiliza o pacote php-snmp (ver <https://www.php.net/manual/fr/book.snmp.php>), que é um wrapper da biblioteca Net-SNMP (ver <http://www.net-snmp.org>). O plugin permite consultar (comando get) e atualizar (comando set) os OIDs que suportam esta funcionalidade.
 
 # AVISO
 
@@ -17,7 +17,7 @@ Este plugin destina-se a pessoas que estão familiarizadas com o protocolo.
 
 Este não é particularmente complicado, mas requer, ainda assim, o domínio dos conceitos subjacentes (autenticação, OID, MIB, ...).
 
-Antes de contactar o programador em caso de eventuais problemas, verifique primeiro se as definições para a comunicação com o dispositivo SNMP estão corretas.
+Antes de contactar o programador em caso de eventuais problemas, verifique primeiro se as configurações para a comunicação com o dispositivo SNMP estão corretas.
 
 Para tal, pode-se utilizar, numa sessão SSH, o comando snmpget, por exemplo:
 
@@ -35,7 +35,7 @@ Recomenda-se a utilização do protocolo v3 para garantir a segurança da ligaç
 
 Veja acima um exemplo de configuração num NAS Synology.
 
-Teste as definições de ligação com o comando snmpget (ver parágrafo anterior) ou outros utilitários.
+Teste os parâmetros de ligação com o comando snmpget (ver parágrafo anterior) ou outros utilitários.
 
 # Configuração do plugin
 
@@ -56,7 +56,7 @@ Ao instalar o pacote php-snmp, são instalados vários MIBs (normalmente no dire
 
 O plugin permite instalar MIBs específicas, colocando os ficheiros correspondentes, por exemplo, SYNOLOGY-SYSTEM-MIB.txt, no diretório plugins/SNMP3/data/mibs.
 
-Também pode copiar os ficheiros para o diretório comum (normalmente /usr/share/snmp/mibs). Tenha em atenção que será necessário repetir este procedimento caso seja necessária uma restauração do Jeedom.
+Também pode copiar os ficheiros para o diretório comum (normalmente /usr/share/snmp/mibs). Tenha em atenção que será necessário repetir este procedimento em caso de restauração do Jeedom.
 
 Se tiver dificuldades na implementação dos MIBs, pode testá-los com o comando snmptranslate (consulte <https://net-snmp.sourceforge.io/tutorial/tutorial-5/commands/snmptranslate.html>). Atenção: neste caso, os MIBs no diretório plugins/SNMP3/data/mibs não são tidos em conta.
 
@@ -105,13 +105,13 @@ Estão disponíveis os seguintes botões:
 Para cada comando relacionado com um OID, além dos campos habituais do Jeedom, encontram-se:
 
 - o LogicalID:
-  - para comandos do tipo «info», igual ao OID
+  - para comandos do tipo «info», iguais ao OID
   - para os comandos de atualização, igual a «R_» seguido do OID
   - para comandos de ação, igual a «A_» seguido do OID
 - a opção de atualização que permite solicitar ou não a atualização do OID
 - o campo «scan», que indica a frequência de atualização do OID
 
-Para os comandos que permitem a atualização do OID, o subtipo do comando de ação determina o formato do valor transmitido ao dispositivo SNMP. Quando o subtipo é «Message», o título indica o formato e o conteúdo da mensagem fornece o valor (apenas a primeira linha é transmitida). Consulte <https://www.php.net/manual/fr/function.snmpset.php> para ver os formatos suportados.
+Para os comandos que permitem a atualização do OID, o subtipo do comando de ação determina o formato do valor transmitido ao dispositivo SNMP. Quando o subtipo é «Message», o título indica o formato e o conteúdo da mensagem indica o valor (apenas a primeira linha é transmitida). Consulte <https://www.php.net/manual/fr/function.snmpset.php> para ver os formatos suportados.
 
 # Widget
 

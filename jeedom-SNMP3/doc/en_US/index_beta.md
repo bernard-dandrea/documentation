@@ -46,13 +46,13 @@ You can enable the Debug log level to monitor the plugin's activity and identify
 
 ![SNMP3_Equipment](../images/SNMP3_cron.png)
 
-You can also specify whether to use a standalone cron job. This prevents other cron jobs from being blocked if the plugin's cron job freezes, and ensures that the plugin's cron job isn't blocked by other cron jobs running for other plugins.
+You can also specify whether to use a standalone cron job. This prevents other cron jobs from being blocked if the plugin's cron job hangs, and ensures that the plugin's cron job isn't blocked by other cron jobs running for other plugins.
 
 # MIB Management
 
 OIDs can be identified by their numeric code, for example, .1.3.6.1.4.1.6574.1.1.0, or by using the corresponding MIB, for example, SYNOLOGY-SYSTEM-MIB::systemStatus.0.
 
-When you install the php-snmp package, a number of MIBs are installed (usually in the /usr/share/snmp/mibs directory) and can be used immediately.
+When you install the php-snmp package, a number of MIBs are installed (usually in the /usr/share/snmp/mibs directory) and can be used directly.
 
 The plugin allows you to install specific MIBs by placing the corresponding files—for example, SYNOLOGY-SYSTEM-MIB.txt—in the plugins/SNMP3/data/mibs directory.
 

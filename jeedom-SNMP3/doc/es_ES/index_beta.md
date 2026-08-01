@@ -97,7 +97,7 @@ Por defecto, se crean dos comandos:
 Están disponibles los siguientes botones:
 
 - Importar un OID: permite crear un comando de información para un OID
-- Añadir un comando «refresh»: permite crear un comando de acción para forzar la actualización del valor del OID
+- Añadir un comando «refresh»: permite crear un comando de acción para forzar la recuperación del valor del OID
 - Añadir una acción: permite crear un comando de acción para modificar el valor del OID (cuando lo permita el dispositivo SNMP)
 
 # Análisis de los campos del pedido
