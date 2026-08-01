@@ -1,3 +1,5 @@
+# Registro delle modifiche del plugin Archiplus
 
+# 18/07/2026
 
-English link <https://bernard-dandrea.github.io/documentation/jeedom-archiplus/doc/en_US/changelog> 
+- Caricamento iniziale
