@@ -2,14 +2,14 @@
 Zuletzt geändert: 26.06.2026
 -->
 - [Verwaltung von Verlaufsdaten in Jeedom](#Verwaltung-von-Verlaufsdaten-in-Jeedom)
-  - [Funktionsweise](#Funktionsweise)
+  - [Funktionsweise](#funktionsweise)
   - [Umfang der Verlaufsdaten](#Umfang-der-Verlaufsdaten)
   - [Die Grenzen der Archivierung in Jeedom](#die-grenzen-der-archivierung-in-jeedom)
   - [Die Vorteile des archiplus-Plugins](#die-vorteile-des-archiplus-plugins)
   - [Hinweis](#hinweis)
 - [Archiplus-Plugin](#plugin-archiplus)
   - [Das archiplus-Plugin installieren](#das-archiplus-plugin-installieren)
-  - [Plugin konfigurieren](#plugin-konfigurieren)
+  - [Das Plugin konfigurieren](#das-plugin-konfigurieren)
   - [Die Module des Plugins](#die-module-des-plugins)
 - [Zugriff auf die Module](#zugriff-auf-die-module)
   - [Die Bedientasten](#die-bedientasten)
@@ -69,8 +69,8 @@ Durch die optionale Aktivierung der im Plugin integrierten Archivierungsfunktion
 
 Der Verlauf in Jeedom hat sich seit den ersten Versionen kaum verändert und basiert auf zwei Tabellen:
 
-* Die Tabelle „history“, in die die aktualisierten Werte der Befehle vom Typ INFO, für die der Verlauf aktiviert ist, geschrieben werden
-* Die Tabelle „historyArch“, die bei jeder Archivierung (in der Regel täglich um 5:00 Uhr) die konsolidierten oder nicht konsolidierten History-Werte entsprechend den für den Befehl festgelegten Einstellungen erhält.
+* Die Tabelle „history“, in die die aktualisierten Werte der Befehle vom Typ INFO geschrieben werden, für die die Verlaufsfunktion aktiviert ist
+* Die Tabelle „historyArch“, in die bei jeder Archivierung (in der Regel täglich um 5:00 Uhr) die konsolidierten oder nicht konsolidierten History-Werte je nach den für den Befehl festgelegten Einstellungen geschrieben werden.
 
 Der Aufbau der beiden Tabellen ist identisch und sehr einfach: Pro Bestellung wird ein Wert mit der ID und dem Datum sowie der Uhrzeit (auf die Sekunde genau) gespeichert.
 
@@ -84,7 +84,7 @@ Jeedom-Nutzer werden sich erst dann für den Verlauf interessieren, wenn sie fes
 
 Über den folgenden Link gelangen Sie zu einer Anleitung, in der erklärt wird, wie Sie ein Szenario erstellen, das die Volumina der umfangreichsten Tabellen sowie die INFO-Befehle mit den umfangreichsten Verlaufsdaten auflistet [Tutorial – Archive analysieren](https://community.jeedom.com/t/tuto-analyser-les-archives-pour-detecter-des-pbs-lenteurs-espaces-disques/104384).
 
-Einfacher ausgedrückt: Sie können die Tabellengrößen einsehen, indem Sie die Datenbank direkt abfragen (Menü „Einstellungen“ / „System“ / „Konfiguration“, dann die Registerkarte „OS / DB“ (die letzte), dann die Schaltfläche „Datenbankverwaltung“ (die unterste rote Schaltfläche) und anschließend links die Abfrage „Größe“).
+Einfacher ausgedrückt: Sie können die Tabellengrößen einsehen, indem Sie die Datenbank direkt abfragen (Menü „Einstellungen“ / „System“ / „Konfiguration“, dann die Registerkarte „OS / DB“ (die letzte), dann die Schaltfläche „Datenbankverwaltung“ (die unterste rote Schaltfläche) und schließlich links die Abfrage „Größe“).
 
 In einer Standardinstallation sollte man sich Gedanken machen, wenn das Gesamtvolumen des Archivs eine Million Datensätze überschreitet oder ein „info“-Befehl mehr als 10.000 Datensätze liefert. In diesem Fall ist es notwendig, die betroffenen Befehle zu analysieren und die verschiedenen Parameter der Protokollierung und Archivierung anzupassen, um dieses Volumen zu reduzieren. Ist dies nicht möglich, muss möglicherweise auf andere Archivierungsmethoden zurückgegriffen werden, beispielsweise auf InfluxDB, das standardmäßig mit Jeedom verbunden werden kann.
 
@@ -92,10 +92,10 @@ Das Plugin „archiplus“ zeigt sofort die Volumina von „history“ und „hi
 
 ## Die Grenzen der Archivierung in Jeedom
 
-Obwohl in vielen Anlagen der Standardbetrieb ausreicht, sind folgende Einschränkungen zu beachten:
+Obwohl in vielen Anlagen der Standardbetrieb ausreicht, lassen sich folgende Einschränkungen feststellen:
 
 * Schwierigkeiten beim Anzeigen und Ändern der Archivierungseinstellungen: Das einzige verfügbare Tool (Menü „Analyse“ / „Verlauf“ und dann „Konfiguration“) ist sehr langsam, unpraktisch und bietet nur wenige konfigurierbare Felder.
-* Schwierigkeiten bei der Darstellung der historischen Volumina pro Auftrag und beim Erkennen ungewöhnlicher Volumina: Dazu sind SQL-Abfragen und umständliche Prozesse erforderlich
+* Schwierigkeiten bei der Darstellung der historischen Volumina pro Auftrag und beim Erkennen ungewöhnlicher Volumina: Dazu sind SQL-Abfragen und umständliche Verfahren erforderlich
 * Einstellungen für die Datengruppierung in historyArch, global definiert und nicht pro Befehl anpassbar
 * Keine Transparenz hinsichtlich des Archivierungsprozesses (kein Protokoll)
 * Globale Archivierung: Es ist nicht möglich, die Archivierung für einen bestimmten Auftrag zu starten
@@ -104,7 +104,7 @@ Obwohl in vielen Anlagen der Standardbetrieb ausreicht, sind folgende Einschrän
 
 ## Die Vorteile des archiplus-Plugins
 
-Das Plugin „archiplus“ ermöglicht die Darstellung von Befehlen vom Typ INFO in einer Tabelle zusammen mit allen Parametern zur Archivierung. Die Anzahl der Einträge in „history“ und „historyArch“ wird ebenfalls angezeigt, wodurch sich übermäßige Datenmengen sehr leicht erkennen lassen. Das Plugin nutzt die JavaScript-Bibliothek „Tabulator“, die äußerst leistungsstark ist und einen sehr einfachen Zugriff auf die Funktionen des Plugins ermöglicht.
+Das Plugin „archiplus“ ermöglicht es, Befehle vom Typ INFO zusammen mit allen für die Archivierung relevanten Parametern in einer Tabelle anzuzeigen. Die Anzahl der Einträge in „history“ und „historyArch“ wird ebenfalls angezeigt, wodurch sich übermäßige Datenmengen sehr leicht erkennen lassen. Das Plugin nutzt die JavaScript-Bibliothek „Tabulator“, die äußerst leistungsstark ist und einen sehr einfachen Zugriff auf die Funktionen des Plugins ermöglicht.
 
 Alle von Jeedom angebotenen Funktionen sind direkt verfügbar, und es wurden weitere Funktionen hinzugefügt:
 
@@ -112,7 +112,7 @@ Alle von Jeedom angebotenen Funktionen sind direkt verfügbar, und es wurden wei
 * Anzeige von Diagrammen und Datenextraktion
 * Verlauf löschen
 * Standard-CSV-Export
-* Kopieren der Konfiguration aus dem Verlauf (oder einer einzelnen Einstellung) in mehrere Befehle
+* Kopieren der Konfiguration aus dem Verlauf (oder einer einzelnen Einstellung) auf mehrere Befehle
 * Laden der Parameter der INFO-Befehle zum Verlauf aus einer Excel-Datei
 * Archivierung für einen bestimmten Auftrag starten
 * Kopieren des Verlaufs einer Bestellung in eine andere Bestellung
@@ -127,7 +127,7 @@ Darüber hinaus kann der Archivierungsprozess des Plugins als Alternative zur na
 * alle durchgeführten Vorgänge und die für jeden Befehl berücksichtigten Parameter im Archiplus-Protokoll zu speichern
 * den Berechnungszeitraum (für Min., Max., Durchschnitt), die Frist bis zur Archivierung und die Paketgröße für jeden Befehl individuell anzupassen
 * das Datum der Löschung auf einen Tag, eine Stunde oder eine Minute festlegen
-* die Archivierung für einen Auftrag aus einem Szenario heraus starten (in PHP-Code)
+* die Archivierung für einen Auftrag über ein Szenario (in PHP-Code) zu starten
 * Optionen hinzuzufügen, die in Jeedom nicht vorgesehen sind (siehe Erläuterungen weiter unten in der Dokumentation)
   * „Keep Last Value“: Immer mindestens einen Wert im Verlauf beibehalten
   * Uniq: Identische aufeinanderfolgende Werte in historyArch entfernen
@@ -139,7 +139,7 @@ Da Jeedom keine Pläne für eine Weiterentwicklung der Protokollverwaltung hat, 
 
 ## Hinweis
 
-Das Plugin und sein spezifischer Archivierungsprozess wurden sehr gründlich getestet, sind jedoch nicht vor Fehlern gefeit. In diesem Fall ist das Jeedom-Team selbstverständlich nicht verpflichtet, Support zu leisten. Anfragen zur Analyse und Behebung von Fehlern müssen zwingend über das Standard-Support-Formular an den Autor des Plugins gerichtet werden.
+Das Plugin und sein spezifischer Archivierungsprozess wurden sehr gründlich getestet, sind jedoch nicht vor Fehlern gefeit. In diesem Fall ist das Jeedom-Team selbstverständlich nicht verpflichtet, Support zu leisten. Anfragen zur Analyse und Behebung von Fehlern müssen zwingend über das Standard-Supportformular an den Autor des Plugins gerichtet werden.
 
 Die Aktivierung des Plugins und insbesondere des Archivierungsprozesses setzt daher die uneingeschränkte Zustimmung zu dieser Situation voraus.
 
@@ -169,7 +169,7 @@ Im Bereich „Konfiguration“ können Sie:
 
 * Spezifische Archivierung aktivieren (standardmäßig deaktiviert)
 * Geben Sie an, ob die Einträge in „history“ und „historyArch“ gelöscht werden sollen, falls der betreffende Befehl nicht existiert
-* Festlegen, dass History-Einträge nicht in historyArch übertragen werden, wenn keine Glättung erfolgt
+* Festlegen, dass History-Einträge nicht in „historyArch“ übertragen werden, wenn keine Glättung erfolgt
 * Format für Exporte festlegen
 * Standardzeitraum für Lösch- und Archivierungsenddaten festlegen
 
@@ -292,7 +292,7 @@ Die Anzahl der Einträge in „history“ und „historyArch“ entspricht in de
 
 ![015](../images/015.png)
 
-Wenn Sie auf die Schaltfläche oben klicken, können Sie eine Berechnung erneut starten, was einige Sekunden dauert.
+Wenn Sie auf die Schaltfläche oben klicken, können Sie eine Berechnung erneut starten, was einige Sekunden dauern wird.
 
 ![017](../images/017.png)
 
@@ -348,7 +348,7 @@ Es ist auch möglich, Änderungen aus einer Excel- oder CSV-Datei zu laden, inde
 
 Die Daten müssen dasselbe Format haben wie die beim Export generierten Daten. Es ist daher möglich, die Daten zu exportieren, sie in Excel zu bearbeiten und die Änderungen anschließend in die Tabelle zu laden.
 
-Es ist auch möglich, die Archivierungseinstellungen aus einem Jeedom-Backup zu extrahieren und die Änderungen zu laden: So lassen sich die seit dem Backup vorgenommenen Änderungen schnell einsehen und gegebenenfalls kann zu einem früheren Zustand zurückgekehrt werden.
+Es ist auch möglich, die Archivierungseinstellungen aus einem Jeedom-Backup zu extrahieren und die Änderungen zu laden: So lassen sich die seit dem Backup vorgenommenen Änderungen schnell einsehen und gegebenenfalls kann man zu einem früheren Zustand zurückkehren.
 
 ![072](../images/072.png)
 
@@ -358,7 +358,7 @@ Um die Änderungen zu übernehmen, klicken Sie auf die Schaltfläche „Bestäti
 
 ## Bearbeitbare Daten
 
-Alle Einstellungsdaten des Standard-Verlaufs von Jeedom sowie die spezifischen Daten des Archiplus-Plugins können direkt über Monitor geändert werden.
+Alle Einstellungsdaten des Standard-Protokolls von Jeedom sowie die spezifischen Daten des archiplus-Plugins können direkt über Monitor geändert werden.
 
 Im Folgenden werden die spezifischen Optionen von archiplus detailliert beschrieben:
 
@@ -376,7 +376,7 @@ Dies ist der Zeitraum, nach dessen Ablauf die Protokolleinträge aus „history�
 
 ### Rahmung
 
-Ermöglicht die Festlegung des Zeitpunkts, bis zu dem historische Daten gelöscht werden, sowie des Zeitpunkts für die Übertragung der historischen Daten von „history“ nach „historyArch“ anhand einer Begrenzung nach Tag, Stunde oder Minute. Informationen zur Verwendung dieser Option finden Sie in der folgenden FAQ [Zeitlimit und Zeitrahmen](#zeitlimit-und-zeitrahmen).
+Ermöglicht die Festlegung des Zeitpunkts, bis zu dem historische Daten gelöscht werden, sowie des Zeitpunkts der Übertragung der historischen Daten von „history“ nach „historyArch“ anhand einer Begrenzung nach Tag, Stunde oder Minute. Informationen zur Verwendung dieser Option finden Sie in der folgenden FAQ [Zeitlimit und Zeitrahmen](#zeitlimit-und-zeitrahmen).
 
 ### Teich
 
@@ -384,7 +384,7 @@ Ermöglicht die Berechnung eines zeitgewichteten Durchschnitts unter Berücksich
 
 ### Paket
 
-Legt fest, in welchen Intervallen die Daten bei der Glättung zusammengefasst werden. In der Standardarchivierung von Jeedom ist dieser Parameter für alle Befehle gleich und entspricht einem Vielfachen von Stunden. Mit archiplus kann das Intervall für jeden Befehl individuell festgelegt und der Wert auch in Minuten angegeben werden (geben Sie die Anzahl der Minuten gefolgt vom Buchstaben m ein).  Lesen Sie die folgende FAQ, um die Verwendung dieser Option [Pack](#pack-1) zu verstehen.
+Legt fest, in welchen Intervallen die Daten bei der Glättung zusammengefasst werden. In der Standardarchivierung von Jeedom ist dieser Parameter für alle Befehle gleich und entspricht einem Vielfachen von Stunden. Mit archiplus kann das Intervall für jeden Befehl individuell festgelegt und der Wert auch in Minuten angegeben werden (Geben Sie die Anzahl der Minuten gefolgt vom Buchstaben „m“ ein).  Lesen Sie die folgende FAQ, um die Verwendung dieser Option [Pack](#pack-1) zu verstehen.
 
 ### Abgerundet
 
@@ -398,7 +398,7 @@ Durch einen Rechtsklick an einer beliebigen Stelle in einer Zeile der Tabelle wi
 
 * den Verlauf als Grafik anzeigen  (Aufruf der Standardfunktion von Jeedom)
 * die in den Tabellen „history“ und „historyArch“ gespeicherten Daten anzuzeigen
-* den Verlauf bis zu einem bestimmten Datum zu löschen
+* den Verlauf bis zu einem bestimmten Datum löschen
 * Historische Daten im CSV-Format exportieren (Aufruf der Standardfunktion von Jeedom)
 * die Statistiken für die betreffende Zeile zu aktualisieren
 * die Archivierung nur für den betreffenden Auftrag zu starten
@@ -418,7 +418,7 @@ Der Zugriff auf die Daten in den Tabellen „history“ und „historyArch“ er
 
 ![028](../images/028.png)
 
-Die Daten werden in einem modalen Fenster nach Datums- und Uhrzeitangaben in absteigender Reihenfolge sortiert angezeigt.
+Die Daten werden in einem modalen Fenster nach absteigendem Datum und Uhrzeit sortiert angezeigt.
 
 ## Änderung
 
@@ -457,7 +457,7 @@ Mit dem Import-Modul können historische Daten in einen oder mehrere Befehle vom
 Die zu importierende Datei muss im Excel- oder CSV-Format vorliegen und mindestens die folgenden drei Spalten enthalten (alle anderen Spalten werden ignoriert):
 
 * id: Auftrags-ID
-* Datums- und Zeitangabe: Datums- und Zeitangabe der historischen Daten im Format JJJJ-MM-TT HH:MM:SS (das interne Datums- und Zeitformat von Excel wird ebenfalls unterstützt)
+* Datum/Uhrzeit: Datum/Uhrzeit der historischen Daten im Format JJJJ-MM-TT HH:MM:SS (das interne Excel-Datum/Uhrzeit-Format wird ebenfalls unterstützt)
 * value: zu importierender Wert
 
 Stellen Sie sicher, dass die aus den Modulen „Monitor“ oder „Restore“ extrahierten Daten das richtige Format haben.
@@ -531,7 +531,7 @@ In bestimmten Fällen ist es erforderlich, den letzten Wert des Befehls INFO zu 
 
 ![046](../images/046.png)
 
-Nehmen wir den Fall eines Heizkessels, bei dem regelmäßig der für die Heizung zuständige Gaszähler abgelesen wird.
+Nehmen wir den Fall eines Heizkessels, bei dem der für die Heizung zuständige Gaszähler regelmäßig abgelesen wird.
 
 ![047](../images/047.png)
 
@@ -556,7 +556,7 @@ Durch Aktivieren der Option „Uniq“ werden bei der spezifischen Archivierung 
 
 Wenn das Plugin zudem so konfiguriert ist, dass die Einträge aus „history“ nicht in „historyArch“ kopiert werden, werden auch die Duplikate in „history“ gelöscht.
 
-## Zeitrahmen und Projektumfang
+## Zeitrahmen und Umfang
 
 Standardmäßig wird der Zeitpunkt, ab dem Daten in „history“ und „historyArch“ gelöscht werden, durch den Parameter „Protokoll löschen“ festgelegt, der in Stunden angegeben wird. Ein Standardwert ist in der globalen Konfiguration von Jeedom definiert.
 
@@ -571,7 +571,7 @@ Mit der archiplus-spezifischen Einstellung „Cadrage“ lässt sich der Zeitpun
 
 Mit der „Wartezeit bis zur Archivierung“ (in Stunden) lässt sich festlegen, ab wann die History-Aufzeichnungen in historyArch übertragen werden (mit oder ohne Konsolidierung). Standardmäßig ist dieser Wert global definiert und gilt somit für alle Befehle gleichermaßen.
 
-Die spezifische Archivierung von archiplus ermöglicht es, für jeden INFO-Befehl eine bestimmte Frist festzulegen und das oben gezeigte Schema zu verwenden. Bei einer Frist von 2 Stunden erfolgt die Übertragung von „history“ nach „historyArch“ somit zu folgendem Zeitpunkt:
+Die spezifische Archivierung von archiplus ermöglicht es, für jeden INFO-Befehl eine bestimmte Frist festzulegen und das oben dargestellte Schema zu verwenden. Bei einer Frist von 2 Stunden erfolgt die Übertragung von history nach historyArch somit:
 
 * am 20.01.2025 um 03:11:21 Uhr, sofern kein Rahmen definiert ist
 * am 20.01.2025 um 03:11:00 Uhr mit Fokus auf die letzte Minute
@@ -614,7 +614,7 @@ Nach der Archivierung unterscheiden sich die Einträge in „historyArch“
 
 Bei der Standardarchivierung wird der Durchschnittswert des Zeitraums berücksichtigt.
 
-Bei der spezifischen Archivierung von archiplus wird der gewichtete Durchschnitt über den Zeitraum berechnet. Beachten Sie außerdem, dass ein Eintrag in „history“ hinzugefügt wird, um bei der nächsten Archivierung den Startwert des Zeitraums zu ermitteln (ohne diesen Eintrag würde der Durchschnitt des letzten Zeitraums übernommen, was die Berechnung verfälschen würde).
+Bei der spezifischen Archivierung von archiplus wird der gewichtete Durchschnitt des Zeitraums berechnet. Beachten Sie außerdem, dass ein Eintrag in „history“ hinzugefügt wird, um bei der nächsten Archivierung den Startwert des Zeitraums zu kennen (ohne diesen Eintrag würde der Durchschnitt des letzten Zeitraums übernommen, was die Berechnung verfälschen würde).
 
 ## Paket
 
@@ -697,7 +697,7 @@ Die verfügbaren Funktionen finden Sie im Code der Klasse „archiplus“. Die w
 * `addHistoryValue($_cmd_id, $_datetime, $_value)`: Fügt einen Eintrag zum Verlauf hinzu (oder ersetzt den bestehenden Eintrag), indem die Standardfunktion von Jeedom aufgerufen wird
 * `historyArch2history($_cmd_id, $_date_start = '', $_date_end = '')`: Überträgt die Datensätze aus historyArch in history
   
-Selbstverständlich können die in der Klasse „history.class.php“ verfügbaren Funktionen genutzt werden, nachdem die erforderliche `require_once`-Anweisung eingefügt wurde.
+Selbstverständlich können die in der Klasse „history.class.php“ verfügbaren Funktionen genutzt werden, nachdem die erforderliche `require_once`-Anweisung ausgeführt wurde.
 
 # Die Protokolle
 
@@ -717,7 +717,7 @@ Sie können das Protokoll für einen bestimmten Befehl anzeigen, indem Sie desse
 
 # Übersetzung
 
-Die Benutzeroberfläche, die in den Protokollen ausgegebenen Meldungen und die Dokumentation sind in die fünf von Jeedom unterstützten Sprachen übersetzt (vielen Dank an @mips für die Entwicklung von ga-translation und docs-translations). Sollten Sie Übersetzungsfehler feststellen, können Sie eine Supportanfrage stellen und, wenn möglich, die korrigierte Übersetzungsdatei (im Verzeichnis core/i18n des Plugins) beifügen.
+Die Benutzeroberfläche, die in den Protokollen ausgegebenen Meldungen und die Dokumentation sind in die fünf von Jeedom unterstützten Sprachen übersetzt (vielen Dank an @mips für die Entwicklung von ga-translation und docs-translations). Sollten Sie Übersetzungsfehler feststellen, können Sie eine Supportanfrage stellen und, sofern möglich, die korrigierte Übersetzungsdatei (zu finden im Verzeichnis core/i18n des Plugins) beifügen.
 
 # Bewertungen
 
