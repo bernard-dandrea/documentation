@@ -2,21 +2,11 @@ name: Translate SNMP3 documentation
 
 on:
   workflow_dispatch:
-    inputs:
-      target_languages:
-        description: "Comma-separated target languages"
-        required: false
-        default: "en_US,es_ES,de_DE,it_IT,pt_PT"
-  push:
-    branches:
-      - main
-    paths:
-      - '**/fr_FR/*.md'
 
 permissions:
   contents: write
   pull-requests: write
-
+  
 jobs:
   translate:
     runs-on: ubuntu-latest
@@ -24,10 +14,7 @@ jobs:
       - uses: Mips2648/docs-translations@v3
         with:
           deepl_api_key: ${{ secrets.DEEPL_API_KEY }}
-          target_languages: "en_US,es_ES,de_DE,it_IT,pt_PT"
-          documents_roots: "SNMP3"
+          target_languages: "en_US,es_ES,de_DE"
+          documents_roots: "arlo,portainer"
           memory_path: ${{ github.workspace }}/.translation_memory
-
-
-
           
