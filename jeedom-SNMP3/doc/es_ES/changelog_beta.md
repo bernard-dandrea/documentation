@@ -1,5 +1,9 @@
 # Registro de cambios del complemento SNMP3
 
+# 01/08/2026
+
+- traducción del complemento y de la documentación a en_US, es_ES, de_DE, it_IT, pt_PT
+
 # 22/07/2026
 
 - Posibilidad de configurar un cron independiente en el motor de tareas

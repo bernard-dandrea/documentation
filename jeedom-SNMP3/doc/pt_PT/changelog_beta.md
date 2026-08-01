@@ -1,5 +1,9 @@
 # Registo de alterações do plugin SNMP3
 
+# 01/08/2026
+
+- tradução do plugin e da documentação para en_US, es_ES, de_DE, it_IT, pt_PT
+
 # 22/07/2026
 
 - Possibilidade de definir um cron autónomo no motor de tarefas
