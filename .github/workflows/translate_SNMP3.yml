@@ -17,5 +17,5 @@ jobs:
           target_languages: "en_US,es_ES,de_DE,it_IT,pt_PT"
           documents_roots: "jeedom-SNMP3/doc"
           memory_path: ${{ github.workspace }}/jeedom-SNMP3/.translation_memory
-          use_glossary: "true"
+          use_glossary: true
           
