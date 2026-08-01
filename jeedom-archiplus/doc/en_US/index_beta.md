@@ -45,7 +45,7 @@ Last Modified: June 26, 2026
   - [Smoothing and Weighting](#smoothing-and-weighting)
   - [Pack](#pack-1)
   - [Rounded](#rounded-1)
-  - [Copy data from historyArch to history](#copy-data-from-historyarch-to-history)
+  - [Copy data from historyArch to history](#copy-data-from-historyArch-to-history)
   - [Using Archiplus in PHP](#using-archiplus-in-php)
 - [Logs](#logs)
 - [Translation](#translation)
@@ -86,7 +86,7 @@ The following link takes you to a tutorial that explains how to create a scenari
 
 Simply put, you can view the table sizes by querying the database directly (go to the Settings / System / Configuration menu, then select the OS / DB tab (the last one), then click the "Database Administration" button (the red button at the bottom), and then select "Size" from the query options on the left).
 
-In a standard installation, you should start to investigate when the total volume of the logs exceeds one million records or when a `info` command returns more than 10,000 records. In this case, you’ll need to analyze the relevant commands and adjust the various logging and archiving settings to reduce this volume. If that’s not possible, you may need to consider other archiving methods, such as InfluxDB, which can interface with Jeedom out of the box.
+In a standard installation, you should start to investigate when the total volume of the logs exceeds one million records or when a `info` command returns more than 10,000 records. In this case, you’ll need to analyze the relevant commands and adjust the various logging and archiving settings to reduce this volume. If that’s not possible, you may need to consider other archiving methods, such as InfluxDB, which integrates natively with Jeedom.
 
 The archiplus plugin immediately displays the volumes of history and historyArch, making it easy to identify problems and find solutions.
 
@@ -94,7 +94,7 @@ The archiplus plugin immediately displays the volumes of history and historyArch
 
 Although standard operation will be sufficient in many installations, the following limitations should be noted:
 
-* Difficulty viewing and modifying archiving settings: the only available tool (Analysis / History menu, then Configuration) is very slow, impractical, and has few fields to configure
+* Difficulty viewing and modifying archiving settings: the only available tool (Analysis / History menu, then Configuration) is very slow, impractical, and offers few fields to configure
 * Difficulty viewing historical volume data by command and identifying abnormal volumes: this requires using SQL queries and cumbersome processes
 * Settings for data grouping in historyArch are defined globally and cannot be customized on a per-command basis
 * No visibility into the archiving process (no log)
@@ -121,7 +121,7 @@ All the features offered by Jeedom are available directly, and additional featur
 * Export history data in multiple formats (xlsx, CSV, JSON, HTML) for one or more commands from Jeedom or a standard Jeedom backup
 * Extracting INFO command settings related to history from a Jeedom backup (these settings can then be applied to Jeedom)
 
-In addition, the plugin's archiving process can be enabled as an alternative to Jeedom's native archiving feature. This allows you to:
+In addition, the plugin's archiving process can be enabled as an alternative to the native archiving feature provided by Jeedom. This allows you to:
 
 * to start archiving for a given command
 * record in the Archiplus log all operations performed and the parameters taken into account for each command
@@ -139,7 +139,7 @@ Since Jeedom has no plans to update its history management system, the plugin sh
 
 ## Disclaimer
 
-The plugin and its specific logging process have been thoroughly tested but are not immune to errors. In such cases, the Jeedom team is obviously not obligated to provide support. Requests for analysis and fixes must be directed to the plugin’s author via the standard support request form.
+The plugin and its specific logging process have been thoroughly tested but are not immune to errors. In such cases, the Jeedom team is obviously not obligated to provide support. Requests for analysis and fixes must be directed to the plugin’s author via the standard support ticket system.
 
 Activating the plugin—and in particular, the archiving process—therefore implies full acceptance of this situation.
 
@@ -376,7 +376,7 @@ This is the time interval after which history records are transferred to history
 
 ### Scope
 
-Allows you to set the time up to which historical data is purged, as well as the time at which historical data is transferred to historyArch, based on a limit of days, hours, or minutes. See the following FAQ to understand how to use this option [Time Limit and Time Frame](#time-limit-and-time-frame).
+Allows you to set the time up to which historical data is purged, as well as the time at which historical data is transferred to historyArch, based on a limit of days, hours, or minutes. See the following FAQ to understand how to use this option [Timeout and Time Frame](#timeout-and-time-frame).
 
 ### Pond
 
@@ -565,7 +565,7 @@ Thus, with a purge interval set to 7 days, if the archiving process is started o
 The "Framing" setting specific to Archiplus allows you to set the timing of the purge more precisely. Thus, in the example above, the purge will occur at:
 
 * on 01/13/2025 at 5:11:21 a.m. if no frame is defined
-* on January 13, 2025, at 5:11:00 a.m., with a close-up on the final minute
+* on January 13, 2025, at 5:11:00 a.m., with a close-up on the last minute
 * on January 13, 2025, at 5:00:00 a.m., focusing on the last hour
 * on January 13, 2025, at 12:00:00 a.m., focusing on the last day
 
@@ -688,7 +688,7 @@ Here, the archiplus functions are used in a scenario to load the history of a co
 
 `require_once dirname(__FILE__) . '../../../plugins/archiplus/core/class/archiplus.class.php';`
 
-This line loads the code for the archiplus functions. You may need to adjust the path to point to the plugin class.
+This line loads the code for the Archiplus functions. You may need to adjust the path to point to the plugin class.
 
 The available functions can be found in the archiplus class code. The main ones are:
 
@@ -709,7 +709,7 @@ When archiving, Jeedom's general archiving settings are displayed.
 
 ![067](../images/067.png)
 
-Next, for each command, the operations performed and the number of entries in `history` and `historyArch` before and after that command are listed in detail.
+Next, for each command, the operations performed and the number of entries in history and historyArch before and after that command are listed in detail.
 
 ![069](../images/069.png)
 

@@ -56,7 +56,7 @@
 A principal função do plugin é fornecer um conjunto completo de ferramentas que permitem:
 
 *   **gerir as definições de arquivo das encomendas do tipo INFO**
-*   **visualizar volumes de dados e detetar anomalias**
+*   **visualizar os volumes de dados e detetar anomalias**
 *   **inserir facilmente dados históricos a partir de ficheiros do tipo Excel**
 *   **recuperar os registos históricos a partir dos arquivos do Jeedom**
 *   **alargar as opções de arquivo padrão do Jeedom**
@@ -76,7 +76,7 @@ A estrutura das duas tabelas é idêntica e muito simples: cada comando é regis
 
 O histórico pode ser apresentado na interface do Jeedom sob a forma de um gráfico.
 
-A documentação oficial relativa à gestão dos históricos no Jeedom encontra-se [aqui](https://doc.jeedom.com/fr_FR/core/4.5/history).
+A documentação oficial relativa à gestão dos registos no Jeedom encontra-se [aqui](https://doc.jeedom.com/fr_FR/core/4.5/history).
 
 ## Volume dos registos históricos
 
@@ -114,7 +114,7 @@ Todas as funcionalidades oferecidas pelo Jeedom estão disponíveis diretamente 
 * Exportação CSV padrão
 * Copiar a configuração do histórico (ou de um único parâmetro) para vários comandos
 * Carregamento das configurações dos comandos INFO relativos ao histórico a partir de um ficheiro Excel
-* Início do arquivamento para um determinado pedido
+* Início do arquivamento para um pedido específico
 * Copiar o histórico de uma encomenda para outra encomenda
 * Cópia do «historyArch» para o «history», a fim de iniciar uma consolidação por intervalo
 * Importação do histórico de uma encomenda a partir de um ficheiro Excel
@@ -135,11 +135,11 @@ Além disso, o processo de arquivamento do plugin pode ser ativado em substitui�
 
 O plugin archiplus foi desenvolvido no Debian 12 e não utiliza o jQuery (tal como as bibliotecas de terceiros utilizadas). Cumpre as normas de desenvolvimento do Jeedom. O código da classe archiplus é muito bem estruturado e amplamente documentado: o autor do plugin analisará todas as propostas de correção ou melhoria.
 
-Uma vez que o Jeedom não tem um plano de desenvolvimento para a gestão do histórico, o plugin não deverá necessitar de uma reformulação num futuro próximo.
+Uma vez que o Jeedom não tem um plano de evolução para a gestão do histórico, o plugin não deverá necessitar de uma reformulação num futuro próximo.
 
 ## Aviso
 
-O plugin e o seu processo específico de arquivo foram testados de forma muito rigorosa, mas não estão, no entanto, isentos de anomalias. Nesse caso, a equipa do Jeedom não é, obviamente, obrigada a prestar assistência. Os pedidos de análise e correção devem ser dirigidos obrigatoriamente ao autor do plugin através do formulário de assistência padrão.
+O plugin e o seu processo específico de arquivo foram testados de forma muito rigorosa, mas não estão, no entanto, isentos de anomalias. Nesse caso, a equipa do Jeedom não é, obviamente, obrigada a prestar assistência. Os pedidos de análise e correção devem ser dirigidos obrigatoriamente ao autor do plugin através do pedido de assistência padrão.
 
 A ativação do plugin e, em particular, do processo de arquivamento, implica, portanto, a aceitação total desta situação.
 
@@ -173,7 +173,7 @@ Na secção de configuração, pode:
 * Definir o formato para as exportações
 * Definir o intervalo predefinido para as datas de eliminação e de fim de arquivo
 
-A ativação do arquivamento específico cria um novo cron no motor de tarefas e desativa o arquivamento padrão. A desativação do arquivamento específico efetua a operação inversa.
+A ativação do arquivamento específico cria um novo cron no motor de tarefas e desativa o arquivamento padrão. A desativação do arquivamento específico realiza a operação inversa.
 
 Se quiser testar o processo de arquivamento do plugin, pode ativá-lo temporariamente, realizar testes de arquivamento em comandos individuais e, em seguida, desativar o arquivamento do plugin. Como o processo de arquivamento do Jeedom é normalmente iniciado às 5 da manhã, não haverá impacto nos comandos não testados.
 
@@ -189,7 +189,7 @@ A partir do menu Plugins / Monitorização / archiplus, tem acesso a todas as fu
 * Importação: importar dados históricos a partir de um ficheiro do tipo Excel
 * Restauração: extrair dados históricos de um arquivo padrão do Jeedom
 
-A visualização dos dados históricos está disponível no módulo «Monitorização e Recuperação».
+A visualização dos dados históricos está disponível a partir do módulo «Monitorização e Recuperação».
 
 # Acesso aos módulos
 
@@ -388,13 +388,13 @@ Define o intervalo em que os dados serão agrupados durante a suavização. No a
 
 ### Arredondado
 
-Por predefinição no Jeedom, é possível definir o arredondamento para cada comando. O plugin permite, além disso, definir um arredondamento diferente durante o alisamento dos dados no historyArch. Consulte a seguinte FAQ para compreender a utilização desta opção [Arredondamento](#arrondi-1).
+Por predefinição no Jeedom, é possível definir o arredondamento para cada comando. O plugin permite ainda definir um arredondamento diferente durante o alisamento dos dados no historyArch. Consulte a seguinte FAQ para compreender a utilização desta opção [Arredondamento](#arrondi-1).
 
 ## Funções acessíveis através do menu contextual
 
 ![026](../images/026.png)
 
-Ao clicar com o botão direito do rato em qualquer ponto de uma linha da tabela, é apresentado o menu contextual do comando. Para além das ações já vistas, este permite:
+Ao clicar com o botão direito do rato em qualquer ponto de uma linha da tabela, é apresentado o menu contextual do comando. Para além das ações já mencionadas, este permite:
 
 * exibir o histórico sob a forma de gráfico (chamada da função padrão do Jeedom)
 * exibir os dados armazenados nas tabelas history e historyArch
@@ -490,7 +490,7 @@ Note-se que a importação é realizada através do método padrão cmd::addHist
 
 O módulo Restore permite extrair dados históricos de um arquivo padrão do Jeedom e exportá-los, para que possam ser importados com o módulo Import.
 
-Todos os processamentos são efetuados localmente no navegador da Web. Todos os comandos e dados históricos são carregados na memória do navegador. O programa foi testado com 1,5 milhões de linhas no «history» e no «historyArch». O número máximo de dados carregados depende da memória RAM atribuída ao navegador e não pode ser conhecido antecipadamente. No entanto, deverá ser capaz de carregar a maioria dos ficheiros de cópia de segurança em que o histórico não tenha atingido limites excessivos.
+Todos os processamentos são efetuados localmente no navegador da Web. Todos os comandos e dados históricos são carregados na memória do navegador. O programa foi testado com 1,5 milhões de linhas no «history» e no «historyArch». O número máximo de dados carregados depende da memória RAM atribuída ao navegador e não pode ser conhecido antecipadamente. No entanto, deverá ser capaz de carregar a maioria das cópias de segurança em que o histórico não tenha atingido limites excessivos.
 
 ![040](../images/040.png)
 
@@ -554,7 +554,7 @@ Durante o arquivamento, se não houver suavização, os dados do histórico são
 
 A ativação da opção Uniq permite eliminar os duplicados no historyArch durante o arquivamento específico do archiplus.
 
-Além disso, se o plugin estiver configurado para não copiar os registos do «history» para o «historyArch», as entradas duplicadas no «history» também serão eliminadas.
+Além disso, se o plugin estiver configurado para não copiar os registos do «history» para o «historyArch», as entradas duplicadas no «history» serão também eliminadas.
 
 ## Prazo e âmbito
 
@@ -644,7 +644,7 @@ Para certos comandos, pode ser interessante dispor de um valor preciso durante u
 
 ![064](../images/064.png)
 
-O comando acima está configurado para manter um histórico com 1 casa decimal durante uma semana e um histórico sem casas decimais a partir daí.
+O comando acima está configurado para manter um histórico com 1 casa decimal durante uma semana e um histórico sem casas decimais para além desse período.
 
 ![065](../images/065.png)
 
@@ -701,7 +701,7 @@ As funções disponíveis podem ser encontradas no código da classe archiplus. 
 
 # Os registos
 
-Se o nível de registo na configuração do plugin estiver definido, pelo menos, em «Info», os vários eventos relacionados com o Archiplus serão registados no registo do Archiplus do Jeedom. É possível aceder diretamente a este registo através do botão «Registo» presente nos vários módulos do Archiplus.
+Se o nível de registo na configuração do plugin estiver definido, pelo menos, em «Info», os diversos eventos relacionados com o Archiplus serão registados no registo do Archiplus do Jeedom. É possível aceder diretamente a este registo através do botão «Registo» presente nos diversos módulos do Archiplus.
 
 ![068](../images/068.png)
 
@@ -713,7 +713,7 @@ Em seguida, são detalhadas, para cada comando, as operações realizadas e o n�
 
 ![069](../images/069.png)
 
-É possível visualizar o registo de um comando específico, indicando o seu número precedido dos caracteres «-» e um espaço na área de pesquisa.
+É possível visualizar o registo de um comando específico, indicando o seu número precedido pelos caracteres «-» e um espaço na área de pesquisa.
 
 # Tradução
 

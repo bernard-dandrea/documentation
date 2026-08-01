@@ -46,7 +46,7 @@ Ultima modifica: 26/06/2026
   - [Pacchetto](#pack-1)
   - [Arrotondato](#arrotondato-1)
   - [Copiare i dati da historyArch a history](#copiare-i-dati-da-historyarch-a-history)
-  - [Utilizzo di Archiplus in PHP](#utilizzare-archiplus-in-php)
+  - [Come utilizzare Archiplus in PHP](#come-utilizzare-archiplus-in-php)
 - [I log](#i-log)
 - [Traduzione](#traduzione)
 - [Recensioni](#recensioni)
@@ -84,7 +84,7 @@ L'utente di Jeedom inizierà a interessarsi alla cronologia quando noterà che i
 
 Il seguente link rimanda a un tutorial che spiega come creare uno scenario che elenchi i volumi delle tabelle più grandi e i comandi INFO con gli storici più estesi [Tutorial - Analisi degli archivi](https://community.jeedom.com/t/tuto-analyser-les-archives-pour-detecter-des-pbs-lenteurs-espaces-disques/104384).
 
-In parole povere, è possibile visualizzare i volumi delle tabelle interrogando direttamente il database (menu Impostazioni / Sistema / Configurazione, quindi scheda OS / DB (l'ultima), poi il pulsante "Amministrazione database" (il pulsante rosso più in basso) e infine, a sinistra, l'opzione "dimensione").
+In parole povere, è possibile visualizzare i volumi delle tabelle interrogando direttamente il database (menu Impostazioni / Sistema / Configurazione, quindi scheda OS / DB (l'ultima), poi il pulsante "Amministrazione database" (il pulsante rosso in fondo) e infine, a sinistra, l'opzione "dimensione").
 
 In un impianto standard, è necessario iniziare a riflettere quando il volume complessivo degli archivi supera il milione di registrazioni o quando un comando "info" restituisce più di 10.000 registrazioni. In tal caso, è necessario analizzare i comandi in questione e regolare i diversi parametri di registrazione e archiviazione al fine di ridurre tale volume. Se ciò non fosse possibile, potrebbe essere necessario ricorrere ad altri metodi di archiviazione, ad esempio InfluxDB, che può interfacciarsi di serie con Jeedom.
 
@@ -104,7 +104,7 @@ Sebbene in molti impianti il funzionamento standard sia sufficiente, si possono 
 
 ## I VANTAGGI del plugin archiplus
 
-Il plugin archiplus consente di visualizzare in una tabella i comandi di tipo INFO con tutti i parametri relativi all'archiviazione. Viene inoltre indicato il numero di record presenti in history e historyArch, il che permette di individuare con estrema facilità volumi eccessivi. Il plugin utilizza la libreria javascript Tabulator, estremamente performante e che consente un accesso molto semplice alle funzioni del plugin.
+Il plugin archiplus consente di visualizzare in una tabella i comandi di tipo INFO con tutti i parametri relativi all'archiviazione. Viene inoltre indicato il numero di record presenti in history e historyArch, il che permette di individuare con estrema facilità volumi eccessivi. Il plugin utilizza la libreria javascript Tabulator, che è estremamente performante e consente un accesso molto semplice alle funzioni del plugin.
 
 Tutte le funzioni offerte da Jeedom sono disponibili direttamente e ne sono state aggiunte altre:
 
@@ -118,7 +118,7 @@ Tutte le funzioni offerte da Jeedom sono disponibili direttamente e ne sono stat
 * Copia della cronologia di un ordine in un altro ordine
 * Copia di historyArch in history per avviare un consolidamento a intervalli
 * Importazione della cronologia di un ordine da un file Excel
-* Estrazione della cronologia in diversi formati (xlsx, CSV, JSON, HTML) di uno o più comandi da Jeedom o da un backup standard di Jeedom
+* Estrazione della cronologia in diversi formati (xlsx, CSV, JSON, HTML) di uno o più ordini da Jeedom o da un backup standard di Jeedom
 * Estrazione da un backup Jeedom dei parametri dei comandi INFO relativi alla cronologia (questi parametri possono poi essere applicati su Jeedom)
 
 Inoltre, è possibile attivare il processo di archiviazione del plugin in sostituzione della funzione di archiviazione nativa offerta da Jeedom. Ciò consente di:
@@ -133,7 +133,7 @@ Inoltre, è possibile attivare il processo di archiviazione del plugin in sostit
   * Uniq: eliminare i valori identici consecutivi in historyArch
   * Ponderazione: nel livellamento tramite media, calcolare il valore ponderato sull'intervallo di tempo (e non la media dei valori)
 
-Il plugin archiplus è stato sviluppato su Debian 12 e non utilizza jQuery (così come le librerie di terze parti impiegate). Rispetta gli standard di sviluppo di Jeedom. Il codice della classe archiplus è molto strutturato e ampiamente documentato: l'autore del plugin valuterà attentamente tutte le proposte di correzione o miglioramento.
+Il plugin archiplus è stato sviluppato su Debian 12 e non utilizza jQuery (così come le librerie di terze parti utilizzate). Rispetta gli standard di sviluppo di Jeedom. Il codice della classe archiplus è molto strutturato e ampiamente documentato: l'autore del plugin valuterà tutte le proposte di correzione o miglioramento.
 
 Poiché Jeedom non ha in programma di sviluppare ulteriormente la gestione della cronologia, il plugin non dovrebbe richiedere una revisione nel prossimo futuro.
 
@@ -141,7 +141,7 @@ Poiché Jeedom non ha in programma di sviluppare ulteriormente la gestione della
 
 Il plugin e il suo specifico processo di archiviazione sono stati sottoposti a test molto rigorosi, ma non sono comunque esenti da anomalie. In tal caso, il team Jeedom non è ovviamente tenuto a fornire assistenza. Le richieste di analisi e correzione dovranno essere indirizzate obbligatoriamente all'autore del plugin tramite la richiesta di assistenza standard.
 
-L'attivazione del plugin e, in particolare, del processo di archiviazione implicano quindi la piena accettazione di questa situazione.
+L'attivazione del plugin e, in particolare, del processo di archiviazione, comportano quindi la piena accettazione di questa situazione.
 
 # Plugin Archiplus
 
@@ -173,7 +173,7 @@ Nella sezione "Configurazione" è possibile:
 * Definire il formato per le esportazioni
 * Definire l'intervallo predefinito per le date di eliminazione e di fine archiviazione
 
-L'attivazione dell'archiviazione specifica crea un nuovo cron nel motore delle attività e disattiva l'archiviazione standard. La disattivazione dell'archiviazione specifica esegue l'operazione inversa.
+L'attivazione dell'archiviazione specifica crea un nuovo cron nel motore delle attività e disattiva l'archiviazione standard. La disattivazione dell'archiviazione specifica esegue l'operazione opposta.
 
 Se desiderate testare il processo di archiviazione del plugin, potete attivarlo temporaneamente, eseguire dei test di archiviazione su singoli comandi e poi disattivare l'archiviazione del plugin. Poiché il processo di archiviazione di Jeedom viene solitamente avviato alle 5 del mattino, non ci saranno ripercussioni sui comandi non testati.
 
@@ -232,7 +232,7 @@ La prima colonna consente di selezionare le righe su cui si desidera intervenire
 
 Cliccando sull'intestazione della colonna, si selezionano tutte le righe visualizzate nella tabella.
 
-È possibile selezionare ogni riga singolarmente cliccando sulla casella di selezione o in qualsiasi punto della riga.
+È possibile selezionare ogni riga singolarmente cliccando sulla casella di controllo o in qualsiasi punto della riga.
 
 È possibile selezionare anche una serie di righe cliccando sulla prima riga da selezionare tenendo premuto il tasto Ctrl, quindi cliccando sull'ultima riga sempre tenendo premuto il tasto Ctrl (attenzione a cliccare in un punto qualsiasi della riga, ma non sulla casella di selezione, altrimenti la selezione multipla non funzionerà).
 
@@ -336,7 +336,7 @@ Dopo aver cliccato sul pulsante Conferma, i dati vengono aggiornati e lo sfondo 
 
 ![025](../images/025.png)
 
-Si noti che facendo clic con il tasto destro del mouse su una riga è possibile avviare direttamente la configurazione avanzata dei comandi di Jeedom.
+Si noti che cliccando con il tasto destro del mouse su una riga è possibile avviare direttamente la configurazione avanzata dei comandi di Jeedom.
 
 ## Modifiche da un file Excel
 
@@ -348,7 +348,7 @@ Si noti che facendo clic con il tasto destro del mouse su una riga è possibile 
 
 I dati devono avere lo stesso formato di quelli generati dall'esportazione. È quindi possibile esportare i dati, modificarli in Excel e poi caricare le modifiche nella tabella.
 
-È inoltre possibile estrarre le impostazioni di archiviazione da un backup Jeedom e caricare le modifiche: ciò consente di visualizzare rapidamente le modifiche apportate dopo il backup ed eventualmente ripristinare una situazione precedente.
+È inoltre possibile estrarre le impostazioni di archiviazione da un backup Jeedom e caricare le modifiche: ciò consente di visualizzare rapidamente le modifiche apportate dopo il backup e, se necessario, di ripristinare una situazione precedente.
 
 ![072](../images/072.png)
 
@@ -368,7 +368,7 @@ Consente di conservare sempre almeno una registrazione nella cronologia. Consult
 
 ### Uniq
 
-Consente di eliminare i valori identici consecutivi in historyArch (ed eventualmente in history). Consultare la seguente FAQ per comprendere l'utilizzo di questa opzione [Uniq](#uniq-1).
+Consente di eliminare i valori identici consecutivi in historyArch (ed eventualmente in history). Consultare la seguente FAQ per comprendere come utilizzare questa opzione [Uniq](#uniq-1).
 
 ### Tempi di consegna
 
@@ -488,13 +488,13 @@ Si noti che l'importazione viene eseguita tramite il metodo standard cmd::addHis
 
 # Il modulo Restore
 
-Il modulo Restore consente di estrarre i dati storici da un archivio standard Jeedom e di esportarli per poterli importare con il modulo Import.
+Il modulo Restore consente di estrarre i dati storici da un archivio standard Jeedom ed esportarli per poterli importare con il modulo Import.
 
 Tutte le elaborazioni vengono eseguite localmente sul browser web. Tutti i comandi e i dati storici vengono caricati nella memoria del browser. Il programma è stato testato con 1,5 milioni di righe in history e historyArch. Il numero massimo di dati caricabili dipende dalla RAM assegnata al browser e non può essere determinato a priori. Dovrebbe tuttavia essere in grado di caricare la maggior parte dei backup in cui la cronologia non ha raggiunto dimensioni eccessive.
 
 ![040](../images/040.png)
 
-Il primo passo consiste nel recuperare il backup in locale sul computer. Per la gestione dei backup Jeedom, consultare la seguente documentazione [qui](https://doc.jeedom.com/fr_FR/core/4.5/backup).
+Il primo passo consiste nel recuperare il backup in locale sul computer. Per informazioni sulla gestione dei backup Jeedom, consultare la seguente documentazione [qui](https://doc.jeedom.com/fr_FR/core/4.5/backup).
 
 ![041](../images/041.png)
 
@@ -531,7 +531,7 @@ In alcuni casi, è necessario disporre dell'ultimo valore del comando INFO.
 
 ![046](../images/046.png)
 
-Prendiamo ad esempio il caso di una caldaia di cui si rileva periodicamente il contatore del gas destinato al riscaldamento.
+Prendiamo ad esempio il caso di una caldaia di cui si legge periodicamente il contatore del gas destinato al riscaldamento.
 
 ![047](../images/047.png)
 
@@ -569,16 +569,16 @@ Il parametro "Cadrage" specifico di archiplus consente di impostare con maggiore
 * il 13/01/2025 alle 05:00:00 con un'analisi incentrata sull'ultima ora
 * il 13/01/2025 alle 00:00:00 con un'analisi incentrata sull'ultimo giorno
 
-Il "Tempo prima dell'archiviazione" (in ore) consente di determinare a partire da quando le registrazioni della cronologia vengono trasferite a historyArch (con o senza consolidamento). Per impostazione predefinita, è definito a livello globale ed è quindi identico per tutti i comandi.
+Il "Tempo prima dell'archiviazione" (in ore) consente di determinare a partire da quando le registrazioni della cronologia vengono trasferite in historyArch (con o senza consolidamento). Per impostazione predefinita, è definito a livello globale ed è quindi identico per tutti i comandi.
 
-L'archiviazione specifica di archiplus consente di definire un intervallo di tempo specifico per ogni comando INFO e di utilizzare l'inquadramento visto sopra. Pertanto, con un intervallo di 2 ore, il momento del trasferimento da history a historyArch sarà:
+L'archiviazione specifica di archiplus consente di definire un intervallo di tempo specifico per ogni comando INFO e di utilizzare l'inquadramento sopra illustrato. Pertanto, con un intervallo di 2 ore, il momento del trasferimento da history a historyArch sarà:
 
-* il 20/01/2025 alle 03:11:21 se non è definito alcun inquadramento
+* il 20/01/2025 alle 03:11:21 se non è definito alcun ambito
 * il 20/01/2025 alle 03:11:00 con un'inquadratura sull'ultimo minuto
 * il 20/01/2025 alle 03:00:00 con un'analisi dell'ultima ora
 * il 20/01/2025 alle 00:00:00 con un filtro sull'ultimo giorno, indipendentemente dall'ora del giorno in cui viene avviata l'archiviazione
 
-Si noti che il momento dello svuotamento non può essere successivo al momento del trasferimento di history verso historyArch e verrà quindi regolato automaticamente.
+Si noti che il momento dello svuotamento non può essere successivo al trasferimento della cronologia in historyArch e verrà quindi regolato automaticamente.
 
 ![048](../images/048.png)
 
@@ -713,7 +713,7 @@ Successivamente, per ogni comando vengono riportate in dettaglio le operazioni e
 
 ![069](../images/069.png)
 
-È possibile visualizzare il log relativo a un comando specifico inserendo il suo numero preceduto dai caratteri - e uno spazio nell'area di ricerca.
+È possibile visualizzare il log relativo a un comando specifico inserendo il suo numero preceduto dai caratteri - e uno spazio nella casella di ricerca.
 
 # Traduzione
 

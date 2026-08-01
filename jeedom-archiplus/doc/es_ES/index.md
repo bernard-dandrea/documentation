@@ -72,7 +72,7 @@ El historial de Jeedom ha cambiado poco desde las primeras versiones y se basa e
 * la tabla «history», que recibe las actualizaciones de los valores de los comandos de tipo INFO para los que se ha activado el historial
 * la tabla historyArch, que recibe en cada proceso de archivo (normalmente cada día a las 5:00) los valores históricos, consolidados o no, según la configuración definida para el comando.
 
-La estructura de ambas tablas es idéntica y muy sencilla: se registra un valor por cada pedido con el ID y la fecha y hora (con precisión de segundos).
+La estructura de ambas tablas es idéntica y muy sencilla: se registra un valor por cada comando con el identificador (Id) y la fecha y hora (con precisión de segundos).
 
 El historial se puede visualizar en la interfaz de Jeedom en forma de gráfico.
 
@@ -84,9 +84,9 @@ El usuario de Jeedom empezará a interesarse por el historial cuando observe que
 
 El siguiente enlace te permite acceder a un tutorial que explica cómo crear un escenario que muestre los volúmenes de las tablas más grandes y las órdenes INFO con los historiales más extensos [Tutorial: Analizar los archivos](https://community.jeedom.com/t/tuto-analyser-les-archives-pour-detecter-des-pbs-lenteurs-espaces-disques/104384).
 
-En pocas palabras, puedes consultar el tamaño de las tablas consultando directamente la base de datos (menú Ajustes / Sistema / Configuración; a continuación, la pestaña SO / BD (la última); después, el botón «Administración de la base de datos» (el botón rojo más abajo); y, a la izquierda, la consulta «tamaño»).
+En pocas palabras, puedes consultar el tamaño de las tablas consultando directamente la base de datos (menú Ajustes / Sistema / Configuración; a continuación, la pestaña SO / BD (la última); después, el botón «Administración de la base de datos» (el botón rojo situado más abajo); y, por último, en la parte izquierda, la consulta «tamaño»).
 
-En una instalación estándar, hay que empezar a plantearse la cuestión cuando el volumen total de los archivos supere el millón de registros o cuando una consulta «info» arroje más de 10 000 registros. En ese caso, es necesario analizar las órdenes en cuestión y ajustar los distintos parámetros de historización y archivo para reducir dicho volumen. Si esto no es posible, quizá haya que recurrir a otros métodos de archivo, como, por ejemplo, InfluxDB, que puede integrarse de forma estándar con Jeedom.
+En una instalación estándar, hay que empezar a plantearse la cuestión cuando el volumen total de los archivos supere el millón de registros o cuando una consulta «info» arroje más de 10 000 registros. En ese caso, es necesario analizar las órdenes en cuestión y ajustar los distintos parámetros de historización y archivo para reducir dicho volumen. Si esto no es posible, quizá haya que recurrir a otros métodos de archivo, como por ejemplo InfluxDB, que puede integrarse de forma estándar con Jeedom.
 
 El complemento archiplus muestra al instante los volúmenes de history y historyArch, lo que permite identificar fácilmente los problemas y aportar soluciones.
 
@@ -141,7 +141,7 @@ Dado que Jeedom no tiene previsto desarrollar la gestión del historial, no debe
 
 El complemento y su proceso específico de archivado se han sometido a pruebas muy rigurosas, pero no por ello están exentos de posibles anomalías. En tal caso, el equipo de Jeedom no está, evidentemente, obligado a prestar asistencia. Las solicitudes de análisis y corrección deberán dirigirse obligatoriamente al autor del complemento a través del formulario estándar de asistencia técnica.
 
-La activación del complemento y, en particular, del proceso de archivado, implica, por lo tanto, la plena aceptación de esta situación.
+La activación del complemento y, en particular, del proceso de archivado, implica, por tanto, la plena aceptación de esta situación.
 
 # Complemento Archiplus
 
@@ -155,11 +155,11 @@ Se puede acceder al complemento a través del menú.
 
 ## Configurar el complemento
 
-En la configuración, puedes ajustar los parámetros habituales de los complementos y los valores por defecto del complemento.
+En la configuración, puedes ajustar los parámetros habituales de los complementos y los valores predeterminados del complemento.
 
 ![003](../images/003.png)
 
-Para obtener la máxima información sobre el proceso de archivado del complemento y las acciones realizadas, se recomienda poner los registros en modo «Debug».
+Para obtener la máxima información sobre el proceso de archivado del complemento y las acciones realizadas, se recomienda configurar los registros en modo «Debug».
 
 Ten en cuenta que las solicitudes de asistencia deberán realizarse a través del botón **Asistencia**.
 
@@ -245,7 +245,7 @@ Los encabezados de columna describen el contenido de las celdas situadas en la c
 Permiten:
 
 * obtener información adicional mediante una ventana emergente al mantener el cursor sobre el campo durante un segundo
-* ordenar las filas según el valor del campo haciendo clic en el encabezado de la columna (ten en cuenta que el botón «Ordenación inicial» permite anular todas las ordenaciones realizadas)
+* ordenar las filas según el valor del campo haciendo clic en el título de la columna (ten en cuenta que el botón «Ordenación inicial» permite anular todas las ordenaciones realizadas)
 * filtrar las filas que se muestran introduciendo un criterio de selección en el campo situado debajo del nombre de la columna (ten en cuenta que el botón «Restablecer» permite anular todas las selecciones).
 
 En el caso del módulo Monitor, la agrupación de columnas permite seleccionar únicamente determinados tipos de información.
@@ -270,7 +270,7 @@ Los campos modificados aparecen sobre un fondo magenta que desaparece tras valid
 
 ![012](../images/012.png)
 
-En la parte inferior de la tabla se muestran los totales correspondientes a las líneas mostradas o seleccionadas.
+En la parte inferior de la tabla se muestran los totales correspondientes a las filas mostradas o seleccionadas.
 
 # el módulo Monitor
 
@@ -336,7 +336,7 @@ Tras hacer clic en el botón «Validar», los datos se actualizan y se borra el 
 
 ![025](../images/025.png)
 
-Ten en cuenta que al hacer clic con el botón derecho del ratón sobre una línea se abre directamente la configuración avanzada de comandos de Jeedom.
+Ten en cuenta que al hacer clic con el botón derecho del ratón sobre una línea se abre directamente la configuración avanzada de control de Jeedom.
 
 ## Modificaciones a partir de un archivo de Excel
 
@@ -348,7 +348,7 @@ También es posible cargar modificaciones desde un archivo Excel o CSV haciendo 
 
 Los datos deben tener el mismo formato que el generado por la exportación. Por lo tanto, es posible exportar los datos, modificarlos en Excel y, a continuación, cargar los cambios en la tabla.
 
-También es posible extraer los parámetros de archivo de una copia de seguridad de Jeedom y cargar los cambios: esto permite ver rápidamente las modificaciones realizadas desde la copia de seguridad y, si fuera necesario, volver a una situación anterior.
+También es posible extraer los parámetros de archivo desde una copia de seguridad de Jeedom y cargar los cambios: esto permite ver rápidamente las modificaciones realizadas desde la copia de seguridad y, si fuera necesario, volver a una situación anterior.
 
 ![072](../images/072.png)
 
@@ -376,7 +376,7 @@ Se trata del plazo a partir del cual se transfieren los registros de history a h
 
 ### Enfoque
 
-Permite establecer el momento hasta el cual se eliminan los datos históricos, así como el momento de la transferencia de los datos de history a historyArch, con un límite de día, hora o minuto. Consulta la siguiente pregunta frecuente para comprender cómo utilizar esta opción [Plazo y intervalo](#plazo-e-intervalo).
+Permite establecer el momento hasta el cual se eliminan los datos históricos, así como el momento de la transferencia de los datos de «history» a «historyArch», con un límite de día, hora o minuto. Consulta la siguiente pregunta frecuente para comprender cómo utilizar esta opción [Plazo y intervalo](#plazo-e-intervalo).
 
 ### Pond
 
@@ -484,7 +484,7 @@ Para importar los datos históricos a Jeedom, hay que seleccionar la línea o l�
 
 ![039](../images/039.png)
 
-Cabe señalar que la importación se realiza mediante el método estándar cmd::addHistoryValue. Por lo tanto, se llevan a cabo los controles y procesamientos estándar de Jeedom. Las nuevas entradas se guardan en la tabla «history».
+Cabe señalar que la importación se realiza mediante el método estándar cmd::addHistoryValue. Por lo tanto, se llevan a cabo los controles y procesos estándar de Jeedom. Las nuevas entradas se guardan en la tabla «history».
 
 # El módulo Restore
 
@@ -594,7 +594,7 @@ El suavizado se aplica al copiar los datos de «history» a «historyArch». El 
 
 Cabe señalar que el archivo estándar no tiene en cuenta el valor del comando al inicio del intervalo y calcula la media de los valores presentes en el intervalo, lo que puede distorsionar significativamente el resultado.
 
-El proceso específico de archivo de archiplus ofrece una opción «Pond» que permite corregir este fenómeno y calcular un resultado exacto para el intervalo considerado.
+El proceso específico de archivo de Archiplus ofrece una opción «Pond» que permite corregir este fenómeno y calcular un resultado exacto para el intervalo considerado.
 
 Esto se ilustra en el ejemplo siguiente.
 
