@@ -36,6 +36,7 @@
     "Indiquer la configuration du dispositif SNMP:": "Indique a configuração do dispositivo SNMP:",
     "Initial load": "Carregamento inicial",
     "Installation et configuration des dispositifs SNMP": "Instalação e configuração de dispositivos SNMP",
+    "L'interface, les messages envoyés dans les logs et la documenation sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation et docs-translations). Si des erreurs de traduction sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).": "A interface, as mensagens enviadas nos registos e a documentação estão traduzidas para as 5 línguas suportadas pelo Jeedom (obrigado ao @mips pelo desenvolvimento do ga-translation e do docs-translations). Se forem detetados erros de tradução, pode abrir um pedido de suporte e, se possível, anexar o ficheiro de tradução corrigido (localizado no diretório core/i18n do plugin).",
     "La configuration des équipements est accessible à partir du menu du plugin (menu Plugins, Objets Connectés puis SNMP3).": "A configuração dos equipamentos está acessível a partir do menu do plugin (menu Plugins, Objetos Conectados e, em seguida, SNMP3).",
     "Last Modified : 2026/07/25 18:39:50": "Última modificação: 25/07/2026 18:39:50",
     "Le bon fonctionnement du plugin suppose que le protocole SNMP soit correctement installé et configuré sur le système cible. Se reporter à la documentation du fabriquant pour réaliser cette configuration.": "Para que o plugin funcione corretamente, é necessário que o protocolo SNMP esteja devidamente instalado e configurado no sistema de destino. Consulte a documentação do fabricante para efetuar esta configuração.",
@@ -65,6 +66,7 @@
     "Si vous rencontrez des difficultés dans la mise en oeuvre des MIBs, vous pouvez les tester avec la commande snmptranslate (voir <https://net-snmp.sourceforge.io/tutorial/tutorial-5/commands/snmptranslate.html>). Attention, dans ce cas les MIBs dans le répertoire plugins/SNMP3/data/mibs ne sont pas pris en compte.": "Se tiver dificuldades na implementação dos MIBs, pode testá-los com o comando snmptranslate (consulte <https://net-snmp.sourceforge.io/tutorial/tutorial-5/commands/snmptranslate.html>). Atenção: neste caso, os MIBs no diretório plugins/SNMP3/data/mibs não são tidos em conta.",
     "Suppression des warnings PHP": "Eliminação dos avisos do PHP",
     "Tester les paramètres de connexion avec la commande snmpget (voir paragraphe précédent) ou d'autres utilitaires.": "Teste os parâmetros de ligação com o comando snmpget (ver parágrafo anterior) ou outros utilitários.",
+    "Traduction": "Tradução",
     "Une fois le plugin installé, il faut l'activer. Le package php-snmp est installé lors de l'installation des dépendances.": "Depois de instalar o plugin, é necessário ativá-lo. O pacote php-snmp é instalado durante a instalação das dependências.",
     "Voici un exemple de widget. On peut modifier le nom des commandes pour que ce soit plus parlant.": "Eis um exemplo de widget. É possível alterar o nome dos comandos para que sejam mais descritivos.",
     "Voir ci-dessus un exemple de configuration sur un NAS Synology.": "Veja acima um exemplo de configuração num NAS Synology.",
@@ -76,9 +78,12 @@
     "la gestion du retry est maintenant gérée par le plugin directement et non par la bibliothèque Net-SNMP": "A gestão das tentativas de reenvio é agora gerida diretamente pelo plugin e não pela biblioteca Net-SNMP",
     "le LogicalID:": "o LogicalID:",
     "le champ scan qui indique la fréquence de mise à jour de l'OID": "o campo «scan», que indica a frequência de atualização do OID",
+    "nettoyage de code et optimisations": "limpeza de código e otimizações",
+    "passage en vanilla js": "mudança para Vanilla JS",
     "pour les commandes action, égal à 'A_' suivi de l'OID": "para comandos de ação, igual a «A_» seguido do OID",
     "pour les commandes de type info, égal à l'OID": "para comandos do tipo «info», iguais ao OID",
     "pour les commandes refresh, égal à 'R_' suivi de l'OID": "para os comandos de atualização, igual a «R_» seguido do OID",
     "snmpget -v 3 -n \"\" -u admin_snmp_2024 -a MD5 -A \"xxxxxx\" -x DES -X \"yyyyy\" -l authPriv 192.168.1.5 .1.3.6.1.2.1.1.6.0": "snmpget -v 3 -n \"\" -u admin_snmp_2024 -a MD5 -A \"xxxxxx\" -x DES -X \"yyyyy\" -l authPriv 192.168.1.5 .1.3.6.1.2.1.1.6.0",
-    "traduction du plugin et de la documentation en en_US,es_ES,de_DE,it_IT,pt_PT": "tradução do plugin e da documentação para en_US, es_ES, de_DE, it_IT, pt_PT"
+    "traduction du plugin et de la documentation en en_US,es_ES,de_DE,it_IT,pt_PT": "tradução do plugin e da documentação para en_US, es_ES, de_DE, it_IT, pt_PT",
+    "version minimale de jeedom -> 4.4.0": "versão mínima do Jeedom -> 4.4.0"
 }

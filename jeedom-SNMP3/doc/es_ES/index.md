@@ -119,6 +119,10 @@ En el caso de los comandos que permiten actualizar el OID, el subtipo del comand
 
 Este es un ejemplo de widget. Se puede modificar el nombre de los comandos para que sean más descriptivos.
 
+# Traducción
+
+La interfaz, los mensajes que aparecen en los registros y la documentación están traducidos a los cinco idiomas compatibles con Jeedom (gracias a @mips por el desarrollo de ga-translation y docs-translations). Si detectas algún error de traducción, puedes abrir una solicitud de asistencia y, si es posible, adjuntar el archivo de traducción corregido (que se encuentra en el directorio core/i18n del complemento).
+
 # Opiniones
 
 ![SNMP3_aviso](../images/SNMP3_avis.png)
