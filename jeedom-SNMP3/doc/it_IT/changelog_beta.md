@@ -3,6 +3,9 @@
 # 01/08/2026
 
 - traduzione del plugin e della documentazione in en_US, es_ES, de_DE, it_IT, pt_PT
+- passaggio a Vanilla JS
+- versione minima di Jeedom -> 4.4.0
+- ripulizia del codice e ottimizzazioni
 
 # 22/07/2026
 

@@ -119,6 +119,10 @@ For commands that update the OID, the subtype of the action command determines t
 
 Here is an example of a widget. You can change the names of the commands to make them more descriptive.
 
+# Translation
+
+The interface, log messages, and documentation have been translated into the 5 languages supported by Jeedom (thanks to @mips for developing ga-translation and docs-translations). If you find any translation errors, please open a support ticket and, if possible, attach the corrected translation file (located in the plugin’s core/i18n directory).
+
 # Reviews
 
 ![SNMP3_review](../images/SNMP3_avis.png)
