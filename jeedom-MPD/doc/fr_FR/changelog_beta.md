@@ -3,6 +3,7 @@
 # BETA
 
 - modification traductions
+- traduction de la documentation
 
 # 03/02/2026
 
