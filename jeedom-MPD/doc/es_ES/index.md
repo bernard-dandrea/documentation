@@ -184,9 +184,3 @@ La interfaz, los mensajes que aparecen en los registros y la documentación est�
 
 Si te gusta este plugin, te agradeceríamos que dejaras una valoración y un comentario en Jeedom Market, siempre nos hace mucha ilusión: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4464#>
 
-
-# Opiniones
-
-![MPD_aviso](../images/MPD_avis.png)
-
-Si te gusta este plugin, te agradeceríamos que dejaras una valoración y un comentario en Jeedom Market, siempre nos hace mucha ilusión: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4464#>

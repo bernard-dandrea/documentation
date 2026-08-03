@@ -184,9 +184,3 @@ A interface, as mensagens enviadas nos registos e a documentação estão traduz
 
 Se gostar deste plugin, por favor, deixe uma avaliação e um comentário no Jeedom Market, é sempre um prazer: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4464#>
 
-
-# Opiniões
-
-![MPD_aviso](../images/MPD_avis.png)
-
-Se gostar deste plugin, por favor, deixe uma avaliação e um comentário no Jeedom Market, é sempre um prazer: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4464#>
