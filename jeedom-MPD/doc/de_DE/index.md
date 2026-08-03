@@ -184,9 +184,3 @@ Die Benutzeroberfläche, die in den Protokollen ausgegebenen Meldungen und die D
 
 Wenn Ihnen dieses Plugin gefällt, hinterlassen Sie bitte eine Bewertung und einen Kommentar im Jeedom Market – das freut uns immer: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4464#>
 
-
-# Bewertungen
-
-![MPD_Bewertung](../images/MPD_avis.png)
-
-Wenn Ihnen dieses Plugin gefällt, hinterlassen Sie bitte eine Bewertung und einen Kommentar im Jeedom Market – das freut uns immer: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4464#>
