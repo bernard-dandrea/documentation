@@ -66,5 +66,6 @@
     "modification traductions": "translation edits",
     "suppression des appels à jQuery": "Removing jQuery calls",
     "traduction dans les langages supportés par Jeedom (merci à @mips)": "Translation into languages supported by Jeedom (thanks to @mips)",
+    "traduction de la documentation": "translation of documentation",
     "version minimale de Jeedom 4.5.0": "Minimum version of Jeedom: 4.5.0"
 }
