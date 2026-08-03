@@ -184,9 +184,3 @@ L'interface, les messages envoyés dans les logs et la documenation sont traduit
 
 Si vous appréciez ce plugin, merci de laisser une évaluation et un commentaire sur le Jeedom market, ça fait toujours plaisir: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4464#>
 
-
-# Avis
-
-![MPD_avis](../images/MPD_avis.png)
-
-Si vous appréciez ce plugin, merci de laisser une évaluation et un commentaire sur le Jeedom market, ça fait toujours plaisir: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4464#>
