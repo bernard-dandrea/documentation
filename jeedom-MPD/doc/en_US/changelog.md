@@ -1,38 +1,39 @@
-# MPD Plugin Changelog
+# MPD plugin changelog
+
 
 # 03/02/2026
 
-- translations modification
+- translation edits
 
 # 02/02/2026
 
-- Removal of jQuery calls  
-- Translation into the languages supported by Jeedom (thanks to @mips)  
-- Minimum Jeedom version 4.5.0  
+- Removing jQuery calls
+- Translation into languages supported by Jeedom (thanks to @mips)
+- Minimum version of Jeedom: 4.5.0
 
 # 01/01/2026
 
-- Correction of PHP warnings  
-- Documentation moved to a separate GitHub repository in order to allow documentation updates without generating a plugin update  
+- PHP warning fixes
+- Moved the documentation to a separate GitHub repository so that the documentation can be updated without triggering a plugin update
 
 # 22/02/2024
 
-- In MPD.class.php, replaced `refresh_all` with `refresh` so that the refresh button on the widget works  
-- Documentation update  
-
+- In MPD.class.php, replace `refresh_all` with `refresh` so that the refresh button on the widget works
+- documentation update
+  
 # 11/12/2023
 
-- Added commands (toggle, state, repeat, random, single, consume, ...): to make them appear, click on the 'Generate commands' button  
+- Add commands (toggle, state, repeat, random, single, consume, ...): To display them, click the 'Generate Commands' button.
 
 # 26/11/2023
 
-- Bug fix in the mute function  
+- Bug fix for the mute function
 
 # 24/11/2023
 
-- Correction of debug message  
-- Does not change the song if it is already playing  
+- Debug message correction
+- Don't change the song if it's already playing
 
 # 21/11/2023
 
-- Initial load  
+- Initial load
