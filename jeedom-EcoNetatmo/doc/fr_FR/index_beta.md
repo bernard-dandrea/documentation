@@ -121,6 +121,10 @@ Voici le widget standard.
 >
 >Le plugin est capable de le faire. Malheureusement, l'API de Netatmo ne spécifie pas quel est le 'type' à utiliser pour la récupération de ces valeurs. Une demande a été faite à l'équipe en charge du développement de l'API mais aucune réponse n'a encore été fournie.
 
+# Traduction
+
+L'interface, les messages envoyés dans les logs et la documenation sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation et docs-translations). Si des erreurs de traduction sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).
+
 # Avis
 
 ![EcoNetatmo_avis](../images/EcoNetatmo_avis.png)
