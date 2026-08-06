@@ -1,4 +1,4 @@
-name: Translate SNMP3 documentation
+name: Translate EcoLegrand documentation
 
 on:
   workflow_dispatch:
