@@ -168,6 +168,10 @@ Pour cela, modifier le fichier de définition des données à récupérer et ajo
 
 La chaine "024795944" sera alors considérée comme une chaine et il n'y aura plus de problème lors de la conversion.
 
+# Traduction
+
+L'interface, les messages envoyés dans les logs et la documenation sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation et docs-translations). Si des erreurs de traduction sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).
+
 # Avis
 
 ![EcoLegrand_avis](../images/EcoLegrand_avis.png)
