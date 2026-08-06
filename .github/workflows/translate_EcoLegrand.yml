@@ -1,0 +1,21 @@
+name: Translate SNMP3 documentation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Mips2648/docs-translations@v3
+        with:
+          deepl_api_key: ${{ secrets.DEEPL_API_KEY }}
+          target_languages: "en_US,es_ES,de_DE,it_IT,pt_PT"
+          documents_roots: "jeedom-EcoLegrand/doc"
+          memory_path: ${{ github.workspace }}/jeedom-EcoLegrand/.translation_memory
+          use_glossary: true
+          
