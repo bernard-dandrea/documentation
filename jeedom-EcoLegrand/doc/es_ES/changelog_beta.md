@@ -1,5 +1,12 @@
 # Registro de cambios del complemento EcoLegrand
 
+# 06/08/2026
+
+- traducción del complemento y de la documentación a en_US, es_ES, de_DE, it_IT y pt_PT
+- cambio a Vanilla JS
+- versión mínima de Jeedom -> 4.4.0
+- limpieza del código y optimizaciones
+- 
 # 22/07/2026
 
 - Posibilidad de configurar un cron independiente en el motor de tareas

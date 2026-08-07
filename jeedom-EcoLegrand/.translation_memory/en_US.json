@@ -44,6 +44,7 @@
     "Initial load": "Initial load",
     "Installation du plugin": "Installing the plugin",
     "Installation et configuration de l'écocompteur EcoLegrand": "Installation and Setup of the EcoLegrand Eco-Meter",
+    "L'interface, les messages envoyés dans les logs et la documenation sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation et docs-translations). Si des erreurs de traduction sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).": "The interface, log messages, and documentation have been translated into the 5 languages supported by Jeedom (thanks to @mips for developing ga-translation and docs-translations). If you find any translation errors, please open a support ticket and, if possible, attach the corrected translation file (located in the plugin’s core/i18n directory).",
     "La chaine \"024795944\" sera alors considérée comme une chaine et il n'y aura plus de problème lors de la conversion.": "The string \"024795944\" will then be treated as a string, and there will no longer be any issues during conversion.",
     "La commande qui permet la réinitialisation des compteurs et du type http://192.168.1.xxx/wp.cgi?wp=536+X+12724+-1+-1+4+0.0 soit wp.cgi? suivi des références du compteurs et de valeurs fixes par exemple wp=536+2+12724+-1+-1+4+0.0 pour compteur_C1. Voir le forum <https://easydomoticz.com/forum/viewtopic.php?t=1942&start=120> pour plus d'informations.": "What is the command used to reset the counters and the type, such as http://192.168.1.xxx/wp.cgi?wp=536+X+12724+-1+-1+4+0.0, i.e., wp.cgi? followed by the meter references and fixed values; for example, wp=536+2+12724+-1+-1+4+0.0 for meter_C1. See the forum <https://easydomoticz.com/forum/viewtopic.php?t=1942&start=120> for more information.",
     "La communication entre le plugin et l'écocompteur s'effectue en récupérant les données de fichiers JSON définis par l'utilisateur. L'utilisateur définit lui-même dans le fichier JSON les données qu'il souhaite récupérer.": "Communication between the plugin and the energy meter occurs by retrieving data from user-defined JSON files. The user defines the data they wish to retrieve in the JSON file.",
@@ -79,6 +80,7 @@
     "Se connecter en indiquant l'adresse IP et les codes d'accès (par défaut admin / password ).": "Log in using the IP address and login credentials (default: admin / password).",
     "Se positionner sur le répertoire SYS.": "Navigate to the SYS directory.",
     "Si vous appréciez ce plugin, merci de laisser une évaluation et un commentaire sur le Jeedom market, ça fait toujours plaisir: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4430#>": "If you like this plugin, please leave a rating and a comment on the Jeedom Market—it’s always appreciated: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4430#>",
+    "Traduction": "Translation",
     "Une commande info est créée pour chacun des compteurs. Pour chacun d'eux, on trouve en plus des champs habituels de jeedom :": "An info command is created for each meter. For each one, in addition to the usual Jeedom fields, you'll find:",
     "Une fois le plugin installé, il faut l'activer.": "Once the plugin is installed, you need to activate it.",
     "Via des scénarios, virtuels ou des procédures PHP, il est possible de produire ses propres indicateurs issus des compteurs.": "Using scenarios—whether virtual or PHP procedures—you can generate your own metrics based on meter readings.",
@@ -103,5 +105,9 @@
     "la commande qui remet à zéro le compteur": "the command that resets the counter",
     "la valeur actuelle du compteur (offset + valeur du compteur dans l'écocompteur)": "the current meter reading (offset + meter reading in the eco-meter)",
     "le seuil qui est la valeur à partir de laquelle le compteur est remis à zéro": "the threshold, which is the value at which the meter is reset to zero",
-    "puissance": "power"
+    "nettoyage de code et optimisations": "code cleanup and optimizations",
+    "passage en vanilla js": "switch to vanilla JS",
+    "puissance": "power",
+    "traduction du plugin et de la documentation en en_US,es_ES,de_DE,it_IT,pt_PT": "Translation of the plugin and documentation into en_US, es_ES, de_DE, it_IT, pt_PT",
+    "version minimale de jeedom -> 4.4.0": "Minimum Jeedom version -> 4.4.0"
 }

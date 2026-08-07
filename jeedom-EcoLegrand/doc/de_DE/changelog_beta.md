@@ -1,5 +1,12 @@
 # Änderungsprotokoll für das EcoLegrand-Plugin
 
+# 06/08/2026
+
+- Übersetzung des Plugins und der Dokumentation in en_US, es_ES, de_DE, it_IT, pt_PT
+- Umstellung auf Vanilla JS
+- Mindestversion von Jeedom -> 4.4.0
+- Code-Bereinigung und Optimierungen
+- 
 # 22/07/2026
 
 - Möglichkeit, einen eigenständigen Cron-Job in der Aufgaben-Engine zu definieren

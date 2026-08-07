@@ -44,6 +44,7 @@
     "Initial load": "Carga inicial",
     "Installation du plugin": "Instalación del complemento",
     "Installation et configuration de l'écocompteur EcoLegrand": "Instalación y configuración del contador ecológico EcoLegrand",
+    "L'interface, les messages envoyés dans les logs et la documenation sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation et docs-translations). Si des erreurs de traduction sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).": "La interfaz, los mensajes que aparecen en los registros y la documentación están traducidos a los cinco idiomas compatibles con Jeedom (gracias a @mips por el desarrollo de ga-translation y docs-translations). Si detectas algún error de traducción, puedes abrir una solicitud de asistencia y, si es posible, adjuntar el archivo de traducción corregido (que se encuentra en el directorio core/i18n del complemento).",
     "La chaine \"024795944\" sera alors considérée comme une chaine et il n'y aura plus de problème lors de la conversion.": "La cadena «024795944» se considerará entonces como una cadena y ya no habrá ningún problema durante la conversión.",
     "La commande qui permet la réinitialisation des compteurs et du type http://192.168.1.xxx/wp.cgi?wp=536+X+12724+-1+-1+4+0.0 soit wp.cgi? suivi des références du compteurs et de valeurs fixes par exemple wp=536+2+12724+-1+-1+4+0.0 pour compteur_C1. Voir le forum <https://easydomoticz.com/forum/viewtopic.php?t=1942&start=120> pour plus d'informations.": "¿Cuál es el comando que permite reiniciar los contadores y del tipo «http://192.168.1.xxx/wp.cgi»?wp=536+X+12724+-1+-1+4+0.0, es decir, wp.cgi? seguido de las referencias de los contadores y de valores fijos; por ejemplo, wp=536+2+12724+-1+-1+4+0.0 para el contador_C1. Consulta el foro <https://easydomoticz.com/forum/viewtopic.php?t=1942&start=120> para obtener más información.",
     "La communication entre le plugin et l'écocompteur s'effectue en récupérant les données de fichiers JSON définis par l'utilisateur. L'utilisateur définit lui-même dans le fichier JSON les données qu'il souhaite récupérer.": "La comunicación entre el complemento y el contador ecológico se lleva a cabo mediante la recuperación de datos de archivos JSON definidos por el usuario. El propio usuario define en el archivo JSON los datos que desea recuperar.",
@@ -79,6 +80,7 @@
     "Se connecter en indiquant l'adresse IP et les codes d'accès (par défaut admin / password ).": "Inicia sesión indicando la dirección IP y las credenciales de acceso (por defecto, admin / password).",
     "Se positionner sur le répertoire SYS.": "Accede al directorio SYS.",
     "Si vous appréciez ce plugin, merci de laisser une évaluation et un commentaire sur le Jeedom market, ça fait toujours plaisir: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4430#>": "Si te gusta este plugin, te agradeceríamos que dejaras una valoración y un comentario en Jeedom Market, siempre nos hace mucha ilusión: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4430#>",
+    "Traduction": "Traducción",
     "Une commande info est créée pour chacun des compteurs. Pour chacun d'eux, on trouve en plus des champs habituels de jeedom :": "Se crea un comando de información para cada uno de los contadores. Para cada uno de ellos, además de los campos habituales de Jeedom, encontramos:",
     "Une fois le plugin installé, il faut l'activer.": "Una vez instalado el complemento, hay que activarlo.",
     "Via des scénarios, virtuels ou des procédures PHP, il est possible de produire ses propres indicateurs issus des compteurs.": "Mediante escenarios, ya sean virtuales o procedimientos PHP, es posible generar tus propios indicadores a partir de los contadores.",
@@ -103,5 +105,9 @@
     "la commande qui remet à zéro le compteur": "el comando que pone a cero el contador",
     "la valeur actuelle du compteur (offset + valeur du compteur dans l'écocompteur)": "el valor actual del contador (desviación + valor del contador en el ecocontador)",
     "le seuil qui est la valeur à partir de laquelle le compteur est remis à zéro": "el umbral, que es el valor a partir del cual se pone a cero el contador",
-    "puissance": "potencia"
+    "nettoyage de code et optimisations": "limpieza del código y optimizaciones",
+    "passage en vanilla js": "cambio a Vanilla JS",
+    "puissance": "potencia",
+    "traduction du plugin et de la documentation en en_US,es_ES,de_DE,it_IT,pt_PT": "traducción del complemento y de la documentación a en_US, es_ES, de_DE, it_IT y pt_PT",
+    "version minimale de jeedom -> 4.4.0": "versión mínima de Jeedom -> 4.4.0"
 }

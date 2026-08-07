@@ -168,6 +168,10 @@ To do this, edit the definition file for the data to be retrieved and add quotes
 
 The string "024795944" will then be treated as a string, and there will no longer be any issues during conversion.
 
+# Translation
+
+The interface, log messages, and documentation have been translated into the 5 languages supported by Jeedom (thanks to @mips for developing ga-translation and docs-translations). If you find any translation errors, please open a support ticket and, if possible, attach the corrected translation file (located in the plugin’s core/i18n directory).
+
 # Reviews
 
 ![EcoLegrand_review](../images/EcoLegrand_avis.png)
