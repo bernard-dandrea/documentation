@@ -44,6 +44,7 @@
     "Initial load": "Erstladung",
     "Installation du plugin": "Installation des Plugins",
     "Installation et configuration de l'écocompteur EcoLegrand": "Installation und Konfiguration des EcoLegrand-Ökozählers",
+    "L'interface, les messages envoyés dans les logs et la documenation sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation et docs-translations). Si des erreurs de traduction sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).": "Die Benutzeroberfläche, die in den Protokollen ausgegebenen Meldungen und die Dokumentation sind in die fünf von Jeedom unterstützten Sprachen übersetzt (vielen Dank an @mips für die Entwicklung von ga-translation und docs-translations). Sollten Sie Übersetzungsfehler feststellen, können Sie eine Supportanfrage stellen und, wenn möglich, die korrigierte Übersetzungsdatei (im Verzeichnis core/i18n des Plugins) beifügen.",
     "La chaine \"024795944\" sera alors considérée comme une chaine et il n'y aura plus de problème lors de la conversion.": "Die Zeichenfolge „024795944“ wird dann als Zeichenfolge behandelt, und bei der Konvertierung treten keine Probleme mehr auf.",
     "La commande qui permet la réinitialisation des compteurs et du type http://192.168.1.xxx/wp.cgi?wp=536+X+12724+-1+-1+4+0.0 soit wp.cgi? suivi des références du compteurs et de valeurs fixes par exemple wp=536+2+12724+-1+-1+4+0.0 pour compteur_C1. Voir le forum <https://easydomoticz.com/forum/viewtopic.php?t=1942&start=120> pour plus d'informations.": "Der Befehl zum Zurücksetzen der Zähler lautet http://192.168.1.xxx/wp.cgi?wp=536+X+12724+-1+-1+4+0.0, d. h. wp.cgi?, gefolgt von den Zählernummern und festen Werten, zum Beispiel wp=536+2+12724+-1+-1+4+0.0 für Zähler_C1. Weitere Informationen finden Sie im Forum <https://easydomoticz.com/forum/viewtopic.php?t=1942&start=120>.",
     "La communication entre le plugin et l'écocompteur s'effectue en récupérant les données de fichiers JSON définis par l'utilisateur. L'utilisateur définit lui-même dans le fichier JSON les données qu'il souhaite récupérer.": "Die Kommunikation zwischen dem Plugin und dem Stromzähler erfolgt durch das Abrufen von Daten aus benutzerdefinierten JSON-Dateien. Der Benutzer legt in der JSON-Datei selbst fest, welche Daten er abrufen möchte.",
@@ -79,6 +80,7 @@
     "Se connecter en indiquant l'adresse IP et les codes d'accès (par défaut admin / password ).": "Melden Sie sich mit der IP-Adresse und den Zugangsdaten an (Standard: admin / password).",
     "Se positionner sur le répertoire SYS.": "Wechseln Sie in das Verzeichnis SYS.",
     "Si vous appréciez ce plugin, merci de laisser une évaluation et un commentaire sur le Jeedom market, ça fait toujours plaisir: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4430#>": "Wenn Ihnen dieses Plugin gefällt, hinterlassen Sie bitte eine Bewertung und einen Kommentar im Jeedom Market – das freut uns immer: <https://jeedom.com/market/index.php?v=d&p=market_display&id=4430#>",
+    "Traduction": "Übersetzung",
     "Une commande info est créée pour chacun des compteurs. Pour chacun d'eux, on trouve en plus des champs habituels de jeedom :": "Für jeden Zähler wird ein Info-Befehl erstellt. Für jeden davon gibt es zusätzlich zu den üblichen Jeedom-Feldern:",
     "Une fois le plugin installé, il faut l'activer.": "Sobald das Plugin installiert ist, muss es aktiviert werden.",
     "Via des scénarios, virtuels ou des procédures PHP, il est possible de produire ses propres indicateurs issus des compteurs.": "Mithilfe von Szenarien – ob virtuell oder über PHP-Prozeduren – lassen sich eigene Anzeigen auf Basis der Zählerstände erstellen.",
@@ -103,5 +105,9 @@
     "la commande qui remet à zéro le compteur": "Der Befehl, der den Zähler zurücksetzt",
     "la valeur actuelle du compteur (offset + valeur du compteur dans l'écocompteur)": "der aktuelle Zählerstand (Offset + Zählerstand im Ökozähler)",
     "le seuil qui est la valeur à partir de laquelle le compteur est remis à zéro": "der Schwellenwert, ab dem der Zähler auf Null zurückgesetzt wird",
-    "puissance": "Leistung"
+    "nettoyage de code et optimisations": "Code-Bereinigung und Optimierungen",
+    "passage en vanilla js": "Umstellung auf Vanilla JS",
+    "puissance": "Leistung",
+    "traduction du plugin et de la documentation en en_US,es_ES,de_DE,it_IT,pt_PT": "Übersetzung des Plugins und der Dokumentation in en_US, es_ES, de_DE, it_IT, pt_PT",
+    "version minimale de jeedom -> 4.4.0": "Mindestversion von Jeedom -> 4.4.0"
 }

@@ -168,6 +168,10 @@ Dies lässt sich beheben, indem man den Wert 024795944 in Anführungszeichen set
 
 Die Zeichenfolge „024795944“ wird dann als Zeichenfolge behandelt, und bei der Konvertierung treten keine Probleme mehr auf.
 
+# Übersetzung
+
+Die Benutzeroberfläche, die in den Protokollen ausgegebenen Meldungen und die Dokumentation sind in die fünf von Jeedom unterstützten Sprachen übersetzt (vielen Dank an @mips für die Entwicklung von ga-translation und docs-translations). Sollten Sie Übersetzungsfehler feststellen, können Sie eine Supportanfrage stellen und, wenn möglich, die korrigierte Übersetzungsdatei (im Verzeichnis core/i18n des Plugins) beifügen.
+
 # Bewertungen
 
 ![EcoLegrand_Bewertung](../images/EcoLegrand_avis.png)

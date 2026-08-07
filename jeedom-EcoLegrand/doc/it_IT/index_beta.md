@@ -168,6 +168,10 @@ A tal fine, modificare il file di definizione dei dati da recuperare e aggiunger
 
 La stringa "024795944" verrà quindi considerata come una stringa e non ci saranno più problemi durante la conversione.
 
+# Traduzione
+
+L'interfaccia, i messaggi inviati nei log e la documentazione sono tradotti nelle 5 lingue supportate da Jeedom (grazie a @mips per lo sviluppo di ga-translation e docs-translations). Se si riscontrano errori di traduzione, è possibile aprire una richiesta di assistenza e, se possibile, allegare il file di traduzione corretto (che si trova nella directory core/i18n del plugin).
+
 # Recensioni
 
 ![EcoLegrand_recensioni](../images/EcoLegrand_avis.png)

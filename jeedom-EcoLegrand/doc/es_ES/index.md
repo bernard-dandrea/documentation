@@ -168,6 +168,10 @@ Para ello, modifica el archivo de definición de los datos que se van a recupera
 
 La cadena «024795944» se considerará entonces como una cadena y ya no habrá ningún problema durante la conversión.
 
+# Traducción
+
+La interfaz, los mensajes que aparecen en los registros y la documentación están traducidos a los cinco idiomas compatibles con Jeedom (gracias a @mips por el desarrollo de ga-translation y docs-translations). Si detectas algún error de traducción, puedes abrir una solicitud de asistencia y, si es posible, adjuntar el archivo de traducción corregido (que se encuentra en el directorio core/i18n del complemento).
+
 # Opiniones
 
 ![EcoLegrand_opiniones](../images/EcoLegrand_avis.png)
