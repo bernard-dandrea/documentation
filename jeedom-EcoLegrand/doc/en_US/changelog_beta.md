@@ -6,7 +6,7 @@
 - switch to vanilla JS
 - Minimum Jeedom version -> 4.4.0
 - code cleanup and optimizations
-- 
+  
 # 22/07/2026
 
 - Ability to set up a standalone cron job in the task engine

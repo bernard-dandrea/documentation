@@ -6,7 +6,7 @@
 - cambio a Vanilla JS
 - versión mínima de Jeedom -> 4.4.0
 - limpieza del código y optimizaciones
-- 
+  
 # 22/07/2026
 
 - Posibilidad de configurar un cron independiente en el motor de tareas
