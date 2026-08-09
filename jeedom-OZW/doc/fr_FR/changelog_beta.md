@@ -1,6 +1,6 @@
 # Changelog plugin OZW
 
-# 06/08/2026
+# 09/08/2026
 
 - traduction du plugin et de la documentation en en_US,es_ES,de_DE,it_IT,pt_PT
 - passage en vanilla js
