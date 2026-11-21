@@ -58,6 +58,14 @@ Per ogni comando di tipo azione, il campo Comando (memorizzato nel LogicalID del
 
 Il comando "Crea un comando" consente di aggiungere un'azione, ad esempio per creare un collegamento rapido per riprodurre una stazione radio. A tal fine, è possibile utilizzare il comando "playsong", che verrà trasformato in "play" seguito dal numero del brano nella coda.
 
+![MPD_Comandi_url](../images/MPD_Commandes_url.png)
+
+È anche possibile riprodurre un brano indicando direttamente l'URL, senza bisogno di avere una playlist che contenga il brano desiderato.
+
+![MPD_Comandi_clear_volumio](../images/MPD_Commandes_clear_volumio.png)
+
+Il funzionamento del plugin con Volumio richiede una configurazione specifica, poiché Volumio gestisce direttamente le playlist e non utilizza quelle del server MPD. Pertanto, prima di poter utilizzare il comando sopra indicato, è necessario disattivare la playlist di Volumio. A questo serve il comando "Clear Volumio Playlist".
+
 # Widget
 
 ![MPD_Widget](../images/MPD_Widget.png)
@@ -88,7 +96,7 @@ Lo scenario sopra riportato, attivato al cambiamento di stato di #[Nessuno][Cube
 
 # Traduzione
 
-L'interfaccia, i messaggi inviati nei log e la documentazione sono tradotti nelle 5 lingue supportate da Jeedom (grazie a @mips per lo sviluppo di ga-translation e docs-translations). Se si riscontrano errori di traduzione, è possibile aprire una richiesta di assistenza e, se possibile, allegare il file di traduzione corretto (che si trova nella directory core/i18n del plugin).
+L'interfaccia, i messaggi inviati nei log e la documentazione sono tradotti nelle 5 lingue supportate da Jeedom (grazie a @mips per lo sviluppo di ga-translation e docs-translations). Se si riscontrano errori di traduzione, è possibile aprire una richiesta di assistenza e, se possibile, allegare il file di traduzione corretto (situato nella directory core/i18n del plugin).
 
 # Recensioni
 
