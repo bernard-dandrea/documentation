@@ -58,6 +58,14 @@ Bei jedem Befehl vom Typ „Aktion“ gibt das Feld „Befehl“ (gespeichert in
 
 Mit dem Befehl „Befehl erstellen“ kann eine Aktion hinzugefügt werden, beispielsweise um eine Verknüpfung zum Abspielen eines Radiosenders zu erstellen. Dazu kann der Befehl „playsong“ verwendet werden, der in „play“ gefolgt von der Nummer des Titels in der Warteschlange umgewandelt wird.
 
+![MPD_Befehle_URL](../images/MPD_Commandes_url.png)
+
+Es ist auch möglich, einen Titel abzuspielen, indem man direkt die URL angibt. Dazu ist keine Wiedergabeliste mit dem gewünschten Titel erforderlich.
+
+![MPD_Befehle_clear_volumio](../images/MPD_Commandes_clear_volumio.png)
+
+Die Verwendung des Plugins mit Volumio erfordert eine besondere Vorgehensweise, da Volumio die Wiedergabelisten direkt verwaltet und nicht die des MPD-Servers verwendet. Bevor Sie den oben genannten Befehl verwenden können, müssen Sie daher die Volumio-Wiedergabeliste deaktivieren. Dies geschieht mit dem Befehl „Clear Volumio Playlist“.
+
 # Widget
 
 ![MPD_Widget](../images/MPD_Widget.png)
@@ -88,7 +96,7 @@ Das oben gezeigte Szenario, das bei einer Zustandsänderung von #[Keine][Cube][B
 
 # Übersetzung
 
-Die Benutzeroberfläche, die in den Protokollen ausgegebenen Meldungen und die Dokumentation sind in die fünf von Jeedom unterstützten Sprachen übersetzt (vielen Dank an @mips für die Entwicklung von ga-translation und docs-translations). Sollten Ihnen Übersetzungsfehler auffallen, können Sie eine Supportanfrage stellen und, wenn möglich, die korrigierte Übersetzungsdatei (zu finden im Verzeichnis core/i18n des Plugins) beifügen.
+Die Benutzeroberfläche, die in den Protokollen ausgegebenen Meldungen und die Dokumentation sind in die fünf von Jeedom unterstützten Sprachen übersetzt (vielen Dank an @mips für die Entwicklung von ga-translation und docs-translations). Sollten Ihnen Übersetzungsfehler auffallen, können Sie eine Supportanfrage stellen und, sofern möglich, die korrigierte Übersetzungsdatei (zu finden im Verzeichnis core/i18n des Plugins) beifügen.
 
 # Bewertungen
 

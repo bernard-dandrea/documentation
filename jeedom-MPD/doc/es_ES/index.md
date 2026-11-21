@@ -58,6 +58,14 @@ Para cada comando de tipo «acción», el campo «Comando» (almacenado en el Lo
 
 El comando «Crear un comando» permite añadir una acción, por ejemplo, para crear un atajo que reproduzca una emisora de radio. Para ello, se puede utilizar el comando «playsong», que se transformará en «play» seguido del número de la canción en la cola.
 
+![MPD_Comandos_url](../images/MPD_Commandes_url.png)
+
+También es posible reproducir una canción indicando directamente la URL, lo que no requiere tener una lista de reproducción con la canción deseada.
+
+![MPD_Comandos_clear_volumio](../images/MPD_Commandes_clear_volumio.png)
+
+El funcionamiento del complemento con Volumio requiere una configuración específica, ya que Volumio gestiona directamente las listas de reproducción y no utiliza las del servidor MPD. Por lo tanto, antes de poder utilizar el comando anterior, es necesario desactivar la lista de reproducción de Volumio. Para ello sirve el comando «Clear Volumio Playlist».
+
 # Widget
 
 ![MPD_Widget](../images/MPD_Widget.png)

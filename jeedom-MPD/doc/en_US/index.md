@@ -58,6 +58,14 @@ For each action-type command, the Command field (stored in the Jeedom command's 
 
 The "Create Command" command lets you add an action, such as a shortcut to play a radio station. To do this, you can use the "playsong" command, which will be converted to "play" followed by the song number in the Queue.
 
+![MPD_Commands_url](../images/MPD_Commandes_url.png)
+
+It's also possible to play a song by entering the URL directly, which means you don't need to have a playlist containing the song you want.
+
+![MPD_Commands_clear_volumio](../images/MPD_Commandes_clear_volumio.png)
+
+The plugin requires special configuration to work with Volumio because Volumio manages playlists directly and does not use those from the MPD server. Therefore, before you can use the command above, you must disable the Volumio playlist. This is what the 'Clear Volumio Playlist' command does.
+
 # Widget
 
 ![MPD_Widget](../images/MPD_Widget.png)
