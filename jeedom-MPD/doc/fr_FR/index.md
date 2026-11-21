@@ -56,7 +56,15 @@ Pour chaque commande de type action, le champ Commande (stocké dans le LogicalI
 
 ![MPD_Commandes_Ajout](../images/MPD_Commandes_Ajout.png)
 
-La commande 'Créer une commande' permet d'ajouter une action, par exemple pour ajouter un racourci pour jouer une station radio. Pour cela, on peut utiliser la commande 'playsong' qui sera transformée en 'play' suivi du numéro de la song dans la Queue.    
+La commande 'Créer une commande' permet d'ajouter une action, par exemple pour ajouter un racourci pour jouer une station radio. Pour cela, on peut utiliser la commande 'playsong' qui sera transformée en 'play' suivi du numéro de la song dans la Queue.
+
+![MPD_Commandes_url](../images/MPD_Commandes_url.png)
+
+Il est également possible de jouer une song en indiquant directement l'url, ce qui ne nécessite pas d'avoir une playlist avec la song souhaitée.
+
+![MPD_Commandes_clear_volumio](../images/MPD_Commandes_clear_volumio.png)
+
+Le fonctionnement du plugin avec Volumio nécessite un fonctionnement particulier car Volumio gère directement les playlist et n'utilise pas celles du serveur MPD. Aussi, avant de pouvoir utiliser la commande ci-dessus, il est nécessaire de désactiver la playlist de Volumio. C'est le role de la commande 'Clear Volumio Playlist'.
 
 # Widget
 
@@ -88,7 +96,7 @@ Le scenario ci-dessus, activé sur le changement d'état de #[Aucun][Cube][Butto
 
 # Traduction
 
-L'interface, les messages envoyés dans les logs et la documenation sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation et docs-translations). Si des erreurs de traduction sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).
+L'interface, les messages envoyés dans les logs et la documentation sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation et docs-translations). Si des erreurs de traduction sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).
 
 # Avis
 
