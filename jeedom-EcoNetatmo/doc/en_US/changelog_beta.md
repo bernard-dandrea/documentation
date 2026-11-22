@@ -2,6 +2,7 @@
 
 # 05/08/2026
 
+- encryption of NetAtmo access codes
 - Translation of the plugin and documentation into en_US, es_ES, de_DE, it_IT, pt_PT
 - switch to vanilla JS
 - Minimum Jeedom version -> 4.4.0
