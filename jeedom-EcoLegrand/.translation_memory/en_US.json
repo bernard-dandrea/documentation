@@ -97,7 +97,9 @@
     "\\\"compteur_C3\\\":~LG536 6 12724$,": "\"meter_C3\":~LG536 6 12,724$,",
     "\\\"compteur_C4\\\":~LG536 8 12724$,": "\"C4_meter\":~LG536 8 12,724$,",
     "\\\"compteur_C5\\\":~LG536 10 12724$,": "\"meter_C5\":~LG536 10 12,724$,",
+    "amélioration des messages dans les logs": "Improving log messages",
     "conso_jour": "daily consumption",
+    "cryptage des codes d'accès dans la base de données": "encryption of access codes in the database",
     "json_error": "json_error",
     "json_lint": "json_lint",
     "l'offset qui est la valeur cumulée du compteur lors de la remise à zéro": "the offset, which is the cumulative value of the counter at the time of reset",
@@ -108,6 +110,7 @@
     "nettoyage de code et optimisations": "code cleanup and optimizations",
     "passage en vanilla js": "switch to vanilla JS",
     "puissance": "power",
+    "simplification de la gestion de la documentation dans github": "Simplifying documentation management in GitHub",
     "traduction du plugin et de la documentation en en_US,es_ES,de_DE,it_IT,pt_PT": "Translation of the plugin and documentation into en_US, es_ES, de_DE, it_IT, pt_PT",
     "version minimale de jeedom -> 4.4.0": "Minimum Jeedom version -> 4.4.0"
 }
