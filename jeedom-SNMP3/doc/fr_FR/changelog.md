@@ -1,5 +1,14 @@
 # Changelog plugin SNMP3
 
+# 22/11/2026
+
+- traduction du plugin et de la documentation en en_US,es_ES,de_DE,it_IT,pt_PT
+- amélioration des messages dans les logs
+- cryptage des codes d'accès dans la base de données
+- passage en vanilla js
+- nettoyage de code et optimisations
+- simplification de la gestion de la documentation dans github
+
 # 25/07/2026
 
 - Possibilité de définir un cron autonome dans le moteur des tâches
