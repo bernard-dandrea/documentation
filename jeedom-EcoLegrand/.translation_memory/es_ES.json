@@ -97,7 +97,9 @@
     "\\\"compteur_C3\\\":~LG536 6 12724$,": "«contador_C3»:~LG536 6 12 724 $,",
     "\\\"compteur_C4\\\":~LG536 8 12724$,": "«contador_C4»:~LG536 8 12 724 $,",
     "\\\"compteur_C5\\\":~LG536 10 12724$,": "«contador_C5»:~LG536 10 12 724 $,",
+    "amélioration des messages dans les logs": "mejora de los mensajes en los registros",
     "conso_jour": "consumo_diario",
+    "cryptage des codes d'accès dans la base de données": "cifrado de los códigos de acceso en la base de datos",
     "json_error": "json_error",
     "json_lint": "json_lint",
     "l'offset qui est la valeur cumulée du compteur lors de la remise à zéro": "el «offset», que es el valor acumulado del contador en el momento de la puesta a cero",
@@ -108,6 +110,7 @@
     "nettoyage de code et optimisations": "limpieza del código y optimizaciones",
     "passage en vanilla js": "cambio a Vanilla JS",
     "puissance": "potencia",
+    "simplification de la gestion de la documentation dans github": "simplificación de la gestión de la documentación en GitHub",
     "traduction du plugin et de la documentation en en_US,es_ES,de_DE,it_IT,pt_PT": "traducción del complemento y de la documentación a en_US, es_ES, de_DE, it_IT y pt_PT",
     "version minimale de jeedom -> 4.4.0": "versión mínima de Jeedom -> 4.4.0"
 }

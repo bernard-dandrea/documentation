@@ -1,5 +1,14 @@
 # Registro delle modifiche del plugin EcoLegrand
 
+# 22/11/2026
+
+- traduzione del plugin e della documentazione in en_US, es_ES, de_DE, it_IT, pt_PT
+- miglioramento dei messaggi nei log
+- crittografia dei codici di accesso nel database
+- passaggio a Vanilla JS
+- ripulitura del codice e ottimizzazioni
+- semplificazione della gestione della documentazione su GitHub
+
 # 27/07/2026
 
 - Possibilità di definire un cron autonomo nel motore delle attività

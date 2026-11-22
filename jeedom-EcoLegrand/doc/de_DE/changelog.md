@@ -1,5 +1,14 @@
 # Änderungsprotokoll für das EcoLegrand-Plugin
 
+# 22/11/2026
+
+- Übersetzung des Plugins und der Dokumentation in en_US, es_ES, de_DE, it_IT, pt_PT
+- Verbesserung der Meldungen in den Protokollen
+- Verschlüsselung der Zugangscodes in der Datenbank
+- Umstellung auf Vanilla JS
+- Code-Bereinigung und Optimierungen
+- Vereinfachung der Dokumentationsverwaltung in GitHub
+
 # 27/07/2026
 
 - Möglichkeit, einen eigenständigen Cron-Job in der Aufgaben-Engine zu definieren
