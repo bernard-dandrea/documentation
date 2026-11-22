@@ -170,7 +170,7 @@ Die Zeichenfolge „024795944“ wird dann als Zeichenfolge behandelt, und bei d
 
 # Übersetzung
 
-Die Benutzeroberfläche, die in den Protokollen ausgegebenen Meldungen und die Dokumentation sind in die fünf von Jeedom unterstützten Sprachen übersetzt (vielen Dank an @mips für die Entwicklung von ga-translation und docs-translations). Sollten Sie Übersetzungsfehler feststellen, können Sie eine Supportanfrage stellen und, wenn möglich, die korrigierte Übersetzungsdatei (im Verzeichnis core/i18n des Plugins) beifügen.
+Die Benutzeroberfläche, die in den Protokollen ausgegebenen Meldungen und die Dokumentation sind in die fünf von Jeedom unterstützten Sprachen übersetzt (vielen Dank an @mips für die Entwicklung von ga-translation und docs-translations). Sollten Ihnen Übersetzungsfehler auffallen, können Sie ein Support-Ticket eröffnen und nach Möglichkeit die korrigierte Übersetzungsdatei (im Verzeichnis core/i18n des Plugins) beifügen.
 
 # Bewertungen
 

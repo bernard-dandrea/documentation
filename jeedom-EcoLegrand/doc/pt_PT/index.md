@@ -170,7 +170,7 @@ A sequência «024795944» será então considerada como uma sequência e não h
 
 # Tradução
 
-A interface, as mensagens enviadas nos registos e a documentação estão traduzidas para as 5 línguas suportadas pelo Jeedom (obrigado ao @mips pelo desenvolvimento do ga-translation e do docs-translations). Se forem detetados erros de tradução, pode abrir um pedido de suporte e, se possível, anexar o ficheiro de tradução corrigido (localizado no diretório core/i18n do plugin).
+A interface, as mensagens enviadas nos registos e a documentação estão traduzidas para as 5 línguas suportadas pelo Jeedom (obrigado ao @mips pelo desenvolvimento do ga-translation e do docs-translations). Se forem detetados erros de tradução, pode abrir um pedido de apoio e, se possível, anexar o ficheiro de tradução corrigido (localizado no diretório core/i18n do plugin).
 
 # Opiniões
 
