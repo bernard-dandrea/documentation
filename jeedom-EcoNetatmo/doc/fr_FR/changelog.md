@@ -1,5 +1,12 @@
 # Changelog plugin EcoNetatmo
 
+# 22/11/2026
+
+- traduction du plugin et de la documentation en en_US,es_ES,de_DE,it_IT,pt_PT
+- amélioration des messages dans les logs
+- passage en vanilla js
+- nettoyage de code et optimisations
+
 # 26/07/2026
 
 - Possibilité de définir un cron autonome dans le moteur des tâches
