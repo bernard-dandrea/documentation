@@ -123,7 +123,7 @@ Hier ist das Standard-Widget.
 
 # Übersetzung
 
-Die Benutzeroberfläche, die in den Protokollen ausgegebenen Meldungen und die Dokumentation sind in die fünf von Jeedom unterstützten Sprachen übersetzt (vielen Dank an @mips für die Entwicklung von ga-translation und docs-translations). Sollten Ihnen Übersetzungsfehler auffallen, können Sie eine Supportanfrage stellen und, wenn möglich, die korrigierte Übersetzungsdatei (zu finden im Verzeichnis core/i18n des Plugins) beifügen.
+Die Benutzeroberfläche, die in den Protokollen ausgegebenen Meldungen und die Dokumentation sind in die fünf von Jeedom unterstützten Sprachen übersetzt (vielen Dank an @mips für die Entwicklung von ga-translation und docs-translations). Sollten Ihnen Übersetzungsfehler auffallen, können Sie eine Supportanfrage stellen und, wenn möglich, die korrigierte Übersetzungsdatei (im Verzeichnis core/i18n des Plugins) beifügen.
 
 # Bewertungen
 
