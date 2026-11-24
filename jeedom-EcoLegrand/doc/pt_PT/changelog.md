@@ -1,13 +1,17 @@
 # Registo de alterações do plugin EcoLegrand
 
+# 24/11/2026
+
+- Verifica se o valor devolvido pelo ecocontador é numérico
+
 # 22/11/2026
 
-- tradução do plugin e da documentação para en_US, es_ES, de_DE, it_IT, pt_PT
-- melhoria das mensagens nos registos
-- encriptação dos códigos de acesso na base de dados
-- mudança para Vanilla JS
-- limpeza de código e otimizações
-- simplificação da gestão da documentação no GitHub
+- Tradução do plugin e da documentação para en_US, es_ES, de_DE, it_IT, pt_PT
+- Melhoria das mensagens nos registos
+- Encriptação dos códigos de acesso na base de dados
+- Mudança para Vanilla JS
+- Limpeza do código e otimizações
+- Simplificação da gestão da documentação no GitHub
 
 # 27/07/2026
 

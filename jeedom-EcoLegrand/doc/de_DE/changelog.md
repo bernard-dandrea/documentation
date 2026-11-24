@@ -1,5 +1,9 @@
 # Änderungsprotokoll für das EcoLegrand-Plugin
 
+# 24/11/2026
+
+- Überprüft, ob der vom Stromzähler zurückgegebene Wert numerisch ist
+
 # 22/11/2026
 
 - Übersetzung des Plugins und der Dokumentation in en_US, es_ES, de_DE, it_IT, pt_PT

@@ -1,12 +1,16 @@
 # EcoLegrand plugin changelog
 
+# 24/11/2026
+
+- Checks that the value returned by the eco-meter is a number
+
 # 22/11/2026
 
 - Translation of the plugin and documentation into en_US, es_ES, de_DE, it_IT, pt_PT
-- Improving log messages
-- encryption of access codes in the database
-- switch to vanilla JS
-- code cleanup and optimizations
+- Improvements to log messages
+- Encryption of access codes in the database
+- Switch to vanilla JavaScript
+- Code cleanup and optimizations
 - Simplifying documentation management in GitHub
 
 # 27/07/2026

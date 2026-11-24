@@ -1,13 +1,17 @@
 # Registro delle modifiche del plugin EcoLegrand
 
+# 24/11/2026
+
+- Verifica che il valore restituito dal contatore ecologico sia numerico
+
 # 22/11/2026
 
-- traduzione del plugin e della documentazione in en_US, es_ES, de_DE, it_IT, pt_PT
-- miglioramento dei messaggi nei log
-- crittografia dei codici di accesso nel database
-- passaggio a Vanilla JS
-- ripulitura del codice e ottimizzazioni
-- semplificazione della gestione della documentazione su GitHub
+- Traduzione del plugin e della documentazione in en_US, es_ES, de_DE, it_IT, pt_PT
+- Miglioramento dei messaggi nei log
+- Crittografia dei codici di accesso nel database
+- Passaggio a Vanilla JS
+- Riorganizzazione del codice e ottimizzazioni
+- Semplificazione della gestione della documentazione su GitHub
 
 # 27/07/2026
 
