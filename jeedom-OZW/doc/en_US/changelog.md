@@ -1,5 +1,13 @@
 # OZW Plugin Changelog
 
+# 24/11/2026
+
+- Translation of the plugin and documentation into en_US, es_ES, de_DE, it_IT, pt_PT
+- Improving log messages
+- switch to vanilla JS
+- code cleanup and optimizations
+- Simplifying documentation management in GitHub
+
 # 28/07/2026
 
 - Ability to set up a standalone cron job in the task engine

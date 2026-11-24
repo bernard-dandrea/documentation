@@ -43,7 +43,7 @@
     "Indiquer la configuration de l'OZW :": "Indique a configuração do OZW:",
     "Initial load": "Carregamento inicial",
     "Installation et configuration du controleur OZW": "Instalação e configuração do controlador OZW",
-    "L'interface, les messages envoyés dans les logs et la documenation sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation et docs-translations). Si des erreurs de traduction sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).": "A interface, as mensagens enviadas nos registos e a documentação estão traduzidas para as 5 línguas suportadas pelo Jeedom (obrigado ao @mips pelo desenvolvimento do ga-translation e do docs-translations). Se forem detetados erros de tradução, pode abrir um pedido de suporte e, se possível, anexar o ficheiro de tradução corrigido (localizado no diretório core/i18n do plugin).",
+    "L'interface, les messages envoyés dans les logs et la documentation sont traduits dans les 5 langues supportées par Jeedom (merci à @mips pour le développement ga-translation et docs-translations). Si des erreurs de traduction sont constatées, vous pouvez ouvrir une demande de support et si possible joindre le fichier de traduction corrigé (situé dans le répertoire core/i18n du plugin).": "A interface, as mensagens enviadas nos registos e a documentação estão traduzidas para as 5 línguas suportadas pelo Jeedom (obrigado ao @mips pelo desenvolvimento do ga-translation e do docs-translations). Se forem detetados erros de tradução, pode abrir um pedido de suporte e, se possível, anexar o ficheiro de tradução corrigido (localizado no diretório core/i18n do plugin).",
     "La communication entre le plugin et l'OZW s'effectue via les WEB APIs fournies par SIEMENS qui permettent de simuler les interactions réalisées normalement sur le serveur WEB.": "A comunicação entre o plugin e o OZW é efetuada através das APIs WEB fornecidas pela SIEMENS, que permitem simular as interações normalmente realizadas no servidor WEB.",
     "La configuration des équipements est accessible à partir du menu du plugin (menu Plugins, Objets Connectés puis OZW).": "A configuração dos equipamentos está acessível a partir do menu do plugin (menu Plugins, Objetos Conectados e, em seguida, OZW).",
     "Last Modified : 2026/07/28 15:35:23": "Última modificação: 28/07/2026 15:35:23",
@@ -95,6 +95,7 @@
     "Vous pouvez activer le niveau de log Debug pour suivre l'activité du plugin et identifier les éventuels problèmes.": "Pode ativar o nível de registo «Debug» para acompanhar a atividade do plugin e identificar eventuais problemas.",
     "Vous pouvez également définir si un cron autonome est utilisé. Cela permet de ne pas bloquer les autres crons si le cron du plugin se bloque et ne pas être bloqué par d'autres crons lancés pour d'autres plugins.": "Também pode definir se é utilizada uma tarefa cron autónoma. Isto permite evitar que outras tarefas cron fiquem bloqueadas caso a tarefa cron do plugin fique bloqueada e evita que esta seja bloqueada por outras tarefas cron executadas por outros plugins.",
     "Widget": "Widget",
+    "amélioration des messages dans les logs": "melhoria das mensagens nos registos",
     "l'OZW672 en tant qu'équipement principal": "o OZW672 como equipamento principal",
     "l'OZW672.01 en tant que device": "o OZW672.01 como dispositivo",
     "la carte LMS14 gérant la chaudière": "a placa LMS14 que controla a caldeira",
@@ -103,7 +104,12 @@
     "le champ scan qui indique la fréquence de mise à jour du datapoint": "o campo «scan», que indica a frequência de atualização do ponto de dados",
     "le premier représente une carte LMS14 pilotant une chaudière": "o primeiro representa uma placa LMS14 que controla uma caldeira",
     "le second représente la centrale de communication OWZ672 et permet sa configuration": "o segundo representa a central de comunicação OWZ672 e permite a sua configuração",
+    "nettoyage de code et optimisations": "limpeza de código e otimizações",
+    "passage en vanilla js": "mudança para Vanilla JS",
     "pour les commandes action, égal à 'A_' suivi de la référence WEB du datapoint": "para comandos de ação, igual a «A_» seguido da referência WEB do ponto de dados",
     "pour les commandes de type info, égal à la référence WEB du datapoint": "para comandos do tipo «info», igual à referência WEB do ponto de dados",
-    "pour les commandes refresh, égal à 'R_' suivi de la référence WEB du datapoint": "para os comandos de atualização, igual a «R_» seguido da referência WEB do ponto de dados"
+    "pour les commandes refresh, égal à 'R_' suivi de la référence WEB du datapoint": "para os comandos de atualização, igual a «R_» seguido da referência WEB do ponto de dados",
+    "simplification de la gestion de la documentation dans github": "simplificação da gestão da documentação no GitHub",
+    "traduction du plugin et de la documentation en en_US,es_ES,de_DE,it_IT,pt_PT": "tradução do plugin e da documentação para en_US, es_ES, de_DE, it_IT, pt_PT",
+    "version minimale de jeedom -> 4.4.0": "versão mínima do Jeedom -> 4.4.0"
 }
