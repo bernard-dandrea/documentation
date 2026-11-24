@@ -1,13 +1,17 @@
 # Changelog plugin EcoLegrand
 
+# 24/11/2026
+
+- Vérifie que la valeur retournée par l'ecocompteur est numérique
+
 # 22/11/2026
 
-- traduction du plugin et de la documentation en en_US,es_ES,de_DE,it_IT,pt_PT
-- amélioration des messages dans les logs
-- cryptage des codes d'accès dans la base de données
-- passage en vanilla js
-- nettoyage de code et optimisations
-- simplification de la gestion de la documentation dans github
+- Traduction du plugin et de la documentation en en_US,es_ES,de_DE,it_IT,pt_PT
+- Amélioration des messages dans les logs
+- Cryptage des codes d'accès dans la base de données
+- Passage en vanilla js
+- Nettoyage de code et optimisations
+- Simplification de la gestion de la documentation dans github
 
 # 27/07/2026
 
