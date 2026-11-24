@@ -1,5 +1,13 @@
 # Registo de alterações do plugin OZW
 
+# 24/11/2026
+
+- tradução do plugin e da documentação para en_US, es_ES, de_DE, it_IT, pt_PT
+- melhoria das mensagens nos registos
+- mudança para Vanilla JS
+- limpeza de código e otimizações
+- simplificação da gestão da documentação no GitHub
+
 # 28/07/2026
 
 - Possibilidade de definir um cron autónomo no motor de tarefas
