@@ -1,5 +1,13 @@
 # Registro de cambios del complemento BSBLAN
 
+# 24/11/2026
+
+- traducción del complemento y de la documentación a en_US, es_ES, de_DE, it_IT, pt_PT
+- mejora de los mensajes en los registros
+- transición a Vanilla JS
+- limpieza del código y optimizaciones
+- simplificación de la gestión de la documentación en GitHub
+
 # 28/07/2026
 
 - Cifrado de los códigos de acceso en la base de datos

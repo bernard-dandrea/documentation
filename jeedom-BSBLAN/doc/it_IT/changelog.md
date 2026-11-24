@@ -1,5 +1,13 @@
 # Registro delle modifiche del plugin BSBLAN
 
+# 24/11/2026
+
+- traduzione del plugin e della documentazione in en_US, es_ES, de_DE, it_IT, pt_PT
+- miglioramento dei messaggi nei log
+- passaggio a Vanilla JS
+- ripulitura del codice e ottimizzazioni
+- semplificazione della gestione della documentazione su GitHub
+
 # 28/07/2026
 
 - Crittografia dei codici di accesso nel database

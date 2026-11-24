@@ -98,6 +98,10 @@ Para cada comando relacionado com um parâmetro, além dos campos habituais do J
 
 Eis um exemplo de widget. É possível alterar o nome dos comandos para que sejam mais descritivos.
 
+# Tradução
+
+A interface, as mensagens enviadas nos registos e a documentação estão traduzidas para as 5 línguas suportadas pelo Jeedom (obrigado ao @mips pelo desenvolvimento do ga-translation e do docs-translations). Se forem detetados erros de tradução, pode abrir um pedido de suporte e, se possível, anexar o ficheiro de tradução corrigido (localizado no diretório core/i18n do plugin).
+
 # Opiniões
 
 ![BSBLAN_aviso](../images/BSBLAN_avis.png)
