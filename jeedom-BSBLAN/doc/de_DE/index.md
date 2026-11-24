@@ -98,6 +98,10 @@ Für jeden Befehl, der sich auf einen Parameter bezieht, gibt es zusätzlich zu 
 
 Hier ist ein Beispiel für ein Widget. Man kann die Namen der Befehle ändern, damit sie aussagekräftiger sind.
 
+# Übersetzung
+
+Die Benutzeroberfläche, die in den Protokollen ausgegebenen Meldungen und die Dokumentation sind in die fünf von Jeedom unterstützten Sprachen übersetzt (vielen Dank an @mips für die Entwicklung von ga-translation und docs-translations). Sollten Sie Übersetzungsfehler feststellen, können Sie eine Supportanfrage stellen und nach Möglichkeit die korrigierte Übersetzungsdatei (im Verzeichnis core/i18n des Plugins) beifügen.
+
 # Bewertungen
 
 ![BSBLAN_Bewertung](../images/BSBLAN_avis.png)

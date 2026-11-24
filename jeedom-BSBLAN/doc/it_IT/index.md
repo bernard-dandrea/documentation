@@ -98,6 +98,10 @@ Per ogni comando relativo a un parametro, oltre ai campi standard di Jeedom sono
 
 Ecco un esempio di widget. È possibile modificare il nome dei comandi per renderli più intuitivi.
 
+# Traduzione
+
+L'interfaccia, i messaggi inviati nei log e la documentazione sono tradotti nelle 5 lingue supportate da Jeedom (grazie a @mips per lo sviluppo di ga-translation e docs-translations). Se si riscontrano errori di traduzione, è possibile aprire una richiesta di assistenza e, se possibile, allegare il file di traduzione corretto (situato nella directory core/i18n del plugin).
+
 # Recensioni
 
 ![BSBLAN_recensione](../images/BSBLAN_avis.png)

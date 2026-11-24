@@ -1,5 +1,12 @@
 # BSBLAN Plugin Changelog
 
+# 15/08/2026
+
+- Translation of the plugin and documentation into en_US, es_ES, de_DE, it_IT, pt_PT
+- switch to vanilla JS
+- Minimum Jeedom version -> 4.4.0
+- code cleanup and optimizations
+
 # 21/07/2026
 
 - Database encryption of access codes
