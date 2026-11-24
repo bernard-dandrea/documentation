@@ -1,13 +1,17 @@
 # Registro de cambios del complemento EcoLegrand
 
+# 24/11/2026
+
+- Comprueba que el valor devuelto por el contador ecológico sea numérico
+
 # 22/11/2026
 
-- traducción del complemento y de la documentación a en_US, es_ES, de_DE, it_IT y pt_PT
-- mejora de los mensajes en los registros
-- cifrado de los códigos de acceso en la base de datos
-- cambio a Vanilla JS
-- limpieza del código y optimizaciones
-- simplificación de la gestión de la documentación en GitHub
+- Traducción del complemento y de la documentación a en_US, es_ES, de_DE, it_IT y pt_PT
+- Mejora de los mensajes en los registros
+- Cifrado de los códigos de acceso en la base de datos
+- Migración a Vanilla JS
+- Limpieza del código y optimizaciones
+- Simplificación de la gestión de la documentación en GitHub
 
 # 27/07/2026
 
